@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elden Ring Nightreign — The True Relic System</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   STILE GLOBALE — Dark UI Fantasy
+   ======================================== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Rajdhani',sans-serif;background:#0d0d0d;color:#e0e0e0;min-height:100vh;font-size:16px}
+a{color:#e8c96b;text-decoration:none}
+h1,h2,h3,h4{color:#e8c96b;font-weight:700}
+h2{font-size:1.5rem;margin-bottom:.8rem;border-bottom:1px solid #333;padding-bottom:.4rem}
+h3{font-size:1.15rem;margin-bottom:.5rem}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:#1a1a1a}
+::-webkit-scrollbar-thumb{background:#444;border-radius:4px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:100;background:#111;border-bottom:2px solid #c9a84c;padding:.6rem 1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.header h1{font-size:1.3rem;white-space:nowrap}
+.header-right{display:flex;gap:.5rem;align-items:center}
+
+/* Tabs */
+.tabs{display:flex;background:#1a1a1a;overflow-x:auto;border-bottom:1px solid #333}
+.tab-btn{padding:.6rem 1rem;cursor:pointer;color:#888;background:none;border:none;font-family:inherit;font-size:.9rem;white-space:nowrap;transition:.2s;border-bottom:2px solid transparent}
+.tab-btn:hover{color:#e8c96b}
+.tab-btn.active{color:#e8c96b;border-bottom-color:#c9a84c}
+
+/* Contenuto principale */
+.main-content{max-width:1100px;margin:0 auto;padding:1rem}
+.section{display:none}
+.section.active{display:block}
+
+/* Bottoni */
+.btn{padding:.4rem 1rem;border:1px solid #c9a84c;background:transparent;color:#e8c96b;font-family:inherit;font-size:.9rem;cursor:pointer;border-radius:4px;transition:.2s;display:inline-flex;align-items:center;gap:.3rem}
+.btn:hover{background:#c9a84c;color:#0d0d0d}
+.btn:disabled{opacity:.3;cursor:not-allowed}
+.btn-primary{background:#c9a84c;color:#0d0d0d;font-weight:600}
+.btn-primary:hover{background:#e8c96b}
+.btn-danger{border-color:#8b2020;color:#cc4444}
+.btn-danger:hover{background:#8b2020;color:#fff}
+.btn-sm{padding:.25rem .6rem;font-size:.82rem}
+
+/* Card */
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:6px;padding:1rem;margin-bottom:.8rem;transition:.2s}
+.card:hover{border-color:#c9a84c55}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;flex-wrap:wrap}
+.card-actions{display:flex;gap:.3rem;flex-shrink:0}
+
+/* Badge */
+.badge{display:inline-block;padding:.1rem .45rem;border-radius:10px;font-size:.75rem;font-weight:600;vertical-align:middle}
+.badge-g{background:#333;color:#e8c96b;border:1px solid #c9a84c}
+.badge-fusa{background:#3a1a5a;color:#caa0ff}
+.badge-notte{background:#0a1a3a;color:#88bbff}
+.color-dot{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle;margin-right:3px;border:1px solid #555}
+.dot-Rosso{background:#cc3333}.dot-Blu{background:#3366cc}.dot-Giallo{background:#ccaa33}.dot-Verde{background:#33aa55}
+.badge-Rosso{background:#3a1515;color:#ff6666;border:1px solid #662222}
+.badge-Blu{background:#151530;color:#6699ff;border:1px solid #223366}
+.badge-Giallo{background:#2a2a10;color:#eedd55;border:1px solid #555522}
+.badge-Verde{background:#152a15;color:#55cc77;border:1px solid #226622}
+
+/* Form */
+.form-group{margin-bottom:.7rem}
+.form-group label{display:block;color:#bbb;margin-bottom:.2rem;font-size:.85rem}
+input[type=text],input[type=number],select,textarea{width:100%;padding:.4rem .6rem;background:#222;border:1px solid #444;color:#e0e0e0;border-radius:4px;font-family:inherit;font-size:.9rem}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#c9a84c}
+
+/* Modale */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;justify-content:center;align-items:flex-start;padding:2rem;overflow-y:auto}
+.modal-bg.open{display:flex}
+.modal{background:#1a1a1a;border:1px solid #c9a84c;border-radius:8px;padding:1.2rem;width:100%;max-width:550px;max-height:90vh;overflow-y:auto}
+
+/* Filtri */
+.filters{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;padding:.6rem;background:#151515;border-radius:6px}
+.filters select{width:auto;min-width:110px}
+
+/* Messaggio */
+.msg{padding:.6rem .8rem;border-radius:4px;margin:.5rem 0;font-weight:500;font-size:.9rem}
+.msg-ok{background:#0f2f0f;border:1px solid #33aa55;color:#55cc77}
+.msg-err{background:#2f0f0f;border:1px solid #cc3333;color:#ff6666}
+.msg-warn{background:#2a2200;border:1px solid #aa8833;color:#ddbb55}
+.msg-info{background:#0f0f2f;border:1px solid #5577cc;color:#88aadd}
+
+/* Wizard */
+.wiz-bar{display:flex;gap:.3rem;margin-bottom:1rem;flex-wrap:wrap}
+.wiz-step{padding:.3rem .8rem;background:#222;border:1px solid #444;border-radius:16px;font-size:.82rem;color:#777}
+.wiz-step.cur{border-color:#c9a84c;color:#e8c96b;background:#1e1800}
+.wiz-step.done{border-color:#33aa55;color:#55cc77;background:#0f1f0f}
+
+/* Prob bar */
+.prob-bar{display:flex;height:28px;border-radius:4px;overflow:hidden;margin:.5rem 0}
+.prob-seg{display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;transition:width .3s}
+
+/* Tabella */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:.4rem .6rem;text-align:left;border-bottom:1px solid #2a2a2a}
+th{color:#e8c96b;background:#151515;font-weight:600;position:sticky;top:0}
+tr:hover{background:#1e1e1e}
+
+/* Relic selector */
+.rsel{display:flex;align-items:center;gap:.5rem;padding:.4rem .6rem;margin:.2rem 0;background:#1a1a1a;border:1px solid #333;border-radius:4px;cursor:pointer;font-size:.88rem}
+.rsel:hover{border-color:#c9a84c}
+.rsel.on{border-color:#c9a84c;background:#1e1a10}
+.rsel input[type=checkbox]{accent-color:#c9a84c}
+
+/* Token grid */
+.tok-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin-bottom:1rem}
+.tok-card{text-align:center}
+.tok-num{font-size:2rem;color:#e8c96b;font-weight:700}
+
+/* Effetti lista */
+.eff-list{list-style:none;margin:.3rem 0}
+.eff-list li{padding:.2rem 0;font-size:.88rem;border-bottom:1px solid #1e1e1e}
+.eff-step{color:#c9a84c;font-weight:600}
+.eff-up{color:#55cc77;font-style:italic}
+
+/* Pool item */
+.pool-tag{display:inline-block;padding:.15rem .5rem;margin:.15rem;background:#222;border:1px solid #444;border-radius:4px;font-size:.82rem}
+
+/* Risk */
+.risk-lo{color:#55cc77}.risk-md{color:#ddbb55}.risk-hi{color:#ff6666}
+
+/* Anim */
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn .3s ease-out}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.pulse{animation:pulse .6s ease-in-out 3}
+
+/* Responsive */
+@media(max-width:700px){
+  .header{flex-direction:column;text-align:center}
+  .tab-btn{padding:.4rem .7rem;font-size:.82rem}
+  .filters{flex-direction:column}
+  .filters select{width:100%}
+  .main-content{padding:.7rem .4rem}
+}
+
+.hidden{display:none!important}
+.flex-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.flex-1{flex:1;min-width:250px}
+.mt1{margin-top:1rem}
+.mb1{margin-bottom:1rem}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <h1>⚔️ The True Relic System</h1>
+  <div class="header-right">
+    <button class="btn btn-primary" id="btnExport" onclick="esportaJSON()" disabled>📥 Esporta reliquie.json</button>
+  </div>
+</header>
+
+<!-- ===== TABS ===== -->
+<nav class="tabs" id="navTabs">
+  <button class="tab-btn active" data-t="home">🏠 Home</button>
+  <button class="tab-btn" data-t="inv">�� Inventario</button>
+  <button class="tab-btn" data-t="fus-n">⚔️ Fusione Normali</button>
+  <button class="tab-btn" data-t="fus-t">🌙 Fusione Notte</button>
+  <button class="tab-btn" data-t="tok">🎫 Token</button>
+  <button class="tab-btn" data-t="reg">📜 Registro</button>
+  <button class="tab-btn" data-t="set">⚙️ Impostazioni</button>
+</nav>
+
+<!-- ===== CONTENUTO ===== -->
+<div class="main-content">
+
+<!-- SEZIONE 1: HOME -->
+<section class="section active" id="sec-home">
+  <h2>🏠 Benvenuto nel True Relic System</h2>
+  <div class="card">
+    <p style="line-height:1.6;margin-bottom:.8rem"><strong>The True Relic System</strong> è un'applicazione web per gestire il sistema di crafting delle reliquie di Elden Ring Nightreign.
+    Pensata per 3 giocatori, permette di creare, fondere e gestire reliquie secondo un regolamento personalizzato.</p>
+    <p style="color:#999;font-size:.88rem">Funzionalità: Inventario reliquie con filtri • Fusione con wizard a 5 step • Sorteggio colore ed effetti •
+    Test degradazione • Token cromatici e di creazione • Registro fusioni • Esportazione/importazione JSON</p>
+  </div>
+  <div class="flex-row mt1">
+    <div class="card flex-1">
+      <h3>📂 Carica Database</h3>
+      <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Importa un file reliquie.json esistente.</p>
+      <input type="file" id="fileInput" accept=".json" style="margin-bottom:.4rem;background:#222;padding:.3rem;border:1px solid #444;border-radius:4px;color:#ccc;width:100%">
+      <button class="btn btn-primary" onclick="caricaJSON()">Carica file</button>
+    </div>
+    <div class="card flex-1">
+      <h3>🆕 Nuovo Database</h3>
+      <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Crea un database vuoto con i nomi dei 3 giocatori.</p>
+      <div class="form-group"><label>Giocatore 1</label><input type="text" id="np1" placeholder="Nome giocatore 1"></div>
+      <div class="form-group"><label>Giocatore 2</label><input type="text" id="np2" placeholder="Nome giocatore 2"></div>
+      <div class="form-group"><label>Giocatore 3</label><input type="text" id="np3" placeholder="Nome giocatore 3"></div>
+      <button class="btn btn-primary" onclick="nuovoDB()">Crea database</button>
+    </div>
+  </div>
+  <div id="homeMsg" class="mt1"></div>
+  <div id="homeStatus" class="card mt1 hidden">
+    <h3>📊 Stato Database</h3>
+    <div id="homeStatusContent"></div>
+  </div>
+</section>
+
+<!-- SEZIONE 2: INVENTARIO -->
+<section class="section" id="sec-inv">
+  <h2>📦 Inventario Reliquie</h2>
+  <button class="btn btn-primary mb1" onclick="apriModaleNuovaRel()">+ Aggiungi Reliquia</button>
+  <div class="filters">
+    <select id="fProp" onchange="renderInv()"><option value="">Tutti i proprietari</option></select>
+    <select id="fGrado" onchange="renderInv()"><option value="">Tutti i gradi</option><option value="1">G1</option><option value="2">G2</option><option value="3">G3</option></select>
+    <select id="fColore" onchange="renderInv()"><option value="">Tutti i colori</option><option value="Rosso">Rosso</option><option value="Blu">Blu</option><option value="Giallo">Giallo</option><option value="Verde">Verde</option></select>
+    <select id="fGrand" onchange="renderInv()"><option value="">Tutte le grandezze</option><option value="Piccola">Piccola</option><option value="Media">Media</option><option value="Grande">Grande</option></select>
+    <select id="fTipo" onchange="renderInv()"><option value="">Tutte le tipologie</option><option value="normale">Normale</option><option value="notte">Notte</option></select>
+    <select id="fOrd" onchange="renderInv()"><option value="nome">Per nome</option><option value="grado">Per grado</option><option value="proprietario">Per proprietario</option></select>
+  </div>
+  <div id="invList"></div>
+</section>
+
+<!-- SEZIONE 3: FUSIONE NORMALI -->
+<section class="section" id="sec-fus-n">
+  <h2>⚔️ Fusione — Reliquie Normali</h2>
+  <div class="wiz-bar" id="wizBarN"></div>
+  <div id="wizN"></div>
+</section>
+
+<!-- SEZIONE 4: FUSIONE NOTTE -->
+<section class="section" id="sec-fus-t">
+  <h2>🌙 Fusione — Reliquie della Notte</h2>
+  <div class="wiz-bar" id="wizBarT"></div>
+  <div id="wizT"></div>
+</section>
+
+<!-- SEZIONE 5: TOKEN -->
+<section class="section" id="sec-tok">
+  <h2>🎫 Token &amp; Ricompense</h2>
+  <div id="tokDash" class="mb1"></div>
+  <div class="flex-row">
+    <div class="card flex-1">
+      <h3>🎨 Gettone Cromatico</h3>
+      <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Assegnato ogni 1000 punti nel Profondo della Notte. Permette di cambiare il colore di una reliquia.</p>
+      <div class="form-group"><label>Giocatore</label><select id="tcGioc" onchange="aggiornaRelTok()"></select></div>
+      <div class="flex-row" style="align-items:flex-end">
+        <div class="flex-1"><div class="form-group"><label>Punti accumulati</label><input type="number" id="tcPunti" min="0" placeholder="es. 2500"></div></div>
+        <button class="btn btn-sm" onclick="calcolaTC()">Calcola</button>
+        <span id="tcCalcR" style="color:#e8c96b"></span>
+      </div>
+      <button class="btn btn-primary btn-sm mt1" onclick="assegnaTCrom()">Assegna 1 gettone</button>
+      <hr style="border-color:#333;margin:.8rem 0">
+      <h4 style="color:#ccc">Usa Gettone</h4>
+      <div class="form-group"><label>Reliquia</label><select id="tcRel"></select></div>
+      <div class="form-group"><label>Nuovo colore</label>
+        <select id="tcCol"><option value="Rosso">Rosso</option><option value="Blu">Blu</option><option value="Giallo">Giallo</option><option value="Verde">Verde</option></select>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="usaTCrom()">Usa gettone</button>
+      <div id="tcMsg"></div>
+    </div>
+    <div class="card flex-1">
+      <h3>✨ Gettone Creazione</h3>
+      <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Assegnato al raggiungimento di una nuova profondità. Permette di creare una reliquia da zero.</p>
+      <div class="form-group"><label>Giocatore</label><select id="trGioc"></select></div>
+      <div class="form-group"><label>Profondità raggiunta</label><input type="text" id="trProf" placeholder="es. Profondità 5"></div>
+      <button class="btn btn-primary btn-sm" onclick="assegnaTCreaz()">Assegna gettone</button>
+      <hr style="border-color:#333;margin:.8rem 0">
+      <button class="btn btn-primary btn-sm" onclick="usaTCreaz()">Crea reliquia con gettone</button>
+      <div id="trMsg"></div>
+    </div>
+  </div>
+  <div class="card mt1"><h3>📋 Storico Token</h3><div id="tokHist"></div></div>
+</section>
+
+<!-- SEZIONE 6: REGISTRO -->
+<section class="section" id="sec-reg">
+  <h2>📜 Registro Fusioni</h2>
+  <div class="filters">
+    <select id="rfGioc" onchange="renderReg()"><option value="">Tutti i giocatori</option></select>
+    <select id="rfDeg" onchange="renderReg()"><option value="">Tutti gli esiti</option><option value="si">Degradata</option><option value="no">Non degradata</option></select>
+    <button class="btn btn-sm" onclick="esportaCSV()">📊 Esporta CSV</button>
+  </div>
+  <div id="regTab" style="overflow-x:auto"></div>
+</section>
+
+<!-- SEZIONE 7: IMPOSTAZIONI -->
+<section class="section" id="sec-set">
+  <h2>⚙️ Impostazioni</h2>
+  <div class="card">
+    <h3>👥 Gestione Giocatori</h3>
+    <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">⚠️ La modifica dei nomi aggiornerà tutti i riferimenti nel database.</p>
+    <div id="setGioc"></div>
+    <button class="btn btn-primary btn-sm mt1" onclick="salvaGiocatori()">Salva nomi</button>
+  </div>
+  <div class="card mt1">
+    <h3>🗑️ Reset Database</h3>
+    <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Elimina tutti i dati. Azione irreversibile.</p>
+    <button class="btn btn-danger" onclick="resetDB()">Reset completo</button>
+  </div>
+  <div class="card mt1">
+    <h3>ℹ️ Informazioni</h3>
+    <p>Versione regolamento: <strong>1.0</strong></p>
+    <p>Applicazione: The True Relic System v1.0</p>
+    <p><a href="#">📜 Link al regolamento (placeholder)</a></p>
+  </div>
+</section>
+
+</div><!-- fine main-content -->
+
+<!-- ===== MODALE RELIQUIA ===== -->
+<div class="modal-bg" id="modalRel">
+  <div class="modal">
+    <h3 id="modalRelTitle">Aggiungi Reliquia</h3>
+    <input type="hidden" id="mrId">
+    <input type="hidden" id="mrMode" value="add">
+    <div class="form-group"><label>Nome</label><input type="text" id="mrNome" placeholder="Nome della reliquia"></div>
+    <div class="form-group"><label>Proprietario</label><select id="mrProp"></select></div>
+    <div class="form-group"><label>Grado</label><select id="mrGrado"><option value="1">Grado 1 (1 effetto)</option><option value="2">Grado 2 (2 effetti)</option><option value="3">Grado 3 (3 effetti)</option></select></div>
+    <div class="form-group"><label>Grandezza</label><select id="mrGrand"><option>Piccola</option><option>Media</option><option>Grande</option></select></div>
+    <div class="form-group"><label>Colore</label><select id="mrColore"><option>Rosso</option><option>Blu</option><option>Giallo</option><option>Verde</option></select></div>
+    <div class="form-group"><label>Tipologia</label><select id="mrTipo" onchange="aggEffModale()"><option value="normale">Normale</option><option value="notte">Notte</option></select></div>
+    <div class="form-group"><label>Effetti</label><div id="mrEff"></div>
+      <button class="btn btn-sm mt1" onclick="addEffModale()" id="mrAddEff">+ Aggiungi effetto</button>
+    </div>
+    <div id="mrNote" class="msg msg-info hidden">Reliquia creata tramite Gettone Creazione</div>
+    <div class="flex-row mt1">
+      <button class="btn btn-primary" onclick="salvaRel()">Salva</button>
+      <button class="btn" onclick="chiudiModalRel()">Annulla</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ================================================================
+// VARIABILI GLOBALI
+// ================================================================
+let db = null;                // Database in memoria
+let effNormBuff = [];         // Effetti normali buff
+let effNotteBuff = [];        // Effetti notte buff
+let effNotteDebuff = [];      // Effetti notte debuff
+let wizS = {};                // Stato wizard (chiave: 'n' o 't')
+let isCreazMode = false;      // Flag gettone creazione
+
+// ================================================================
+// INIZIALIZZAZIONE
+// ================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  // Navigazione tab
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('sec-' + btn.dataset.t).classList.add('active');
+      const t = btn.dataset.t;
+      if (t === 'inv') renderInv();
+      else if (t === 'fus-n') initWiz('n');
+      else if (t === 'fus-t') initWiz('t');
+      else if (t === 'tok') renderTok();
+      else if (t === 'reg') renderReg();
+      else if (t === 'set') renderSet();
+      else if (t === 'home') aggiornaHome();
+    });
+  });
+  caricaEffetti();
+});
+
+// Carica file JSON effetti
+async function caricaEffetti() {
+  try {
+    const [r1, r2, r3] = await Promise.all([
+      fetch('./data/effetti_normali_buff.json'),
+      fetch('./data/effetti_notte_buff.json'),
+      fetch('./data/effetti_notte_debuff.json')
+    ]);
+    if (!r1.ok || !r2.ok || !r3.ok) throw new Error('File non trovati (404)');
+    effNormBuff = await r1.json();
+    effNotteBuff = await r2.json();
+    effNotteDebuff = await r3.json();
+  } catch (e) {
+    console.error(e);
+    document.getElementById('homeMsg').innerHTML = '<div class="msg msg-err">⚠️ Impossibile caricare i file degli effetti dalla cartella data/. Assicurati che i file JSON siano presenti e il sito sia servito tramite un server HTTP (es. GitHub Pages).</div>';
+  }
+}
+
+// ================================================================
+// SEZIONE 1: HOME / CARICA DATI
+// ================================================================
+function caricaJSON() {
+  const f = document.getElementById('fileInput').files[0];
+  if (!f) { alert('Seleziona un file JSON.'); return; }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const d = JSON.parse(e.target.result);
+      if (!d.versione || !d.giocatori || !Array.isArray(d.reliquie)) throw new Error('Schema JSON non valido');
+      if (!d.registroFusioni) d.registroFusioni = [];
+      if (!d.registroToken) d.registroToken = [];
+      db = d;
+      aggiornaUI();
+      document.getElementById('homeMsg').innerHTML = '<div class="msg msg-ok fade-in">✅ Database caricato con successo!</div>';
+    } catch (err) { alert('Errore nel file JSON: ' + err.message); }
+  };
+  reader.readAsText(f);
+}
+
+function nuovoDB() {
+  const p1 = document.getElementById('np1').value.trim();
+  const p2 = document.getElementById('np2').value.trim();
+  const p3 = document.getElementById('np3').value.trim();
+  if (!p1 || !p2 || !p3) { alert('Inserisci i nomi di tutti e 3 i giocatori.'); return; }
+  db = { versione: '1.0', giocatori: [p1, p2, p3], reliquie: [], registroFusioni: [], registroToken: [] };
+  aggiornaUI();
+  document.getElementById('homeMsg').innerHTML = '<div class="msg msg-ok fade-in">✅ Nuovo database creato!</div>';
+}
+
+function esportaJSON() {
+  if (!db) { alert('Nessun database da esportare.'); return; }
+  const blob = new Blob([JSON.stringify(db, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'reliquie.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+function aggiornaUI() {
+  document.getElementById('btnExport').disabled = !db;
+  aggiornaDropdown();
+  aggiornaHome();
+}
+
+function aggiornaHome() {
+  const el = document.getElementById('homeStatus');
+  if (!db) { el.classList.add('hidden'); return; }
+  el.classList.remove('hidden');
+  document.getElementById('homeStatusContent').innerHTML =
+    `<p>Giocatori: <strong>${db.giocatori.join(', ')}</strong></p>
+     <p>Reliquie: <strong>${db.reliquie.length}</strong></p>
+     <p>Fusioni registrate: <strong>${db.registroFusioni.length}</strong></p>`;
+}
+
+function aggiornaDropdown() {
+  if (!db) return;
+  ['fProp','rfGioc','mrProp','tcGioc','trGioc'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const v = el.value;
+    const isFilt = id.startsWith('f') || id.startsWith('rf');
+    el.innerHTML = isFilt ? '<option value="">Tutti</option>' : '';
+    db.giocatori.forEach(g => { el.innerHTML += `<option value="${g}">${g}</option>`; });
+    if (v && [...el.options].some(o => o.value === v)) el.value = v;
+  });
+}
+
+// ================================================================
+// UTILITÀ EFFETTI
+// ================================================================
+function getEffInfo(id) {
+  return effNormBuff.find(e => e.id === id)
+    || effNotteBuff.find(e => e.id === id)
+    || effNotteDebuff.find(e => e.id === id)
+    || { nome: id, stepMax: 1, descrizioneStep: [id] };
+}
+
+function isDebuff(id) {
+  return effNotteDebuff.some(e => e.id === id);
+}
+
+// ================================================================
+// SEZIONE 2: INVENTARIO
+// ================================================================
+function renderInv() {
+  if (!db) { document.getElementById('invList').innerHTML = '<div class="msg msg-warn">Carica un database dalla sezione Home.</div>'; return; }
+  let rl = [...db.reliquie];
+  const fp = document.getElementById('fProp').value;
+  const fg = document.getElementById('fGrado').value;
+  const fc = document.getElementById('fColore').value;
+  const fgr = document.getElementById('fGrand').value;
+  const ft = document.getElementById('fTipo').value;
+  if (fp) rl = rl.filter(r => r.proprietario === fp);
+  if (fg) rl = rl.filter(r => String(r.grado) === fg);
+  if (fc) rl = rl.filter(r => r.colore === fc);
+  if (fgr) rl = rl.filter(r => r.grandezza === fgr);
+  if (ft) rl = rl.filter(r => r.tipologia === ft);
+  const ord = document.getElementById('fOrd').value;
+  if (ord === 'grado') rl.sort((a, b) => b.grado - a.grado);
+  else if (ord === 'proprietario') rl.sort((a, b) => a.proprietario.localeCompare(b.proprietario));
+  else rl.sort((a, b) => a.nome.localeCompare(b.nome));
+
+  if (!rl.length) { document.getElementById('invList').innerHTML = '<div class="msg msg-info">Nessuna reliquia trovata.</div>'; return; }
+
+  let h = '';
+  rl.forEach(r => {
+    const tipB = r.tipologia === 'notte' ? ' <span class="badge badge-notte">🌙 Notte</span>' : '';
+    const fusB = r.isFusa ? ` <span class="badge badge-fusa">🔗 Fusa (catena: ${r.stadioCartena})</span>` : '';
+    let effH = '<ul class="eff-list">';
+    (r.effetti || []).forEach(ef => {
+      const info = getEffInfo(ef.id);
+      const desc = info.descrizioneStep ? (info.descrizioneStep[ef.step - 1] || info.nome) : info.nome;
+      const dbf = isDebuff(ef.id) ? ' style="color:#ff8888"' : '';
+      effH += `<li${dbf}>${info.nome} — <span class="eff-step">Step ${ef.step}/${info.stepMax}</span> <span style="color:#777;font-size:.8rem">(${desc})</span></li>`;
+    });
+    effH += '</ul>';
+    h += `<div class="card fade-in">
+      <div class="card-header">
+        <div>
+          <strong style="color:#e8c96b;font-size:1.05rem">${r.nome}</strong>
+          <div style="margin-top:.2rem">
+            <span class="color-dot dot-${r.colore}"></span>
+            <span class="badge badge-${r.colore}">${r.colore}</span>
+            <span class="badge badge-g">G${r.grado}</span>
+            <span style="color:#999;font-size:.83rem">${r.grandezza}</span>
+            ${tipB}${fusB}
+          </div>
+          <div style="color:#999;font-size:.83rem;margin-top:.15rem">Proprietario: <strong style="color:#e0e0e0">${r.proprietario}</strong></div>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-sm" onclick="editRel('${r.id}')">✏️</button>
+          <button class="btn btn-sm btn-danger" onclick="delRel('${r.id}')">🗑️</button>
+        </div>
+      </div>
+      <div style="margin-top:.4rem">${effH}</div>
+    </div>`;
+  });
+  document.getElementById('invList').innerHTML = h;
+}
+
+// ================================================================
+// MODALE RELIQUIA (aggiungi/modifica)
+// ================================================================
+function apriModaleNuovaRel() {
+  if (!db) { alert('Carica prima un database.'); return; }
+  isCreazMode = false;
+  document.getElementById('modalRelTitle').textContent = 'Aggiungi Reliquia';
+  document.getElementById('mrId').value = '';
+  document.getElementById('mrMode').value = 'add';
+  document.getElementById('mrNome').value = '';
+  document.getElementById('mrGrado').value = '1';
+  document.getElementById('mrGrado').disabled = false;
+  document.getElementById('mrGrand').value = 'Piccola';
+  document.getElementById('mrGrand').disabled = false;
+  document.getElementById('mrColore').value = 'Rosso';
+  document.getElementById('mrColore').disabled = false;
+  document.getElementById('mrTipo').value = 'normale';
+  document.getElementById('mrTipo').disabled = false;
+  document.getElementById('mrNote').classList.add('hidden');
+  document.getElementById('mrAddEff').classList.remove('hidden');
+  aggiornaDropdown();
+  document.getElementById('mrEff').innerHTML = '';
+  document.getElementById('modalRel').classList.add('open');
+}
+
+function chiudiModalRel() {
+  document.getElementById('modalRel').classList.remove('open');
+  isCreazMode = false;
+}
+
+function aggEffModale() { document.getElementById('mrEff').innerHTML = ''; }
+
+function addEffModale() {
+  const tipo = document.getElementById('mrTipo').value;
+  let pool = tipo === 'normale' ? effNormBuff : [...effNotteBuff, ...effNotteDebuff];
+  if (!pool.length) { alert('Pool effetti vuoto. Verifica i file JSON.'); return; }
+  const c = document.getElementById('mrEff');
+  const i = c.children.length;
+  const d = document.createElement('div');
+  d.style.cssText = 'display:flex;gap:.3rem;align-items:center;margin-bottom:.3rem';
+  let opts = pool.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
+  d.innerHTML = `<select id="me_${i}" style="flex:1">${opts}</select>
+    <input type="number" id="ms_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
+    <button class="btn btn-sm btn-danger" onclick="this.parentElement.remove()">✕</button>`;
+  c.appendChild(d);
+}
+
+function salvaRel() {
+  if (!db) return;
+  const mode = document.getElementById('mrMode').value;
+  const nome = document.getElementById('mrNome').value.trim();
+  const prop = document.getElementById('mrProp').value;
+  if (!nome) { alert('Inserisci un nome.'); return; }
+  if (!prop) { alert('Seleziona un proprietario.'); return; }
+
+  if (mode === 'edit') {
+    // Solo modifica nome e proprietario
+    const r = db.reliquie.find(x => x.id === document.getElementById('mrId').value);
+    if (r) { r.nome = nome; r.proprietario = prop; }
+  } else {
+    const grado = parseInt(document.getElementById('mrGrado').value);
+    const grand = document.getElementById('mrGrand').value;
+    const colore = document.getElementById('mrColore').value;
+    const tipo = document.getElementById('mrTipo').value;
+    // Raccogli effetti
+    const c = document.getElementById('mrEff');
+    const eff = [];
+    for (let i = 0; i < c.children.length; i++) {
+      const sel = document.getElementById('me_' + i);
+      const stp = document.getElementById('ms_' + i);
+      if (sel && stp) {
+        const info = getEffInfo(sel.value);
+        eff.push({ id: sel.value, step: Math.min(parseInt(stp.value) || 1, info.stepMax) });
+      }
+    }
+    if (eff.length > grado) { alert(`Grado ${grado}: massimo ${grado} effetti.`); return; }
+
+    const nuova = {
+      id: crypto.randomUUID(), nome, proprietario: prop, grado, grandezza: grand,
+      colore, tipologia: tipo, effetti: eff, isFusa: false, stadioCartena: 0, storiaCrafting: []
+    };
+    db.reliquie.push(nuova);
+
+    if (isCreazMode) {
+      db.registroToken.push({
+        id: crypto.randomUUID(), data: new Date().toISOString(),
+        tipo: 'creazione_uso', giocatore: prop,
+        descrizione: `Creata reliquia "${nome}" tramite Gettone Creazione`
+      });
+    }
+  }
+  chiudiModalRel();
+  aggiornaUI();
+  renderInv();
+}
+
+function editRel(id) {
+  const r = db.reliquie.find(x => x.id === id);
+  if (!r) return;
+  isCreazMode = false;
+  document.getElementById('modalRelTitle').textContent = 'Modifica Reliquia';
+  document.getElementById('mrId').value = r.id;
+  document.getElementById('mrMode').value = 'edit';
+  document.getElementById('mrNome').value = r.nome;
+  ['mrGrado','mrGrand','mrColore','mrTipo'].forEach(x => {
+    document.getElementById(x).disabled = true;
+  });
+  document.getElementById('mrGrado').value = r.grado;
+  document.getElementById('mrGrand').value = r.grandezza;
+  document.getElementById('mrColore').value = r.colore;
+  document.getElementById('mrTipo').value = r.tipologia;
+  document.getElementById('mrNote').classList.add('hidden');
+  document.getElementById('mrAddEff').classList.add('hidden');
+  aggiornaDropdown();
+  document.getElementById('mrProp').value = r.proprietario;
+  document.getElementById('mrEff').innerHTML = '<p style="color:#888;font-size:.83rem">In modifica puoi cambiare solo nome e proprietario.</p>';
+  document.getElementById('modalRel').classList.add('open');
+}
+
+function delRel(id) {
+  if (!confirm('Eliminare questa reliquia? L\'azione è irreversibile.')) return;
+  db.reliquie = db.reliquie.filter(r => r.id !== id);
+  aggiornaUI(); renderInv();
+}
+
+// ================================================================
+// SEZIONE 3 & 4: WIZARD FUSIONE
+// ================================================================
+const STEP_LABELS = ['Selezione', 'Colore', 'Effetti', 'Degradazione', 'Conferma'];
+
+function initWiz(k) {
+  if (!db) { document.getElementById(k === 'n' ? 'wizN' : 'wizT').innerHTML = '<div class="msg msg-warn">Carica un database.</div>'; return; }
+  wizS[k] = { step: 0, mat: [], prop: '', col: '', eff: [], pool: [], buffPool: [], debPool: [],
+    nBuff: 0, nDeb: 0, bExt: 0, dExt: 0, deg: null, grado: 0, gradoOrig: 0, grand: '',
+    catena: 0, upgSet: new Set(), nome: '' };
+  renderWiz(k);
+}
+
+function renderWiz(k) {
+  const s = wizS[k]; if (!s) return;
+  const barEl = document.getElementById(k === 'n' ? 'wizBarN' : 'wizBarT');
+  const cEl = document.getElementById(k === 'n' ? 'wizN' : 'wizT');
+  let bh = '';
+  STEP_LABELS.forEach((l, i) => {
+    let cls = i === s.step ? 'cur' : i < s.step ? 'done' : '';
+    bh += `<div class="wiz-step ${cls}">${i + 1}. ${l}</div>`;
+  });
+  barEl.innerHTML = bh;
+  switch (s.step) {
+    case 0: wizS1(k, cEl); break;
+    case 1: wizS2(k, cEl); break;
+    case 2: wizS3(k, cEl); break;
+    case 3: wizS4(k, cEl); break;
+    case 4: wizS5(k, cEl); break;
+  }
+}
+
+// STEP 1: Selezione materiali
+function wizS1(k, el) {
+  const s = wizS[k];
+  const tipo = k === 'n' ? 'normale' : 'notte';
+  const rl = db.reliquie.filter(r => r.tipologia === tipo && r.grado >= 2);
+  let h = '<h3>Step 1: Selezione Materiali</h3>';
+  h += '<p style="color:#999;margin-bottom:.5rem">Seleziona almeno 2 reliquie dello stesso grado e grandezza (G2+ soltanto).</p>';
+  if (rl.length < 2) { h += '<div class="msg msg-warn">Non ci sono abbastanza reliquie idonee.</div>'; el.innerHTML = h; return; }
+  h += '<div class="form-group"><label>Proprietario risultato</label><select id="wzPr_' + k + '">';
+  db.giocatori.forEach(g => h += `<option value="${g}">${g}</option>`);
+  h += '</select></div>';
+  rl.forEach(r => {
+    const ck = s.mat.includes(r.id) ? 'checked' : '';
+    const cl = s.mat.includes(r.id) ? 'on' : '';
+    h += `<label class="rsel ${cl}"><input type="checkbox" value="${r.id}" ${ck} onchange="togMat('${k}','${r.id}',this.checked)">
+      <span class="color-dot dot-${r.colore}"></span><strong>${r.nome}</strong> — G${r.grado} ${r.grandezza} ${r.colore} (${r.proprietario})${r.isFusa ? ' 🔗' : ''}${r.tipologia === 'notte' ? ' 🌙' : ''}</label>`;
+  });
+  h += `<div id="wzVal_${k}" style="margin-top:.4rem"></div>`;
+  h += `<div class="mt1"><button class="btn btn-primary" onclick="wzS1Ok('${k}')">Avanti →</button></div>`;
+  el.innerHTML = h;
+  valS1(k);
+}
+
+function togMat(k, id, on) {
+  const s = wizS[k];
+  if (on) { if (!s.mat.includes(id)) s.mat.push(id); } else { s.mat = s.mat.filter(x => x !== id); }
+  document.querySelectorAll(`#sec-fus-${k} .rsel`).forEach(el => {
+    const cb = el.querySelector('input[type=checkbox]');
+    el.classList.toggle('on', cb.checked);
+  });
+  valS1(k);
+}
+
+function valS1(k) {
+  const s = wizS[k]; const d = document.getElementById('wzVal_' + k); if (!d) return;
+  if (s.mat.length < 2) { d.innerHTML = '<div class="msg msg-warn">Seleziona almeno 2 reliquie.</div>'; return; }
+  const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
+  const gr = [...new Set(rl.map(r => r.grado))];
+  const gn = [...new Set(rl.map(r => r.grandezza))];
+  let err = [];
+  if (gr.length > 1) err.push('Stesso grado richiesto.');
+  if (gn.length > 1) err.push('Stessa grandezza richiesta.');
+  if (rl.some(r => r.grado < 2)) err.push('Grado 1 non ammesso.');
+  d.innerHTML = err.length
+    ? err.map(e => `<div class="msg msg-err">❌ ${e}</div>`).join('')
+    : `<div class="msg msg-ok">✅ ${rl.length} reliquie — G${gr[0]} ${gn[0]}</div>`;
+}
+
+function wzS1Ok(k) {
+  const s = wizS[k];
+  if (s.mat.length < 2) { alert('Seleziona almeno 2 reliquie.'); return; }
+  const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
+  const gr = [...new Set(rl.map(r => r.grado))];
+  const gn = [...new Set(rl.map(r => r.grandezza))];
+  if (gr.length > 1 || gn.length > 1 || rl.some(r => r.grado < 2)) { alert('Vincoli non rispettati.'); return; }
+  s.prop = document.getElementById('wzPr_' + k).value;
+  s.grado = gr[0]; s.gradoOrig = gr[0]; s.grand = gn[0];
+
+  // Costruisci pool
+  if (k === 'n') {
+    s.pool = [];
+    rl.forEach(r => (r.effetti || []).forEach(e => s.pool.push({ ...e })));
+  } else {
+    s.buffPool = []; s.debPool = [];
+    rl.forEach(r => (r.effetti || []).forEach(e => {
+      if (isDebuff(e.id)) s.debPool.push({ ...e }); else s.buffPool.push({ ...e });
+    }));
+    const tot = s.buffPool.length + s.debPool.length;
+    if (tot > 0) {
+      s.nBuff = Math.max(1, Math.round((s.buffPool.length / tot) * s.grado));
+      s.nDeb = s.grado - s.nBuff;
+      if (s.nDeb < 0) s.nDeb = 0;
+      if (!s.debPool.length) { s.nBuff = s.grado; s.nDeb = 0; }
+      if (!s.buffPool.length) { s.nDeb = s.grado; s.nBuff = 0; }
+    } else { s.nBuff = s.grado; s.nDeb = 0; }
+    s.bExt = 0; s.dExt = 0;
+  }
+
+  // Catena
+  const fuse = rl.filter(r => r.isFusa);
+  s.catena = fuse.length ? Math.max(...fuse.map(r => r.stadioCartena)) + 1 : 0;
+
+  s.eff = []; s.upgSet = new Set(); s.step = 1;
+  renderWiz(k);
+}
+
+// STEP 2: Colore
+function wizS2(k, el) {
+  const s = wizS[k];
+  const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
+  const cc = {}; rl.forEach(r => cc[r.colore] = (cc[r.colore] || 0) + 1);
+  const tot = rl.length;
+  let h = '<h3>Step 2: Sorteggio Colore</h3><p style="color:#999;margin-bottom:.4rem">Probabilità basate sui colori dei materiali.</p>';
+  h += '<div class="prob-bar">';
+  const cols = ['Rosso', 'Blu', 'Giallo', 'Verde'];
+  const bgMap = { Rosso: '#cc3333', Blu: '#3366cc', Giallo: '#ccaa33', Verde: '#33aa55' };
+  cols.forEach(c => {
+    const n = cc[c] || 0;
+    if (n) { const p = ((n / tot) * 100).toFixed(1); h += `<div class="prob-seg" style="width:${p}%;background:${bgMap[c]}">${c} ${p}%</div>`; }
+  });
+  h += '</div>';
+  h += '<table><tr><th>Colore</th><th>Qty</th><th>Prob.</th></tr>';
+  cols.forEach(c => { const n = cc[c] || 0; h += `<tr><td><span class="color-dot dot-${c}"></span>${c}</td><td>${n}</td><td>${((n / tot) * 100).toFixed(1)}%</td></tr>`; });
+  h += '</table>';
+  if (s.col) h += `<div class="msg msg-ok fade-in" style="margin-top:.5rem"><strong style="font-size:1.2rem">🎨 Colore: <span class="color-dot dot-${s.col}"></span> ${s.col}</strong></div>`;
+  h += `<div class="mt1 flex-row">
+    <button class="btn btn-primary" onclick="estraiCol('${k}')">🎲 Estrai colore</button>
+    <button class="btn" onclick="wizS[\'${k}\'].step=0;renderWiz('${k}')">← Indietro</button>
+    <button class="btn btn-primary" onclick="wzS2Ok('${k}')" ${!s.col ? 'disabled' : ''}>Avanti →</button></div>`;
+  el.innerHTML = h;
+}
+
+function estraiCol(k) {
+  const s = wizS[k];
+  const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
+  const pool = rl.map(r => r.colore);
+  s.col = pool[Math.floor(Math.random() * pool.length)];
+  renderWiz(k);
+}
+
+function wzS2Ok(k) { if (!wizS[k].col) return; wizS[k].step = 2; renderWiz(k); }
+
+// STEP 3: Effetti
+function wizS3(k, el) {
+  const s = wizS[k];
+  const slots = s.grado;
+  let h = '<h3>Step 3: Sorteggio Effetti</h3>';
+
+  if (k === 'n') {
+    h += `<p style="color:#999;margin-bottom:.4rem">Slot: ${slots}. Estratti: ${s.eff.length}/${slots}</p>`;
+    // Pool
+    const pc = {}; s.pool.forEach(e => pc[e.id] = (pc[e.id] || 0) + 1);
+    h += '<h4 style="color:#ccc">Pool:</h4><div style="margin-bottom:.5rem">';
+    Object.keys(pc).forEach(id => { const info = getEffInfo(id); h += `<span class="pool-tag">${info.nome} ×${pc[id]}</span>`; });
+    h += '</div>';
+    // Risultato
+    h += '<h4 style="color:#ccc">Effetti risultanti:</h4><ul class="eff-list">';
+    s.eff.forEach(e => {
+      const info = getEffInfo(e.id);
+      h += `<li>${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span>${s.upgSet.has(e.id) ? ' <span class="eff-up">⬆ Potenziato</span>' : ''}</li>`;
+    });
+    h += '</ul>';
+    const done = s.eff.length >= slots;
+    h += `<div class="mt1 flex-row">
+      <button class="btn btn-primary" onclick="estraiEff('${k}')" ${done ? 'disabled' : ''}>🎲 Estrai effetto</button>
+      <button class="btn" onclick="wizS['${k}'].step=1;renderWiz('${k}')">← Indietro</button>
+      <button class="btn btn-primary" onclick="wzS3Ok('${k}')" ${!done ? 'disabled' : ''}>Avanti →</button></div>`;
+  } else {
+    // Notte: buff e debuff separati
+    h += `<p style="color:#999;margin-bottom:.4rem">Slot Buff: ${s.nBuff} | Slot Debuff: ${s.nDeb}</p>`;
+    // Buff pool
+    const bc = {}; s.buffPool.forEach(e => bc[e.id] = (bc[e.id] || 0) + 1);
+    h += '<h4 style="color:#55cc77">Pool Buff:</h4><div style="margin-bottom:.4rem">';
+    Object.keys(bc).forEach(id => { h += `<span class="pool-tag">${getEffInfo(id).nome} ×${bc[id]}</span>`; });
+    h += '</div>';
+    // Debuff pool
+    const dc = {}; s.debPool.forEach(e => dc[e.id] = (dc[e.id] || 0) + 1);
+    h += '<h4 style="color:#ff8888">Pool Debuff:</h4><div style="margin-bottom:.4rem">';
+    Object.keys(dc).forEach(id => { h += `<span class="pool-tag">${getEffInfo(id).nome} ×${dc[id]}</span>`; });
+    h += '</div>';
+    // Risultato
+    h += '<h4 style="color:#ccc">Effetti risultanti:</h4><ul class="eff-list">';
+    s.eff.forEach(e => {
+      const info = getEffInfo(e.id);
+      const db2 = isDebuff(e.id);
+      h += `<li style="color:${db2 ? '#ff8888' : '#88cc88'}">${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span>${s.upgSet.has(e.id) ? ' <span class="eff-up">⬆</span>' : ''} (${db2 ? 'debuff' : 'buff'})</li>`;
+    });
+    h += '</ul>';
+    const bDone = s.bExt >= s.nBuff;
+    const dDone = s.dExt >= s.nDeb;
+    h += `<div class="mt1 flex-row">
+      <button class="btn btn-primary" onclick="estraiEffN('${k}','b')" ${bDone || !s.buffPool.length ? 'disabled' : ''}>🎲 Buff (${s.bExt}/${s.nBuff})</button>
+      <button class="btn btn-danger" onclick="estraiEffN('${k}','d')" ${dDone || !s.debPool.length ? 'disabled' : ''}>🎲 Debuff (${s.dExt}/${s.nDeb})</button>
+      <button class="btn" onclick="wizS['${k}'].step=1;renderWiz('${k}')">← Indietro</button>
+      <button class="btn btn-primary" onclick="wzS3Ok('${k}')" ${!(bDone && dDone) ? 'disabled' : ''}>Avanti →</button></div>`;
+  }
+  el.innerHTML = h;
+}
+
+function estraiEff(k) {
+  const s = wizS[k];
+  if (s.eff.length >= s.grado || !s.pool.length) return;
+  let tries = 200;
+  while (tries-- > 0 && s.pool.length) {
+    const i = Math.floor(Math.random() * s.pool.length);
+    const dr = s.pool[i];
+    const ex = s.eff.find(e => e.id === dr.id);
+    if (ex) {
+      const info = getEffInfo(dr.id);
+      if (s.upgSet.has(dr.id) || ex.step >= info.stepMax) { s.pool.splice(i, 1); continue; }
+      ex.step = Math.min(ex.step + 1, info.stepMax);
+      s.upgSet.add(dr.id);
+      s.pool.splice(i, 1);
+    } else {
+      s.eff.push({ id: dr.id, step: dr.step || 1 });
+      s.pool.splice(i, 1);
+    }
+    break;
+  }
+  renderWiz(k);
+}
+
+function estraiEffN(k, tipo) {
+  const s = wizS[k];
+  const pool = tipo === 'b' ? s.buffPool : s.debPool;
+  const max = tipo === 'b' ? s.nBuff : s.nDeb;
+  const ext = tipo === 'b' ? s.bExt : s.dExt;
+  if (ext >= max || !pool.length) return;
+  let tries = 200;
+  while (tries-- > 0 && pool.length) {
+    const i = Math.floor(Math.random() * pool.length);
+    const dr = pool[i];
+    const ex = s.eff.find(e => e.id === dr.id);
+    if (ex) {
+      const info = getEffInfo(dr.id);
+      if (s.upgSet.has(dr.id) || ex.step >= info.stepMax) { pool.splice(i, 1); continue; }
+      ex.step = Math.min(ex.step + 1, info.stepMax);
+      s.upgSet.add(dr.id);
+      pool.splice(i, 1);
+    } else {
+      s.eff.push({ id: dr.id, step: dr.step || 1 });
+      pool.splice(i, 1);
+    }
+    if (tipo === 'b') s.bExt++; else s.dExt++;
+    break;
+  }
+  renderWiz(k);
+}
+
+function wzS3Ok(k) { wizS[k].step = 3; renderWiz(k); }
+
+// STEP 4: Degradazione
+function wizS4(k, el) {
+  const s = wizS[k];
+  const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
+  const pBase = s.gradoOrig === 2 ? 10 : 20;
+  const fuse = rl.filter(r => r.isFusa);
+  const pFuse = fuse.length * 10;
+  let pCat = 0;
+  fuse.forEach(r => { if (r.stadioCartena >= 4) pCat += (r.stadioCartena - 3) * 10; });
+  const pTot = pBase + pFuse + pCat;
+  const rc = pTot <= 20 ? 'risk-lo' : pTot <= 50 ? 'risk-md' : 'risk-hi';
+
+  let h = '<h3>Step 4: Test di Degradazione</h3><div class="card">';
+  h += `<table><tr><td>Rischio base (G${s.gradoOrig})</td><td>${pBase}%</td></tr>
+    <tr><td>Reliquie fuse come materiale (${fuse.length} × 10%)</td><td>+${pFuse}%</td></tr>
+    <tr><td>Bonus catena (Art. 11)</td><td>+${pCat}%</td></tr>
+    <tr style="font-weight:700;font-size:1.1rem"><td>RISCHIO TOTALE</td><td class="${rc}">${pTot}%</td></tr></table>`;
+  h += `<p style="color:#999;margin-top:.3rem">Stadio catena risultante: <strong>${s.catena}</strong></p></div>`;
+  h += `<div id="wzDR_${k}"></div>`;
+  h += `<div class="mt1 flex-row">
+    <button class="btn btn-danger" onclick="eseguiDeg('${k}',${pTot})" id="bdeg_${k}">⚡ Esegui test</button>
+    <button class="btn" onclick="wizS['${k}'].step=2;renderWiz('${k}')">← Indietro</button>
+    <button class="btn btn-primary" id="bdnx_${k}" onclick="wzS4Ok('${k}')" disabled>Avanti →</button></div>`;
+  el.innerHTML = h;
+}
+
+function eseguiDeg(k, pTot) {
+  const s = wizS[k];
+  const roll = Math.random() * 100;
+  s.deg = roll < pTot;
+  const d = document.getElementById('wzDR_' + k);
+  if (s.deg) {
+    let msg = '💀 <strong>DEGRADAZIONE!</strong><br>';
+    if (s.eff.length > 0) {
+      const ri = Math.floor(Math.random() * s.eff.length);
+      const rm = s.eff.splice(ri, 1)[0];
+      msg += `Effetto perso: <strong>${getEffInfo(rm.id).nome}</strong> (Step ${rm.step})<br>`;
+    }
+    if (s.grado > 1) {
+      s.grado--;
+      msg += `Grado: G${s.grado + 1} → G${s.grado}<br>`;
+      while (s.eff.length > s.grado) {
+        const ri2 = Math.floor(Math.random() * s.eff.length);
+        const rm2 = s.eff.splice(ri2, 1)[0];
+        msg += `Effetto aggiuntivo perso: <strong>${getEffInfo(rm2.id).nome}</strong><br>`;
+      }
+    }
+    d.innerHTML = `<div class="msg msg-err fade-in" style="margin-top:.5rem">${msg}<small>Tiro: ${roll.toFixed(2)} vs soglia ${pTot}%</small></div>`;
+  } else {
+    d.innerHTML = `<div class="msg msg-ok fade-in" style="margin-top:.5rem">✨ <strong>Nessuna degradazione!</strong> La reliquia è intatta.<br><small>Tiro: ${roll.toFixed(2)} vs soglia ${pTot}%</small></div>`;
+  }
+  document.getElementById('bdeg_' + k).disabled = true;
+  document.getElementById('bdnx_' + k).disabled = false;
+}
+
+function wzS4Ok(k) {
+  const s = wizS[k];
+  s.nome = `Reliquia Fusa ${s.col} G${s.grado}`;
+  s.step = 4; renderWiz(k);
+}
+
+// STEP 5: Conferma
+function wizS5(k, el) {
+  const s = wizS[k];
+  let h = '<h3>Step 5: Riepilogo e Conferma</h3><div class="card">';
+  h += `<div class="form-group"><label>Nome reliquia (modificabile)</label><input type="text" id="wzNm_${k}" value="${s.nome}"></div>`;
+  h += `<p><span class="color-dot dot-${s.col}"></span> <strong>${s.col}</strong> — G${s.grado} — ${s.grand} — ${k === 't' ? '🌙 Notte' : 'Normale'}</p>`;
+  h += `<p>Proprietario: <strong>${s.prop}</strong> | Catena: <strong>${s.catena}</strong></p>`;
+  if (s.deg) h += '<p style="color:#ff6666">⚠️ Reliquia degradata</p>';
+  h += '<h4 style="color:#ccc;margin-top:.4rem">Effetti finali:</h4><ul class="eff-list">';
+  s.eff.forEach(e => {
+    const info = getEffInfo(e.id);
+    const db2 = isDebuff(e.id);
+    h += `<li${db2 ? ' style="color:#ff8888"' : ''}>${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span></li>`;
+  });
+  h += '</ul></div>';
+  h += '<div class="card"><h4 style="color:#ccc">Testimoni</h4>';
+  db.giocatori.forEach(g => {
+    if (g !== s.prop) h += `<label style="display:block;margin:.2rem 0"><input type="checkbox" class="wzTst_${k}" value="${g}" checked> ${g}</label>`;
+  });
+  h += '</div>';
+  h += `<div class="mt1 flex-row">
+    <button class="btn btn-primary" onclick="confFus('${k}')">✅ Conferma Fusione</button>
+    <button class="btn" onclick="wizS['${k}'].step=3;renderWiz('${k}')">← Indietro</button>
+    <button class="btn btn-danger" onclick="initWiz('${k}')">✕ Annulla</button></div>`;
+  el.innerHTML = h;
+}
+
+function confFus(k) {
+  if (!confirm('Confermi la fusione? Le reliquie materiali verranno rimosse.')) return;
+  const s = wizS[k];
+  const nome = document.getElementById('wzNm_' + k).value.trim() || s.nome;
+  const test = []; document.querySelectorAll('.wzTst_' + k + ':checked').forEach(cb => test.push(cb.value));
+
+  const nId = crypto.randomUUID();
+  const nuova = {
+    id: nId, nome, proprietario: s.prop, grado: s.grado, grandezza: s.grand,
+    colore: s.col, tipologia: k === 'n' ? 'normale' : 'notte',
+    effetti: s.eff.map(e => ({ id: e.id, step: e.step })),
+    isFusa: true, stadioCartena: s.catena, storiaCrafting: []
+  };
+
+  const fId = crypto.randomUUID();
+  const fus = {
+    id: fId, data: new Date().toISOString(), proprietarioRisultato: s.prop,
+    materialiIds: [...s.mat], risultatoId: nId,
+    degradata: s.deg || false, testimoni: test
+  };
+
+  s.mat.forEach(mid => {
+    const r = db.reliquie.find(x => x.id === mid);
+    if (r) r.storiaCrafting.push(fId);
+  });
+
+  db.reliquie = db.reliquie.filter(r => !s.mat.includes(r.id));
+  db.reliquie.push(nuova);
+  db.registroFusioni.push(fus);
+  aggiornaUI();
+  alert('✅ Fusione completata! "' + nome + '" aggiunta all\'inventario.');
+  initWiz(k);
+}
+
+// ================================================================
+// SEZIONE 5: TOKEN
+// ================================================================
+function contaTok(g, tipo) {
+  if (!db) return 0;
+  const ass = db.registroToken.filter(t => t.giocatore === g && t.tipo === tipo).length;
+  const uso = db.registroToken.filter(t => t.giocatore === g && t.tipo === tipo + '_uso').length;
+  return ass - uso;
+}
+
+function renderTok() {
+  if (!db) return;
+  aggiornaDropdown();
+  let h = '<div class="tok-grid">';
+  db.giocatori.forEach(g => {
+    h += `<div class="card tok-card"><h4>${g}</h4>
+      <p>🎨 Cromatici: <span class="tok-num">${contaTok(g, 'cromatico')}</span></p>
+      <p>✨ Creazione: <span class="tok-num">${contaTok(g, 'creazione')}</span></p></div>`;
+  });
+  h += '</div>';
+  document.getElementById('tokDash').innerHTML = h;
+  aggiornaRelTok();
+  // Storico
+  let sh = '<table><tr><th>Data</th><th>Tipo</th><th>Giocatore</th><th>Descrizione</th></tr>';
+  (db.registroToken || []).slice().reverse().forEach(t => {
+    sh += `<tr><td>${new Date(t.data).toLocaleString('it-IT')}</td><td>${t.tipo}</td><td>${t.giocatore}</td><td>${t.descrizione}</td></tr>`;
+  });
+  sh += '</table>';
+  document.getElementById('tokHist').innerHTML = sh;
+}
+
+function aggiornaRelTok() {
+  const sel = document.getElementById('tcRel');
+  const g = document.getElementById('tcGioc').value;
+  sel.innerHTML = '<option value="">-- Seleziona --</option>';
+  if (g && db) db.reliquie.filter(r => r.proprietario === g).forEach(r => {
+    sel.innerHTML += `<option value="${r.id}">${r.nome} (${r.colore})</option>`;
+  });
+}
+
+function calcolaTC() {
+  const p = parseInt(document.getElementById('tcPunti').value) || 0;
+  document.getElementById('tcCalcR').textContent = `= ${Math.floor(p / 1000)} gettoni`;
+}
+
+function assegnaTCrom() {
+  if (!db) return;
+  const g = document.getElementById('tcGioc').value;
+  if (!g) { alert('Seleziona giocatore.'); return; }
+  db.registroToken.push({ id: crypto.randomUUID(), data: new Date().toISOString(), tipo: 'cromatico', giocatore: g, descrizione: 'Gettone cromatico assegnato' });
+  renderTok();
+}
+
+function usaTCrom() {
+  if (!db) return;
+  const g = document.getElementById('tcGioc').value;
+  const rid = document.getElementById('tcRel').value;
+  const nc = document.getElementById('tcCol').value;
+  if (!g || !rid) { alert('Seleziona giocatore e reliquia.'); return; }
+  if (contaTok(g, 'cromatico') <= 0) { alert('Nessun gettone disponibile.'); return; }
+  const r = db.reliquie.find(x => x.id === rid);
+  if (!r) { alert('Reliquia non trovata.'); return; }
+  if (r.colore === nc) { alert('Stesso colore già presente.'); return; }
+  if (!confirm(`Cambiare colore di "${r.nome}" da ${r.colore} a ${nc}?`)) return;
+  const vc = r.colore; r.colore = nc;
+  db.registroToken.push({ id: crypto.randomUUID(), data: new Date().toISOString(), tipo: 'cromatico_uso', giocatore: g, descrizione: `Colore "${r.nome}": ${vc} → ${nc}` });
+  document.getElementById('tcMsg').innerHTML = '<div class="msg msg-ok fade-in">✅ Colore aggiornato!</div>';
+  renderTok();
+}
+
+function assegnaTCreaz() {
+  if (!db) return;
+  const g = document.getElementById('trGioc').value;
+  const p = document.getElementById('trProf').value.trim();
+  if (!g) { alert('Seleziona giocatore.'); return; }
+  if (!p) { alert('Inserisci profondità.'); return; }
+  db.registroToken.push({ id: crypto.randomUUID(), data: new Date().toISOString(), tipo: 'creazione', giocatore: g, descrizione: `Gettone creazione: ${p}` });
+  document.getElementById('trMsg').innerHTML = '<div class="msg msg-ok fade-in">✅ Gettone assegnato!</div>';
+  renderTok();
+}
+
+function usaTCreaz() {
+  if (!db) return;
+  const g = document.getElementById('trGioc').value;
+  if (!g) { alert('Seleziona giocatore.'); return; }
+  if (contaTok(g, 'creazione') <= 0) { alert('Nessun gettone creazione disponibile.'); return; }
+  isCreazMode = true;
+  document.getElementById('modalRelTitle').textContent = 'Crea Reliquia (Gettone Creazione)';
+  document.getElementById('mrId').value = '';
+  document.getElementById('mrMode').value = 'add';
+  document.getElementById('mrNome').value = '';
+  ['mrGrado', 'mrGrand', 'mrColore', 'mrTipo'].forEach(x => document.getElementById(x).disabled = false);
+  document.getElementById('mrGrado').value = '1';
+  document.getElementById('mrGrand').value = 'Piccola';
+  document.getElementById('mrColore').value = 'Rosso';
+  document.getElementById('mrTipo').value = 'normale';
+  document.getElementById('mrNote').classList.remove('hidden');
+  document.getElementById('mrAddEff').classList.remove('hidden');
+  aggiornaDropdown();
+  document.getElementById('mrProp').value = g;
+  document.getElementById('mrEff').innerHTML = '';
+  document.getElementById('modalRel').classList.add('open');
+}
+
+// ================================================================
+// SEZIONE 6: REGISTRO
+// ================================================================
+function renderReg() {
+  if (!db) return;
+  aggiornaDropdown();
+  let fl = [...(db.registroFusioni || [])];
+  const fg = document.getElementById('rfGioc').value;
+  const fd = document.getElementById('rfDeg').value;
+  if (fg) fl = fl.filter(f => f.proprietarioRisultato === fg);
+  if (fd === 'si') fl = fl.filter(f => f.degradata);
+  else if (fd === 'no') fl = fl.filter(f => !f.degradata);
+  fl.sort((a, b) => new Date(b.data) - new Date(a.data));
+
+  if (!fl.length) { document.getElementById('regTab').innerHTML = '<div class="msg msg-info">Nessuna fusione registrata.</div>'; return; }
+  let h = '<table><tr><th>Data</th><th>Proprietario</th><th>Materiali</th><th>Risultato</th><th>Degr.</th><th>Testimoni</th></tr>';
+  fl.forEach(f => {
+    const mN = f.materialiIds.map(id => { const r = db.reliquie.find(x => x.id === id); return r ? r.nome : id.slice(0, 8) + '…'; }).join(', ');
+    const rR = db.reliquie.find(x => x.id === f.risultatoId);
+    h += `<tr><td>${new Date(f.data).toLocaleString('it-IT')}</td><td>${f.proprietarioRisultato}</td>
+      <td title="${mN}">${mN}</td><td>${rR ? rR.nome : f.risultatoId.slice(0, 8) + '…'}</td>
+      <td>${f.degradata ? '⚠️' : '✅'}</td><td>${(f.testimoni || []).join(', ')}</td></tr>`;
+  });
+  h += '</table>';
+  document.getElementById('regTab').innerHTML = h;
+}
+
+function esportaCSV() {
+  if (!db || !db.registroFusioni.length) { alert('Nessun dato.'); return; }
+  let csv = 'Data,Proprietario,Materiali,Risultato,Degradata,Testimoni\n';
+  db.registroFusioni.forEach(f => {
+    csv += `"${f.data}","${f.proprietarioRisultato}","${f.materialiIds.join(';')}","${f.risultatoId}","${f.degradata}","${(f.testimoni || []).join(';')}"\n`;
+  });
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'registro_fusioni.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ================================================================
+// SEZIONE 7: IMPOSTAZIONI
+// ================================================================
+function renderSet() {
+  if (!db) return;
+  let h = '';
+  db.giocatori.forEach((g, i) => {
+    h += `<div class="form-group"><label>Giocatore ${i + 1}</label><input type="text" id="sg_${i}" value="${g}"></div>`;
+  });
+  document.getElementById('setGioc').innerHTML = h;
+}
+
+function salvaGiocatori() {
+  if (!db) return;
+  if (!confirm('⚠️ Aggiornare i nomi in tutto il database?')) return;
+  const nuovi = [];
+  for (let i = 0; i < db.giocatori.length; i++) {
+    const v = document.getElementById('sg_' + i).value.trim();
+    if (!v) { alert('Tutti i nomi sono obbligatori.'); return; }
+    nuovi.push(v);
+  }
+  db.giocatori.forEach((old, i) => {
+    const nw = nuovi[i];
+    if (old !== nw) {
+      db.reliquie.forEach(r => { if (r.proprietario === old) r.proprietario = nw; });
+      db.registroFusioni.forEach(f => {
+        if (f.proprietarioRisultato === old) f.proprietarioRisultato = nw;
+        f.testimoni = (f.testimoni || []).map(t => t === old ? nw : t);
+      });
+      db.registroToken.forEach(t => { if (t.giocatore === old) t.giocatore = nw; });
+    }
+  });
+  db.giocatori = nuovi;
+  aggiornaUI();
+  alert('✅ Nomi aggiornati!');
+}
+
+function resetDB() {
+  if (!confirm('⚠️ Resettare completamente il database?')) return;
+  if (!confirm('⚠️⚠️ ULTIMA CONFERMA: tutti i dati verranno eliminati. Procedere?')) return;
+  db = null;
+  aggiornaUI();
+  document.getElementById('homeMsg').innerHTML = '<div class="msg msg-warn">Database resettato.</div>';
+}
+</script>
+</body>
+</html>
