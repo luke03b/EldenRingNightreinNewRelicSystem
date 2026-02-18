@@ -208,9 +208,8 @@ tr:hover{background:#1e1e1e}
   <button class="btn btn-primary mb1" onclick="apriModaleNuovaRel()">+ Aggiungi Reliquia</button>
   <div class="filters">
     <select id="fProp" onchange="renderInv()"><option value="">Tutti i proprietari</option></select>
-    <select id="fGrado" onchange="renderInv()"><option value="">Tutti i gradi</option><option value="1">G1</option><option value="2">G2</option><option value="3">G3</option></select>
+    <select id="fGrado" onchange="renderInv()"><option value="">Tutti i gradi/grandezze</option><option value="1">G1 — Piccola</option><option value="2">G2 — Media</option><option value="3">G3 — Grande</option></select>
     <select id="fColore" onchange="renderInv()"><option value="">Tutti i colori</option><option value="Rosso">Rosso</option><option value="Blu">Blu</option><option value="Giallo">Giallo</option><option value="Verde">Verde</option></select>
-    <select id="fGrand" onchange="renderInv()"><option value="">Tutte le grandezze</option><option value="Piccola">Piccola</option><option value="Media">Media</option><option value="Grande">Grande</option></select>
     <select id="fTipo" onchange="renderInv()"><option value="">Tutte le tipologie</option><option value="normale">Normale</option><option value="notte">Notte</option></select>
     <select id="fOrd" onchange="renderInv()"><option value="nome">Per nome</option><option value="grado">Per grado</option><option value="proprietario">Per proprietario</option></select>
   </div>
@@ -312,8 +311,8 @@ tr:hover{background:#1e1e1e}
     <input type="hidden" id="mrMode" value="add">
     <div class="form-group"><label>Nome</label><input type="text" id="mrNome" placeholder="Nome della reliquia"></div>
     <div class="form-group"><label>Proprietario</label><select id="mrProp"></select></div>
-    <div class="form-group"><label>Grado</label><select id="mrGrado"><option value="1">Grado 1 (1 effetto)</option><option value="2">Grado 2 (2 effetti)</option><option value="3">Grado 3 (3 effetti)</option></select></div>
-    <div class="form-group"><label>Grandezza</label><select id="mrGrand"><option>Piccola</option><option>Media</option><option>Grande</option></select></div>
+    <div class="form-group"><label>Grado / Grandezza</label><select id="mrGrado" onchange="syncGrandezzaDaGrado();aggEffModale()"><option value="1">Grado 1 — Piccola (1 slot)</option><option value="2">Grado 2 — Media (2 slot)</option><option value="3">Grado 3 — Grande (3 slot)</option></select></div>
+    <input type="hidden" id="mrGrand" value="Piccola">
     <div class="form-group"><label>Colore</label><select id="mrColore"><option>Rosso</option><option>Blu</option><option>Giallo</option><option>Verde</option></select></div>
     <div class="form-group"><label>Tipologia</label><select id="mrTipo" onchange="aggEffModale()"><option value="normale">Normale</option><option value="notte">Notte</option></select></div>
     <div class="form-group"><label>Effetti</label><div id="mrEff"></div>
@@ -471,12 +470,10 @@ function renderInv() {
   const fp = document.getElementById('fProp').value;
   const fg = document.getElementById('fGrado').value;
   const fc = document.getElementById('fColore').value;
-  const fgr = document.getElementById('fGrand').value;
   const ft = document.getElementById('fTipo').value;
   if (fp) rl = rl.filter(r => r.proprietario === fp);
   if (fg) rl = rl.filter(r => String(r.grado) === fg);
   if (fc) rl = rl.filter(r => r.colore === fc);
-  if (fgr) rl = rl.filter(r => r.grandezza === fgr);
   if (ft) rl = rl.filter(r => r.tipologia === ft);
   const ord = document.getElementById('fOrd').value;
   if (ord === 'grado') rl.sort((a, b) => b.grado - a.grado);
@@ -490,12 +487,34 @@ function renderInv() {
     const tipB = r.tipologia === 'notte' ? ' <span class="badge badge-notte">🌙 Notte</span>' : '';
     const fusB = r.isFusa ? ` <span class="badge badge-fusa">🔗 Fusa (catena: ${r.stadioCartena})</span>` : '';
     let effH = '<ul class="eff-list">';
-    (r.effetti || []).forEach(ef => {
-      const info = getEffInfo(ef.id);
-      const desc = info.descrizioneStep ? (info.descrizioneStep[ef.step - 1] || info.nome) : info.nome;
-      const dbf = isDebuff(ef.id) ? ' style="color:#ff8888"' : '';
-      effH += `<li${dbf}>${info.nome} — <span class="eff-step">Step ${ef.step}/${info.stepMax}</span> <span style="color:#777;font-size:.8rem">(${desc})</span></li>`;
-    });
+    if (r.tipologia === 'notte') {
+      (r.effetti || []).forEach((slot, idx) => {
+        if (slot.buff && slot.debuff) {
+          const bInfo = getEffInfo(slot.buff.id);
+          const dInfo = getEffInfo(slot.debuff.id);
+          const bDesc = bInfo.descrizioneStep ? (bInfo.descrizioneStep[slot.buff.step - 1] || bInfo.nome) : bInfo.nome;
+          const dDesc = dInfo.descrizioneStep ? (dInfo.descrizioneStep[slot.debuff.step - 1] || dInfo.nome) : dInfo.nome;
+          effH += `<li style="border-left:2px solid #555;padding-left:.4rem;margin-bottom:.3rem">
+            <div style="font-size:.78rem;color:#888">Slot ${idx + 1}</div>
+            <div style="color:#88cc88">↑ ${bInfo.nome} — <span class="eff-step">Step ${slot.buff.step}/${bInfo.stepMax}</span> <span style="color:#777;font-size:.8rem">(${bDesc})</span></div>
+            <div style="color:#ff8888">↓ ${dInfo.nome} — <span class="eff-step">Step ${slot.debuff.step}/${dInfo.stepMax}</span> <span style="color:#777;font-size:.8rem">(${dDesc})</span></div>
+          </li>`;
+        } else {
+          // Legacy flat format fallback
+          const info = getEffInfo(slot.id);
+          const desc = info.descrizioneStep ? (info.descrizioneStep[slot.step - 1] || info.nome) : info.nome;
+          const dbf = isDebuff(slot.id) ? ' style="color:#ff8888"' : '';
+          effH += `<li${dbf}>${info.nome} — <span class="eff-step">Step ${slot.step}/${info.stepMax}</span> <span style="color:#777;font-size:.8rem">(${desc})</span></li>`;
+        }
+      });
+    } else {
+      (r.effetti || []).forEach(ef => {
+        const info = getEffInfo(ef.id);
+        const desc = info.descrizioneStep ? (info.descrizioneStep[ef.step - 1] || info.nome) : info.nome;
+        const dbf = isDebuff(ef.id) ? ' style="color:#ff8888"' : '';
+        effH += `<li${dbf}>${info.nome} — <span class="eff-step">Step ${ef.step}/${info.stepMax}</span> <span style="color:#777;font-size:.8rem">(${desc})</span></li>`;
+      });
+    }
     effH += '</ul>';
     h += `<div class="card fade-in">
       <div class="card-header">
@@ -524,6 +543,14 @@ function renderInv() {
 // ================================================================
 // MODALE RELIQUIA (aggiungi/modifica)
 // ================================================================
+const GRADO_GRANDEZZA = { 1: 'Piccola', 2: 'Media', 3: 'Grande' };
+const GRANDEZZA_GRADO = { 'Piccola': 1, 'Media': 2, 'Grande': 3 };
+
+function syncGrandezzaDaGrado() {
+  const g = parseInt(document.getElementById('mrGrado').value);
+  document.getElementById('mrGrand').value = GRADO_GRANDEZZA[g] || 'Piccola';
+}
+
 function apriModaleNuovaRel() {
   if (!db) { alert('Carica prima un database.'); return; }
   isCreazMode = false;
@@ -533,8 +560,7 @@ function apriModaleNuovaRel() {
   document.getElementById('mrNome').value = '';
   document.getElementById('mrGrado').value = '1';
   document.getElementById('mrGrado').disabled = false;
-  document.getElementById('mrGrand').value = 'Piccola';
-  document.getElementById('mrGrand').disabled = false;
+  syncGrandezzaDaGrado();
   document.getElementById('mrColore').value = 'Rosso';
   document.getElementById('mrColore').disabled = false;
   document.getElementById('mrTipo').value = 'normale';
@@ -551,21 +577,70 @@ function chiudiModalRel() {
   isCreazMode = false;
 }
 
-function aggEffModale() { document.getElementById('mrEff').innerHTML = ''; }
+function aggEffModale() {
+  document.getElementById('mrEff').innerHTML = '';
+  aggiornaAddEffBtn();
+}
+
+function aggiornaAddEffBtn() {
+  const grado = parseInt(document.getElementById('mrGrado').value);
+  const tipo = document.getElementById('mrTipo').value;
+  const c = document.getElementById('mrEff');
+  const btn = document.getElementById('mrAddEff');
+  const count = c.children.length;
+  const max = grado;
+  if (count >= max) {
+    btn.disabled = true;
+    btn.textContent = `Massimo ${max} slot raggiunto`;
+  } else {
+    btn.disabled = false;
+    btn.textContent = tipo === 'notte'
+      ? `+ Aggiungi slot (${count}/${max}) — buff + debuff`
+      : `+ Aggiungi effetto (${count}/${max})`;
+  }
+}
 
 function addEffModale() {
   const tipo = document.getElementById('mrTipo').value;
-  let pool = tipo === 'normale' ? effNormBuff : [...effNotteBuff, ...effNotteDebuff];
-  if (!pool.length) { alert('Pool effetti vuoto. Verifica i file JSON.'); return; }
+  const grado = parseInt(document.getElementById('mrGrado').value);
   const c = document.getElementById('mrEff');
-  const i = c.children.length;
-  const d = document.createElement('div');
-  d.style.cssText = 'display:flex;gap:.3rem;align-items:center;margin-bottom:.3rem';
-  let opts = pool.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
-  d.innerHTML = `<select id="me_${i}" style="flex:1">${opts}</select>
-    <input type="number" id="ms_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
-    <button class="btn btn-sm btn-danger" onclick="this.parentElement.remove()">✕</button>`;
-  c.appendChild(d);
+  if (c.children.length >= grado) { alert(`Massimo ${grado} slot per grado ${grado}.`); return; }
+
+  if (tipo === 'notte') {
+    // Night relic: each slot has a buff + debuff pair
+    if (!effNotteBuff.length || !effNotteDebuff.length) { alert('Pool effetti notte vuoto. Verifica i file JSON.'); return; }
+    const i = c.children.length;
+    const d = document.createElement('div');
+    d.style.cssText = 'border:1px solid #333;border-radius:4px;padding:.4rem;margin-bottom:.4rem;background:#111';
+    let buffOpts = effNotteBuff.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
+    let debOpts = effNotteDebuff.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
+    d.innerHTML = `<div style="font-size:.8rem;color:#888;margin-bottom:.2rem">Slot ${i + 1}</div>
+      <div style="display:flex;gap:.3rem;align-items:center;margin-bottom:.2rem">
+        <span style="color:#55cc77;font-size:.8rem;width:45px">Buff:</span>
+        <select id="meb_${i}" style="flex:1">${buffOpts}</select>
+        <input type="number" id="msb_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
+      </div>
+      <div style="display:flex;gap:.3rem;align-items:center">
+        <span style="color:#ff8888;font-size:.8rem;width:45px">Debuff:</span>
+        <select id="med_${i}" style="flex:1">${debOpts}</select>
+        <input type="number" id="msd_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
+      </div>
+      <button class="btn btn-sm btn-danger" style="margin-top:.3rem" onclick="this.parentElement.remove();aggiornaAddEffBtn()">✕ Rimuovi slot</button>`;
+    c.appendChild(d);
+  } else {
+    // Normal relic: single buff effect
+    let pool = effNormBuff;
+    if (!pool.length) { alert('Pool effetti vuoto. Verifica i file JSON.'); return; }
+    const i = c.children.length;
+    const d = document.createElement('div');
+    d.style.cssText = 'display:flex;gap:.3rem;align-items:center;margin-bottom:.3rem';
+    let opts = pool.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
+    d.innerHTML = `<select id="me_${i}" style="flex:1">${opts}</select>
+      <input type="number" id="ms_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
+      <button class="btn btn-sm btn-danger" onclick="this.parentElement.remove();aggiornaAddEffBtn()">✕</button>`;
+    c.appendChild(d);
+  }
+  aggiornaAddEffBtn();
 }
 
 function salvaRel() {
@@ -582,21 +657,38 @@ function salvaRel() {
     if (r) { r.nome = nome; r.proprietario = prop; }
   } else {
     const grado = parseInt(document.getElementById('mrGrado').value);
-    const grand = document.getElementById('mrGrand').value;
+    const grand = GRADO_GRANDEZZA[grado];
     const colore = document.getElementById('mrColore').value;
     const tipo = document.getElementById('mrTipo').value;
     // Raccogli effetti
     const c = document.getElementById('mrEff');
     const eff = [];
-    for (let i = 0; i < c.children.length; i++) {
-      const sel = document.getElementById('me_' + i);
-      const stp = document.getElementById('ms_' + i);
-      if (sel && stp) {
-        const info = getEffInfo(sel.value);
-        eff.push({ id: sel.value, step: Math.min(parseInt(stp.value) || 1, info.stepMax) });
+    if (tipo === 'notte') {
+      for (let i = 0; i < c.children.length; i++) {
+        const selB = document.getElementById('meb_' + i);
+        const stpB = document.getElementById('msb_' + i);
+        const selD = document.getElementById('med_' + i);
+        const stpD = document.getElementById('msd_' + i);
+        if (selB && stpB && selD && stpD) {
+          const infoB = getEffInfo(selB.value);
+          const infoD = getEffInfo(selD.value);
+          eff.push({
+            buff: { id: selB.value, step: Math.min(parseInt(stpB.value) || 1, infoB.stepMax) },
+            debuff: { id: selD.value, step: Math.min(parseInt(stpD.value) || 1, infoD.stepMax) }
+          });
+        }
+      }
+    } else {
+      for (let i = 0; i < c.children.length; i++) {
+        const sel = document.getElementById('me_' + i);
+        const stp = document.getElementById('ms_' + i);
+        if (sel && stp) {
+          const info = getEffInfo(sel.value);
+          eff.push({ id: sel.value, step: Math.min(parseInt(stp.value) || 1, info.stepMax) });
+        }
       }
     }
-    if (eff.length > grado) { alert(`Grado ${grado}: massimo ${grado} effetti.`); return; }
+    if (eff.length > grado) { alert(`Grado ${grado}: massimo ${grado} slot.`); return; }
 
     const nuova = {
       id: crypto.randomUUID(), nome, proprietario: prop, grado, grandezza: grand,
@@ -625,7 +717,7 @@ function editRel(id) {
   document.getElementById('mrId').value = r.id;
   document.getElementById('mrMode').value = 'edit';
   document.getElementById('mrNome').value = r.nome;
-  ['mrGrado','mrGrand','mrColore','mrTipo'].forEach(x => {
+  ['mrGrado','mrColore','mrTipo'].forEach(x => {
     document.getElementById(x).disabled = true;
   });
   document.getElementById('mrGrado').value = r.grado;
@@ -653,8 +745,8 @@ const STEP_LABELS = ['Selezione', 'Colore', 'Effetti', 'Degradazione', 'Conferma
 
 function initWiz(k) {
   if (!db) { document.getElementById(k === 'n' ? 'wizN' : 'wizT').innerHTML = '<div class="msg msg-warn">Carica un database.</div>'; return; }
-  wizS[k] = { step: 0, mat: [], prop: '', col: '', eff: [], pool: [], buffPool: [], debPool: [],
-    nBuff: 0, nDeb: 0, bExt: 0, dExt: 0, deg: null, grado: 0, gradoOrig: 0, grand: '',
+  wizS[k] = { step: 0, mat: [], prop: '', col: '', eff: [], pool: [], slotPool: [],
+    slotExt: 0, deg: null, grado: 0, gradoOrig: 0, grand: '',
     catena: 0, upgSet: new Set(), nome: '' };
   renderWiz(k);
 }
@@ -684,7 +776,7 @@ function wizS1(k, el) {
   const tipo = k === 'n' ? 'normale' : 'notte';
   const rl = db.reliquie.filter(r => r.tipologia === tipo && r.grado >= 2);
   let h = '<h3>Step 1: Selezione Materiali</h3>';
-  h += '<p style="color:#999;margin-bottom:.5rem">Seleziona almeno 2 reliquie dello stesso grado e grandezza (G2+ soltanto).</p>';
+  h += '<p style="color:#999;margin-bottom:.5rem">Seleziona almeno 2 reliquie dello stesso grado/grandezza (G2+ soltanto).</p>';
   if (rl.length < 2) { h += '<div class="msg msg-warn">Non ci sono abbastanza reliquie idonee.</div>'; el.innerHTML = h; return; }
   h += '<div class="form-group"><label>Proprietario risultato</label><select id="wzPr_' + k + '">';
   db.giocatori.forEach(g => h += `<option value="${g}">${g}</option>`);
@@ -716,14 +808,12 @@ function valS1(k) {
   if (s.mat.length < 2) { d.innerHTML = '<div class="msg msg-warn">Seleziona almeno 2 reliquie.</div>'; return; }
   const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
   const gr = [...new Set(rl.map(r => r.grado))];
-  const gn = [...new Set(rl.map(r => r.grandezza))];
   let err = [];
-  if (gr.length > 1) err.push('Stesso grado richiesto.');
-  if (gn.length > 1) err.push('Stessa grandezza richiesta.');
+  if (gr.length > 1) err.push('Stesso grado/grandezza richiesto.');
   if (rl.some(r => r.grado < 2)) err.push('Grado 1 non ammesso.');
   d.innerHTML = err.length
     ? err.map(e => `<div class="msg msg-err">❌ ${e}</div>`).join('')
-    : `<div class="msg msg-ok">✅ ${rl.length} reliquie — G${gr[0]} ${gn[0]}</div>`;
+    : `<div class="msg msg-ok">✅ ${rl.length} reliquie — G${gr[0]} ${GRADO_GRANDEZZA[gr[0]]}</div>`;
 }
 
 function wzS1Ok(k) {
@@ -731,29 +821,23 @@ function wzS1Ok(k) {
   if (s.mat.length < 2) { alert('Seleziona almeno 2 reliquie.'); return; }
   const rl = s.mat.map(id => db.reliquie.find(r => r.id === id)).filter(Boolean);
   const gr = [...new Set(rl.map(r => r.grado))];
-  const gn = [...new Set(rl.map(r => r.grandezza))];
-  if (gr.length > 1 || gn.length > 1 || rl.some(r => r.grado < 2)) { alert('Vincoli non rispettati.'); return; }
+  if (gr.length > 1 || rl.some(r => r.grado < 2)) { alert('Vincoli non rispettati.'); return; }
   s.prop = document.getElementById('wzPr_' + k).value;
-  s.grado = gr[0]; s.gradoOrig = gr[0]; s.grand = gn[0];
+  s.grado = gr[0]; s.gradoOrig = gr[0]; s.grand = GRADO_GRANDEZZA[gr[0]];
 
   // Costruisci pool
   if (k === 'n') {
     s.pool = [];
     rl.forEach(r => (r.effetti || []).forEach(e => s.pool.push({ ...e })));
   } else {
-    s.buffPool = []; s.debPool = [];
-    rl.forEach(r => (r.effetti || []).forEach(e => {
-      if (isDebuff(e.id)) s.debPool.push({ ...e }); else s.buffPool.push({ ...e });
+    // Night: pool di slot (coppie buff+debuff)
+    s.slotPool = [];
+    rl.forEach(r => (r.effetti || []).forEach(slot => {
+      if (slot.buff && slot.debuff) {
+        s.slotPool.push({ buff: { ...slot.buff }, debuff: { ...slot.debuff } });
+      }
     }));
-    const tot = s.buffPool.length + s.debPool.length;
-    if (tot > 0) {
-      s.nBuff = Math.max(1, Math.round((s.buffPool.length / tot) * s.grado));
-      s.nDeb = s.grado - s.nBuff;
-      if (s.nDeb < 0) s.nDeb = 0;
-      if (!s.debPool.length) { s.nBuff = s.grado; s.nDeb = 0; }
-      if (!s.buffPool.length) { s.nDeb = s.grado; s.nBuff = 0; }
-    } else { s.nBuff = s.grado; s.nDeb = 0; }
-    s.bExt = 0; s.dExt = 0;
+    s.slotExt = 0;
   }
 
   // Catena
@@ -826,33 +910,34 @@ function wizS3(k, el) {
       <button class="btn" onclick="wizS['${k}'].step=1;renderWiz('${k}')">← Indietro</button>
       <button class="btn btn-primary" onclick="wzS3Ok('${k}')" ${!done ? 'disabled' : ''}>Avanti →</button></div>`;
   } else {
-    // Notte: buff e debuff separati
-    h += `<p style="color:#999;margin-bottom:.4rem">Slot Buff: ${s.nBuff} | Slot Debuff: ${s.nDeb}</p>`;
-    // Buff pool
-    const bc = {}; s.buffPool.forEach(e => bc[e.id] = (bc[e.id] || 0) + 1);
-    h += '<h4 style="color:#55cc77">Pool Buff:</h4><div style="margin-bottom:.4rem">';
-    Object.keys(bc).forEach(id => { h += `<span class="pool-tag">${getEffInfo(id).nome} ×${bc[id]}</span>`; });
-    h += '</div>';
-    // Debuff pool
-    const dc = {}; s.debPool.forEach(e => dc[e.id] = (dc[e.id] || 0) + 1);
-    h += '<h4 style="color:#ff8888">Pool Debuff:</h4><div style="margin-bottom:.4rem">';
-    Object.keys(dc).forEach(id => { h += `<span class="pool-tag">${getEffInfo(id).nome} ×${dc[id]}</span>`; });
+    // Notte: ogni slot ha un buff + debuff accoppiati
+    h += `<p style="color:#999;margin-bottom:.4rem">Slot: ${slots} (ogni slot = 1 buff + 1 debuff). Estratti: ${s.slotExt}/${slots}</p>`;
+    // Pool slot
+    h += '<h4 style="color:#ccc">Pool Slot:</h4><div style="margin-bottom:.4rem">';
+    s.slotPool.forEach((slot, idx) => {
+      const bInfo = getEffInfo(slot.buff.id);
+      const dInfo = getEffInfo(slot.debuff.id);
+      h += `<span class="pool-tag">↑${bInfo.nome} / ↓${dInfo.nome}</span>`;
+    });
+    if (!s.slotPool.length) h += '<span style="color:#888">Pool vuoto</span>';
     h += '</div>';
     // Risultato
-    h += '<h4 style="color:#ccc">Effetti risultanti:</h4><ul class="eff-list">';
-    s.eff.forEach(e => {
-      const info = getEffInfo(e.id);
-      const db2 = isDebuff(e.id);
-      h += `<li style="color:${db2 ? '#ff8888' : '#88cc88'}">${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span>${s.upgSet.has(e.id) ? ' <span class="eff-up">⬆</span>' : ''} (${db2 ? 'debuff' : 'buff'})</li>`;
+    h += '<h4 style="color:#ccc">Slot risultanti:</h4><ul class="eff-list">';
+    s.eff.forEach((slot, idx) => {
+      const bInfo = getEffInfo(slot.buff.id);
+      const dInfo = getEffInfo(slot.debuff.id);
+      h += `<li style="border-left:2px solid #555;padding-left:.4rem;margin-bottom:.3rem">
+        <div style="font-size:.78rem;color:#888">Slot ${idx + 1}</div>
+        <div style="color:#88cc88">↑ ${bInfo.nome} — <span class="eff-step">Step ${slot.buff.step}/${bInfo.stepMax}</span></div>
+        <div style="color:#ff8888">↓ ${dInfo.nome} — <span class="eff-step">Step ${slot.debuff.step}/${dInfo.stepMax}</span></div>
+      </li>`;
     });
     h += '</ul>';
-    const bDone = s.bExt >= s.nBuff;
-    const dDone = s.dExt >= s.nDeb;
+    const done = s.slotExt >= slots;
     h += `<div class="mt1 flex-row">
-      <button class="btn btn-primary" onclick="estraiEffN('${k}','b')" ${bDone || !s.buffPool.length ? 'disabled' : ''}>🎲 Buff (${s.bExt}/${s.nBuff})</button>
-      <button class="btn btn-danger" onclick="estraiEffN('${k}','d')" ${dDone || !s.debPool.length ? 'disabled' : ''}>🎲 Debuff (${s.dExt}/${s.nDeb})</button>
+      <button class="btn btn-primary" onclick="estraiSlotNotte('${k}')" ${done || !s.slotPool.length ? 'disabled' : ''}>🎲 Estrai slot (${s.slotExt}/${slots})</button>
       <button class="btn" onclick="wizS['${k}'].step=1;renderWiz('${k}')">← Indietro</button>
-      <button class="btn btn-primary" onclick="wzS3Ok('${k}')" ${!(bDone && dDone) ? 'disabled' : ''}>Avanti →</button></div>`;
+      <button class="btn btn-primary" onclick="wzS3Ok('${k}')" ${!done ? 'disabled' : ''}>Avanti →</button></div>`;
   }
   el.innerHTML = h;
 }
@@ -880,30 +965,13 @@ function estraiEff(k) {
   renderWiz(k);
 }
 
-function estraiEffN(k, tipo) {
+function estraiSlotNotte(k) {
   const s = wizS[k];
-  const pool = tipo === 'b' ? s.buffPool : s.debPool;
-  const max = tipo === 'b' ? s.nBuff : s.nDeb;
-  const ext = tipo === 'b' ? s.bExt : s.dExt;
-  if (ext >= max || !pool.length) return;
-  let tries = 200;
-  while (tries-- > 0 && pool.length) {
-    const i = Math.floor(Math.random() * pool.length);
-    const dr = pool[i];
-    const ex = s.eff.find(e => e.id === dr.id);
-    if (ex) {
-      const info = getEffInfo(dr.id);
-      if (s.upgSet.has(dr.id) || ex.step >= info.stepMax) { pool.splice(i, 1); continue; }
-      ex.step = Math.min(ex.step + 1, info.stepMax);
-      s.upgSet.add(dr.id);
-      pool.splice(i, 1);
-    } else {
-      s.eff.push({ id: dr.id, step: dr.step || 1 });
-      pool.splice(i, 1);
-    }
-    if (tipo === 'b') s.bExt++; else s.dExt++;
-    break;
-  }
+  if (s.slotExt >= s.grado || !s.slotPool.length) return;
+  const i = Math.floor(Math.random() * s.slotPool.length);
+  const drawn = s.slotPool.splice(i, 1)[0];
+  s.eff.push({ buff: { ...drawn.buff }, debuff: { ...drawn.debuff } });
+  s.slotExt++;
   renderWiz(k);
 }
 
@@ -945,15 +1013,24 @@ function eseguiDeg(k, pTot) {
     if (s.eff.length > 0) {
       const ri = Math.floor(Math.random() * s.eff.length);
       const rm = s.eff.splice(ri, 1)[0];
-      msg += `Effetto perso: <strong>${getEffInfo(rm.id).nome}</strong> (Step ${rm.step})<br>`;
+      if (k === 't' && rm.buff && rm.debuff) {
+        msg += `Slot perso: <strong>↑${getEffInfo(rm.buff.id).nome} / ↓${getEffInfo(rm.debuff.id).nome}</strong><br>`;
+      } else {
+        msg += `Effetto perso: <strong>${getEffInfo(rm.id).nome}</strong> (Step ${rm.step})<br>`;
+      }
     }
     if (s.grado > 1) {
       s.grado--;
-      msg += `Grado: G${s.grado + 1} → G${s.grado}<br>`;
+      s.grand = GRADO_GRANDEZZA[s.grado];
+      msg += `Grado: G${s.grado + 1} → G${s.grado} (${s.grand})<br>`;
       while (s.eff.length > s.grado) {
         const ri2 = Math.floor(Math.random() * s.eff.length);
         const rm2 = s.eff.splice(ri2, 1)[0];
-        msg += `Effetto aggiuntivo perso: <strong>${getEffInfo(rm2.id).nome}</strong><br>`;
+        if (k === 't' && rm2.buff && rm2.debuff) {
+          msg += `Slot aggiuntivo perso: <strong>↑${getEffInfo(rm2.buff.id).nome} / ↓${getEffInfo(rm2.debuff.id).nome}</strong><br>`;
+        } else {
+          msg += `Effetto aggiuntivo perso: <strong>${getEffInfo(rm2.id).nome}</strong><br>`;
+        }
       }
     }
     d.innerHTML = `<div class="msg msg-err fade-in" style="margin-top:.5rem">${msg}<small>Tiro: ${roll.toFixed(2)} vs soglia ${pTot}%</small></div>`;
@@ -979,11 +1056,25 @@ function wizS5(k, el) {
   h += `<p>Proprietario: <strong>${s.prop}</strong> | Catena: <strong>${s.catena}</strong></p>`;
   if (s.deg) h += '<p style="color:#ff6666">⚠️ Reliquia degradata</p>';
   h += '<h4 style="color:#ccc;margin-top:.4rem">Effetti finali:</h4><ul class="eff-list">';
-  s.eff.forEach(e => {
-    const info = getEffInfo(e.id);
-    const db2 = isDebuff(e.id);
-    h += `<li${db2 ? ' style="color:#ff8888"' : ''}>${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span></li>`;
-  });
+  if (k === 't') {
+    s.eff.forEach((slot, idx) => {
+      if (slot.buff && slot.debuff) {
+        const bInfo = getEffInfo(slot.buff.id);
+        const dInfo = getEffInfo(slot.debuff.id);
+        h += `<li style="border-left:2px solid #555;padding-left:.4rem;margin-bottom:.3rem">
+          <div style="font-size:.78rem;color:#888">Slot ${idx + 1}</div>
+          <div style="color:#88cc88">↑ ${bInfo.nome} — <span class="eff-step">Step ${slot.buff.step}/${bInfo.stepMax}</span></div>
+          <div style="color:#ff8888">↓ ${dInfo.nome} — <span class="eff-step">Step ${slot.debuff.step}/${dInfo.stepMax}</span></div>
+        </li>`;
+      }
+    });
+  } else {
+    s.eff.forEach(e => {
+      const info = getEffInfo(e.id);
+      const db2 = isDebuff(e.id);
+      h += `<li${db2 ? ' style="color:#ff8888"' : ''}>${info.nome} — <span class="eff-step">Step ${e.step}/${info.stepMax}</span></li>`;
+    });
+  }
   h += '</ul></div>';
   h += '<div class="card"><h4 style="color:#ccc">Testimoni</h4>';
   db.giocatori.forEach(g => {
@@ -1004,11 +1095,19 @@ function confFus(k) {
   const test = []; document.querySelectorAll('.wzTst_' + k + ':checked').forEach(cb => test.push(cb.value));
 
   const nId = crypto.randomUUID();
+  let effetti;
+  if (k === 't') {
+    effetti = s.eff.map(slot => ({
+      buff: { id: slot.buff.id, step: slot.buff.step },
+      debuff: { id: slot.debuff.id, step: slot.debuff.step }
+    }));
+  } else {
+    effetti = s.eff.map(e => ({ id: e.id, step: e.step }));
+  }
   const nuova = {
     id: nId, nome, proprietario: s.prop, grado: s.grado, grandezza: s.grand,
     colore: s.col, tipologia: k === 'n' ? 'normale' : 'notte',
-    effetti: s.eff.map(e => ({ id: e.id, step: e.step })),
-    isFusa: true, stadioCartena: s.catena, storiaCrafting: []
+    effetti, isFusa: true, stadioCartena: s.catena, storiaCrafting: []
   };
 
   const fId = crypto.randomUUID();
@@ -1122,9 +1221,9 @@ function usaTCreaz() {
   document.getElementById('mrId').value = '';
   document.getElementById('mrMode').value = 'add';
   document.getElementById('mrNome').value = '';
-  ['mrGrado', 'mrGrand', 'mrColore', 'mrTipo'].forEach(x => document.getElementById(x).disabled = false);
+  ['mrGrado', 'mrColore', 'mrTipo'].forEach(x => document.getElementById(x).disabled = false);
   document.getElementById('mrGrado').value = '1';
-  document.getElementById('mrGrand').value = 'Piccola';
+  syncGrandezzaDaGrado();
   document.getElementById('mrColore').value = 'Rosso';
   document.getElementById('mrTipo').value = 'normale';
   document.getElementById('mrNote').classList.remove('hidden');
