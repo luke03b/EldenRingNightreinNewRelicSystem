@@ -32,12 +32,24 @@ export function RelicBrowser({
   const [colorFilter, setColorFilter] = useState<ColorFilterOption>(
     colorFilterOptions[0]
   );
+  const [selectedEffects, setSelectedEffects] = useState<Effect[]>([]);
+
+  const handleEffectSelect = (effect: Effect) => {
+    if (!selectedEffects.some((e) => e.key === effect.key)) {
+      setSelectedEffects([...selectedEffects, effect]);
+    }
+  };
+
+  const handleEffectRemove = (effect: Effect) => {
+    setSelectedEffects(selectedEffects.filter((e) => e.key !== effect.key));
+  };
 
   const matchingRelics = useMemo(() => {
     if (
       !searchTerm.trim() &&
       colorFilter.color === RelicSlotColor.Any &&
-      !filterSell
+      !filterSell &&
+      selectedEffects.length === 0
     ) {
       return currentSlot.relics;
     }
@@ -69,6 +81,21 @@ export function RelicBrowser({
         }
       }
 
+      // Filter by selected effects
+      if (selectedEffects.length > 0) {
+        const relicEffectKeys = effects.flatMap(([effect, debuff]) =>
+          debuff !== undefined
+            ? [effect.key, debuff.key]
+            : [effect.key]
+        );
+        const hasAllSelectedEffects = selectedEffects.every((selectedEffect) =>
+          relicEffectKeys.includes(selectedEffect.key)
+        );
+        if (!hasAllSelectedEffects) {
+          return false;
+        }
+      }
+
       const itemName = getItemName(itemId);
       const effectNames = effects.flatMap(([effect, debuff]) =>
         debuff !== undefined
@@ -89,6 +116,7 @@ export function RelicBrowser({
     colorFilter.type,
     filterSell,
     currentSlot.relics,
+    selectedEffects,
   ]);
 
   const normalRelicsCount = useMemo(() => {
@@ -121,6 +149,9 @@ export function RelicBrowser({
         availableEffects={availableEffects}
         filterSell={filterSell}
         onFilterSellChange={setFilterSell}
+        selectedEffects={selectedEffects}
+        onEffectSelect={handleEffectSelect}
+        onEffectRemove={handleEffectRemove}
       />
 
       <Typography variant="subtitle2" textAlign="center" gutterBottom>
