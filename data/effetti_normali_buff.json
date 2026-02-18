@@ -2,61 +2,81 @@
   {
     "id": "atk_boost",
     "nome": "Aumento Attacco",
+    "nomeEN": "Attack Boost",
     "stepMax": 3,
-    "descrizioneStep": ["Attacco +5%", "Attacco +10%", "Attacco +15%"]
+    "descrizioneStep": ["Attacco +5%", "Attacco +10%", "Attacco +15%"],
+    "descrizioneLiterale": "Aumenta il danno inflitto negli attacchi fisici"
   },
   {
     "id": "def_boost",
     "nome": "Aumento Difesa",
+    "nomeEN": "Defense Boost",
     "stepMax": 3,
-    "descrizioneStep": ["Difesa +5%", "Difesa +10%", "Difesa +15%"]
+    "descrizioneStep": ["Difesa +5%", "Difesa +10%", "Difesa +15%"],
+    "descrizioneLiterale": "Riduce il danno ricevuto aumentando la difesa"
   },
   {
     "id": "hp_regen",
     "nome": "Rigenerazione HP",
+    "nomeEN": "HP Regeneration",
     "stepMax": 2,
-    "descrizioneStep": ["Rigenerazione HP +3/s", "Rigenerazione HP +6/s"]
+    "descrizioneStep": ["Rigenerazione HP +3/s", "Rigenerazione HP +6/s"],
+    "descrizioneLiterale": "Rigenera gradualmente i punti vita nel tempo"
   },
   {
     "id": "mov_speed",
     "nome": "Velocità Movimento",
+    "nomeEN": "Movement Speed",
     "stepMax": 3,
-    "descrizioneStep": ["Velocità +5%", "Velocità +10%", "Velocità +15%"]
+    "descrizioneStep": ["Velocità +5%", "Velocità +10%", "Velocità +15%"],
+    "descrizioneLiterale": "Aumenta la velocità di spostamento del personaggio"
   },
   {
     "id": "magic_res",
     "nome": "Resistenza Magia",
+    "nomeEN": "Magic Resistance",
     "stepMax": 3,
-    "descrizioneStep": ["Resistenza Magia +5%", "Resistenza Magia +10%", "Resistenza Magia +15%"]
+    "descrizioneStep": ["Resistenza Magia +5%", "Resistenza Magia +10%", "Resistenza Magia +15%"],
+    "descrizioneLiterale": "Riduce il danno da incantesimi e attacchi magici"
   },
   {
     "id": "stamina_boost",
     "nome": "Aumento Stamina",
+    "nomeEN": "Stamina Boost",
     "stepMax": 2,
-    "descrizioneStep": ["Stamina +10%", "Stamina +20%"]
+    "descrizioneStep": ["Stamina +10%", "Stamina +20%"],
+    "descrizioneLiterale": "Aumenta la stamina massima disponibile"
   },
   {
     "id": "fire_res",
     "nome": "Riduzione Danni Fuoco",
+    "nomeEN": "Fire Damage Reduction",
     "stepMax": 3,
-    "descrizioneStep": ["Riduzione Fuoco +5%", "Riduzione Fuoco +10%", "Riduzione Fuoco +15%"]
+    "descrizioneStep": ["Riduzione Fuoco +5%", "Riduzione Fuoco +10%", "Riduzione Fuoco +15%"],
+    "descrizioneLiterale": "Riduce il danno subito da attacchi basati sul fuoco"
   },
   {
     "id": "crit_boost",
     "nome": "Potenziamento Critico",
+    "nomeEN": "Critical Hit Boost",
     "stepMax": 3,
-    "descrizioneStep": ["Critico +5%", "Critico +10%", "Critico +15%"]
+    "descrizioneStep": ["Critico +5%", "Critico +10%", "Critico +15%"],
+    "descrizioneLiterale": "Aumenta la probabilità o il danno dei colpi critici"
   },
   {
     "id": "atk_range",
     "nome": "Aumento Range Attacco",
+    "nomeEN": "Attack Range Increase",
     "stepMax": 2,
-    "descrizioneStep": ["Range +10%", "Range +20%"]
+    "descrizioneStep": ["Range +10%", "Range +20%"],
+    "descrizioneLiterale": "Estende la portata degli attacchi fisici e magici"
   },
   {
     "id": "fp_recovery",
     "nome": "Recupero FP",
+    "nomeEN": "FP Recovery",
     "stepMax": 2,
-    "descrizioneStep": ["Recupero FP +3/s", "Recupero FP +6/s"]
+    "descrizioneStep": ["Recupero FP +3/s", "Recupero FP +6/s"],
+    "descrizioneLiterale": "Rigenera gradualmente i Focus Points nel tempo"
   }
 ]

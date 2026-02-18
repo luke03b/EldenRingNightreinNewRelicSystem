@@ -2,49 +2,65 @@
   {
     "id": "hp_reduction",
     "nome": "Riduzione HP Massimi",
+    "nomeEN": "Max HP Reduction",
     "stepMax": 3,
-    "descrizioneStep": ["HP Massimi -5%", "HP Massimi -10%", "HP Massimi -15%"]
+    "descrizioneStep": ["HP Massimi -5%", "HP Massimi -10%", "HP Massimi -15%"],
+    "descrizioneLiterale": "Riduce temporaneamente i punti vita massimi"
   },
   {
     "id": "def_reduction",
     "nome": "Riduzione Difesa",
+    "nomeEN": "Defense Reduction",
     "stepMax": 2,
-    "descrizioneStep": ["Difesa -8%", "Difesa -16%"]
+    "descrizioneStep": ["Difesa -8%", "Difesa -16%"],
+    "descrizioneLiterale": "Indebolisce le difese rendendoti più vulnerabile"
   },
   {
     "id": "fp_consumption",
     "nome": "Consumo FP Aumentato",
+    "nomeEN": "Increased FP Consumption",
     "stepMax": 2,
-    "descrizioneStep": ["Consumo FP +10%", "Consumo FP +20%"]
+    "descrizioneStep": ["Consumo FP +10%", "Consumo FP +20%"],
+    "descrizioneLiterale": "Gli incantesimi e le abilità consumano più Focus Points"
   },
   {
     "id": "stamina_drain",
     "nome": "Perdita Stamina Rapida",
+    "nomeEN": "Rapid Stamina Drain",
     "stepMax": 3,
-    "descrizioneStep": ["Perdita Stamina +5%", "Perdita Stamina +10%", "Perdita Stamina +15%"]
+    "descrizioneStep": ["Perdita Stamina +5%", "Perdita Stamina +10%", "Perdita Stamina +15%"],
+    "descrizioneLiterale": "La stamina si consuma più velocemente durante le azioni"
   },
   {
     "id": "fire_vuln",
     "nome": "Vulnerabilità al Fuoco",
+    "nomeEN": "Fire Vulnerability",
     "stepMax": 2,
-    "descrizioneStep": ["Vulnerabilità Fuoco +10%", "Vulnerabilità Fuoco +20%"]
+    "descrizioneStep": ["Vulnerabilità Fuoco +10%", "Vulnerabilità Fuoco +20%"],
+    "descrizioneLiterale": "Subisci maggiori danni dagli attacchi di fuoco"
   },
   {
     "id": "mov_penalty",
     "nome": "Penalità Movimento",
+    "nomeEN": "Movement Penalty",
     "stepMax": 2,
-    "descrizioneStep": ["Velocità -5%", "Velocità -10%"]
+    "descrizioneStep": ["Velocità -5%", "Velocità -10%"],
+    "descrizioneLiterale": "Riduce la velocità di movimento e schivata"
   },
   {
     "id": "vision_reduction",
     "nome": "Riduzione Visuale",
+    "nomeEN": "Vision Reduction",
     "stepMax": 1,
-    "descrizioneStep": ["Visuale ridotta del 15%"]
+    "descrizioneStep": ["Visuale ridotta del 15%"],
+    "descrizioneLiterale": "Restringe il campo visivo limitando la percezione"
   },
   {
     "id": "temp_curse",
     "nome": "Maledizione Temporanea",
+    "nomeEN": "Temporary Curse",
     "stepMax": 3,
-    "descrizioneStep": ["Maledizione Lieve", "Maledizione Media", "Maledizione Grave"]
+    "descrizioneStep": ["Maledizione Lieve", "Maledizione Media", "Maledizione Grave"],
+    "descrizioneLiterale": "Applica una maledizione con effetti negativi variabili"
   }
 ]

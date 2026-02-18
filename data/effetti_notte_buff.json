@@ -2,61 +2,81 @@
   {
     "id": "night_atk",
     "nome": "Attacco Notturno",
+    "nomeEN": "Night Attack",
     "stepMax": 3,
-    "descrizioneStep": ["Attacco Notturno +10%", "Attacco Notturno +20%", "Attacco Notturno +30%"]
+    "descrizioneStep": ["Attacco Notturno +10%", "Attacco Notturno +20%", "Attacco Notturno +30%"],
+    "descrizioneLiterale": "Potenzia significativamente l'attacco durante le fasi notturne"
   },
   {
     "id": "night_def",
     "nome": "Difesa Notturna",
+    "nomeEN": "Night Defense",
     "stepMax": 3,
-    "descrizioneStep": ["Difesa Notturna +10%", "Difesa Notturna +20%", "Difesa Notturna +30%"]
+    "descrizioneStep": ["Difesa Notturna +10%", "Difesa Notturna +20%", "Difesa Notturna +30%"],
+    "descrizioneLiterale": "Aumenta la difesa quando si combatte nell'oscurità"
   },
   {
     "id": "dark_power",
     "nome": "Potenziamento Oscuro",
+    "nomeEN": "Dark Power",
     "stepMax": 3,
-    "descrizioneStep": ["Potenza Oscura +8%", "Potenza Oscura +16%", "Potenza Oscura +24%"]
+    "descrizioneStep": ["Potenza Oscura +8%", "Potenza Oscura +16%", "Potenza Oscura +24%"],
+    "descrizioneLiterale": "Amplifica il potere delle abilità legate all'oscurità"
   },
   {
     "id": "night_regen",
     "nome": "Rigenerazione Notturna",
+    "nomeEN": "Night Regeneration",
     "stepMax": 2,
-    "descrizioneStep": ["Rigenerazione HP +5/s di notte", "Rigenerazione HP +10/s di notte"]
+    "descrizioneStep": ["Rigenerazione HP +5/s di notte", "Rigenerazione HP +10/s di notte"],
+    "descrizioneLiterale": "Rigenera rapidamente HP durante le ore notturne"
   },
   {
     "id": "shadow_speed",
     "nome": "Velocità nell'Ombra",
+    "nomeEN": "Shadow Speed",
     "stepMax": 3,
-    "descrizioneStep": ["Velocità Ombra +8%", "Velocità Ombra +16%", "Velocità Ombra +24%"]
+    "descrizioneStep": ["Velocità Ombra +8%", "Velocità Ombra +16%", "Velocità Ombra +24%"],
+    "descrizioneLiterale": "Aumenta la velocità di movimento quando si è nell'ombra"
   },
   {
     "id": "night_crit",
     "nome": "Critico Notturno",
+    "nomeEN": "Night Critical",
     "stepMax": 3,
-    "descrizioneStep": ["Critico Notturno +8%", "Critico Notturno +16%", "Critico Notturno +24%"]
+    "descrizioneStep": ["Critico Notturno +8%", "Critico Notturno +16%", "Critico Notturno +24%"],
+    "descrizioneLiterale": "Potenzia i colpi critici inflitti durante la notte"
   },
   {
     "id": "dark_res",
     "nome": "Resistenza Oscura",
+    "nomeEN": "Dark Resistance",
     "stepMax": 3,
-    "descrizioneStep": ["Resistenza Oscura +10%", "Resistenza Oscura +20%", "Resistenza Oscura +30%"]
+    "descrizioneStep": ["Resistenza Oscura +10%", "Resistenza Oscura +20%", "Resistenza Oscura +30%"],
+    "descrizioneLiterale": "Riduce il danno subito da attacchi oscuri e maledizioni"
   },
   {
     "id": "night_stamina",
     "nome": "Stamina Notturna",
+    "nomeEN": "Night Stamina",
     "stepMax": 2,
-    "descrizioneStep": ["Stamina Notturna +15%", "Stamina Notturna +30%"]
+    "descrizioneStep": ["Stamina Notturna +15%", "Stamina Notturna +30%"],
+    "descrizioneLiterale": "Aumenta la stamina disponibile nelle ore notturne"
   },
   {
     "id": "night_fp",
     "nome": "Recupero FP Notturno",
+    "nomeEN": "Night FP Recovery",
     "stepMax": 2,
-    "descrizioneStep": ["Recupero FP Notturno +5/s", "Recupero FP Notturno +10/s"]
+    "descrizioneStep": ["Recupero FP Notturno +5/s", "Recupero FP Notturno +10/s"],
+    "descrizioneLiterale": "Rigenera più rapidamente i Focus Points di notte"
   },
   {
     "id": "moon_blessing",
     "nome": "Benedizione Lunare",
+    "nomeEN": "Moon Blessing",
     "stepMax": 3,
-    "descrizioneStep": ["Benedizione Lunare I", "Benedizione Lunare II", "Benedizione Lunare III"]
+    "descrizioneStep": ["Benedizione Lunare I", "Benedizione Lunare II", "Benedizione Lunare III"],
+    "descrizioneLiterale": "Conferisce una benedizione mistica legata al potere lunare"
   }
 ]
