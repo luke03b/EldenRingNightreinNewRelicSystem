@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   Checkbox,
+  Chip,
   Divider,
   FormControlLabel,
   IconButton,
@@ -34,6 +35,8 @@ import {
 } from "../utils/ComboSearch";
 import {
   getEffectByKey,
+  getEffectName,
+  getItemName,
   getRelicColor,
   relicEffectCount,
   relicHasEffect,
@@ -327,6 +330,10 @@ export function ComboFinder(props: ComboFinderProps) {
   const [progress, setProgress] = useState<ComboSearchProgress | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
+  // Result filtering state
+  const [resultFilterEffects, setResultFilterEffects] = useState<Effect[]>([]);
+  const [resultSearchTerm, setResultSearchTerm] = useState("");
+
   // Track latest search run to avoid race conditions when inputs change quickly
   const runIdRef = useRef<number>(0);
 
@@ -541,9 +548,82 @@ export function ComboFinder(props: ComboFinderProps) {
 
   const selectedNightfarerData = nightfarers[selectedNightfarer];
 
+  // Filter search results based on result filter effects and search term
+  const filteredSearchResults = useMemo(() => {
+    if (!searchResults) {
+      return null;
+    }
+
+    if (resultFilterEffects.length === 0 && !resultSearchTerm.trim()) {
+      return searchResults;
+    }
+
+    const filteredCombinations = searchResults.combinations.filter((combo) => {
+      // Check if any relic in the combination matches the filters
+      // This allows users to find combinations that contain relics with the desired effects
+      return combo.relicCombination.some((relic) => {
+        if (!relic) return false;
+
+        // Filter by selected effects - show combinations where at least one relic has any of the selected effects
+        if (resultFilterEffects.length > 0) {
+          const relicEffectKeys = relic.effects.flatMap(([effect, debuff]) =>
+            debuff !== undefined ? [effect.key, debuff.key] : [effect.key]
+          );
+          const hasAnySelectedEffect = resultFilterEffects.some(
+            (selectedEffect) => relicEffectKeys.includes(selectedEffect.key)
+          );
+          if (!hasAnySelectedEffect) {
+            return false;
+          }
+        }
+
+        // Filter by search term
+        if (resultSearchTerm.trim()) {
+          const itemName = getItemName(relic.itemId).toLowerCase();
+          const effectNames = relic.effects
+            .flatMap(([effect, debuff]) =>
+              debuff !== undefined
+                ? [getEffectName(effect), getEffectName(debuff)]
+                : [getEffectName(effect)]
+            )
+            .map((name) => name.toLowerCase());
+
+          const searchLower = resultSearchTerm.toLowerCase();
+          const matchesSearch =
+            itemName.includes(searchLower) ||
+            effectNames.some((name) => name.includes(searchLower));
+
+          if (!matchesSearch) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+    });
+
+    return {
+      ...searchResults,
+      combinations: filteredCombinations,
+    };
+  }, [searchResults, resultFilterEffects, resultSearchTerm]);
+
+  const handleResultEffectSelect = useCallback((effect: Effect) => {
+    setResultFilterEffects((prev) => {
+      if (prev.some((e) => e.key === effect.key)) {
+        return prev;
+      }
+      return [...prev, effect];
+    });
+  }, []);
+
+  const handleResultEffectRemove = useCallback((effect: Effect) => {
+    setResultFilterEffects((prev) => prev.filter((e) => e.key !== effect.key));
+  }, []);
+
   // Virtualizer for results list
   const resultsParentRef = useRef<HTMLDivElement | null>(null);
-  const resultsCount = searchResults?.combinations.length ?? 0;
+  const resultsCount = filteredSearchResults?.combinations.length ?? 0;
   const resultsVirtualizer = useVirtualizer({
     count: resultsCount,
     getScrollElement: () => resultsParentRef.current,
@@ -888,8 +968,44 @@ export function ComboFinder(props: ComboFinderProps) {
               <Alert severity="info">No combinations found.</Alert>
             ) : (
               <>
+                {/* Result Filters */}
+                <Box sx={{ mb: 2, flexShrink: 0 }}>
+                  <EffectsAutocomplete
+                    onSearchChange={setResultSearchTerm}
+                    onChange={handleResultEffectSelect}
+                    availableEffects={props.availableEffects}
+                    placeholder="Filter results by name or effect..."
+                    clearOnSelect
+                  />
+                  {resultFilterEffects.length > 0 && (
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: 1,
+                        mt: 1,
+                      }}
+                    >
+                      {resultFilterEffects.map((effect) => (
+                        <Chip
+                          key={effect.key}
+                          label={t(`effects.${effect.key}`)}
+                          onDelete={() => handleResultEffectRemove(effect)}
+                          color="primary"
+                          variant="outlined"
+                          size="small"
+                        />
+                      ))}
+                    </Box>
+                  )}
+                </Box>
+
                 <Typography gutterBottom sx={{ flexShrink: 0 }}>
-                  {`Showing the best ${searchResults.combinations.length} combos`}
+                  {filteredSearchResults &&
+                  filteredSearchResults.combinations.length !==
+                    searchResults.combinations.length
+                    ? `Showing ${filteredSearchResults.combinations.length} of ${searchResults.combinations.length} combos`
+                    : `Showing the best ${searchResults.combinations.length} combos`}
                 </Typography>
 
                 {/* Virtualized results list */}
@@ -906,7 +1022,7 @@ export function ComboFinder(props: ComboFinderProps) {
                   >
                     {resultsVirtualizer.getVirtualItems().map((virtualRow) => {
                       const combo =
-                        searchResults.combinations[virtualRow.index];
+                        filteredSearchResults!.combinations[virtualRow.index];
                       return (
                         <Box
                           key={virtualRow.key}
