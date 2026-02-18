@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Items Mapping - Elden Ring Nightreign</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0d0d0d;
+            color: #e0e0e0;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #e8c96b;
+            border-bottom: 2px solid #c9a84c;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .test-item {
+            margin: 8px 0;
+            padding: 10px;
+            background: #2a2a2a;
+            border-left: 4px solid #555;
+            border-radius: 4px;
+        }
+        .test-item.pass {
+            border-left-color: #4caf50;
+        }
+        .test-item.fail {
+            border-left-color: #f44336;
+        }
+        .summary {
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 6px;
+        }
+        .summary.success {
+            border: 2px solid #4caf50;
+        }
+        .summary.error {
+            border: 2px solid #f44336;
+        }
+        code {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Items Mapping - Elden Ring Nightreign</h1>
+    <div id="loading">Loading...</div>
+    <div id="results" style="display:none;"></div>
+
+    <script src="js/ItemsMapping.js"></script>
+    <script src="js/RelicParser.js"></script>
+    <script>
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+        
+        const results = document.getElementById('results');
+        
+        function addSection(title) {
+            const section = document.createElement('div');
+            section.className = 'test-section';
+            section.innerHTML = `<h2>${title}</h2>`;
+            results.appendChild(section);
+            return section;
+        }
+        
+        function addResult(section, testName, passed, details) {
+            const div = document.createElement('div');
+            div.className = `test-item ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `<strong>${testName}</strong>: ${passed ? '✓ PASS' : '✗ FAIL'}<br>${details}`;
+            section.appendChild(div);
+            return passed;
+        }
+
+        // Test ItemsMapping directly
+        const section1 = addSection('Test 1: ItemsMapping Module');
+        let totalTests = 0;
+        let passedTests = 0;
+
+        const testCases = [
+            { id: 10001, expectedName: 'Cornice Sbrindellata', expectedColor: 'Blu', desc: 'Unique Relic' },
+            { id: 11000, expectedName: 'Cote di Ardesia', expectedColor: 'Rosso', desc: 'Unique Relic' },
+            { id: 12000, expectedName: 'Terzo Volume', expectedColor: 'Rosso', desc: 'Unique Relic' },
+            { id: 2000, expectedName: 'Notte della Bestia', expectedColor: 'Verde', desc: 'Night Relic' },
+            { id: 2010, expectedName: 'Notte del Barone', expectedColor: 'Blu', desc: 'Night Relic' },
+            { id: 100, expectedName: 'Scena Ardente Delicata', expectedColor: 'Rosso', desc: 'Delicate Relic' },
+            { id: 109, expectedName: 'Scena Piovigginosa Delicata', expectedColor: 'Blu', desc: 'Delicate Relic' },
+            { id: 118, expectedName: 'Scena Luminosa Delicata', expectedColor: 'Giallo', desc: 'Delicate Relic' },
+            { id: 127, expectedName: 'Scena Tranquilla Delicata', expectedColor: 'Verde', desc: 'Delicate Relic' },
+            { id: 101, expectedName: 'Scena Ardente Lucida', expectedColor: 'Rosso', desc: 'Polished Relic' },
+            { id: 102, expectedName: 'Scena Ardente Grandiosa', expectedColor: 'Rosso', desc: 'Grand Relic' },
+            { id: 30000, expectedName: 'Scena Ardente Delicata Profonda', expectedColor: 'Rosso', desc: 'Deep Relic' },
+        ];
+
+        testCases.forEach(test => {
+            totalTests++;
+            const name = ItemsMapping.getItemName(test.id);
+            const color = ItemsMapping.getItemColor(test.id);
+            
+            const namePassed = name === test.expectedName;
+            const colorPassed = color === test.expectedColor;
+            const passed = namePassed && colorPassed;
+            
+            if (passed) passedTests++;
+            
+            addResult(
+                section1,
+                `Item ID ${test.id} (${test.desc})`,
+                passed,
+                `Nome: <code>${name}</code> ${namePassed ? '✓' : '✗ Expected: ' + test.expectedName}<br>
+                 Colore: <code>${color}</code> ${colorPassed ? '✓' : '✗ Expected: ' + test.expectedColor}`
+            );
+        });
+
+        // Test RelicParser integration
+        const section2 = addSection('Test 2: RelicParser Integration');
+        
+        testCases.forEach(test => {
+            totalTests++;
+            const name = RelicParser.getItemName(test.id);
+            const color = RelicParser.getItemColor(test.id);
+            
+            const namePassed = name === test.expectedName;
+            const colorPassed = color === test.expectedColor;
+            const passed = namePassed && colorPassed;
+            
+            if (passed) passedTests++;
+            
+            addResult(
+                section2,
+                `RelicParser.getItemName(${test.id})`,
+                passed,
+                `Nome: <code>${name}</code> ${namePassed ? '✓' : '✗ Expected: ' + test.expectedName}<br>
+                 Colore: <code>${color}</code> ${colorPassed ? '✓' : '✗ Expected: ' + test.expectedColor}`
+            );
+        });
+
+        // Test unknown item fallback
+        const section3 = addSection('Test 3: Unknown Item Handling');
+        totalTests++;
+        const unknownId = 999999;
+        const unknownName = RelicParser.getItemName(unknownId);
+        const unknownColor = RelicParser.getItemColor(unknownId);
+        const unknownPassed = unknownName.includes('Sconosciuta') && unknownColor === 'Rosso';
+        if (unknownPassed) passedTests++;
+        
+        addResult(
+            section3,
+            `Unknown Item ID ${unknownId}`,
+            unknownPassed,
+            `Nome: <code>${unknownName}</code><br>
+             Colore: <code>${unknownColor}</code> (fallback to Rosso)`
+        );
+
+        // Test grade and size functions
+        const section4 = addSection('Test 4: Helper Functions');
+        const gradeTests = [
+            { effectCount: 1, expectedGrade: 1, expectedSize: 'Piccola' },
+            { effectCount: 2, expectedGrade: 2, expectedSize: 'Media' },
+            { effectCount: 3, expectedGrade: 3, expectedSize: 'Grande' },
+        ];
+        
+        gradeTests.forEach(test => {
+            totalTests++;
+            const grade = RelicParser.getRelicGrade(test.effectCount);
+            const size = RelicParser.getRelicSize(grade);
+            const passed = grade === test.expectedGrade && size === test.expectedSize;
+            
+            if (passed) passedTests++;
+            
+            addResult(
+                section4,
+                `${test.effectCount} effect(s)`,
+                passed,
+                `Grade: <code>${grade}</code> (expected: ${test.expectedGrade})<br>
+                 Size: <code>${size}</code> (expected: ${test.expectedSize})`
+            );
+        });
+
+        // Summary
+        const summary = document.createElement('div');
+        summary.className = `summary ${passedTests === totalTests ? 'success' : 'error'}`;
+        summary.innerHTML = `
+            <h2>📊 Test Summary</h2>
+            <p><strong>${passedTests}/${totalTests}</strong> tests passed</p>
+            ${passedTests === totalTests ? 
+                '<p>✅ All tests passed! The items mapping is working correctly.</p>' : 
+                `<p>❌ ${totalTests - passedTests} test(s) failed. Please review the errors above.</p>`
+            }
+        `;
+        results.insertBefore(summary, results.firstChild);
+    </script>
+</body>
+</html>
