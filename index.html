@@ -340,6 +340,7 @@ tr:hover{background:#1e1e1e}
   </div>
 </div>
 
+<script src="js/ItemsMapping.js"></script>
 <script src="js/SaveFileDecryptor.js"></script>
 <script src="js/RelicParser.js"></script>
 <script>
@@ -628,9 +629,12 @@ function confermaImportazioneSL2() {
           }
         });
         
+        // Get the proper item name from the mapping
+        const itemName = RelicParser.getItemName(relicData.itemId);
+        
         const relic = {
           id: crypto.randomUUID(), // Modern browsers only (Chrome 92+, Firefox 95+, Safari 15.4+)
-          nome: `Reliquia ${colore} G${grado} (da ${slot.name})`,
+          nome: `${itemName} (da ${slot.name})`,
           proprietario: playerName,
           grado: grado,
           grandezza: grandezza,

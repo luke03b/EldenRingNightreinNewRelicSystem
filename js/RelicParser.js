@@ -277,29 +277,30 @@ class RelicParser {
   }
 
   /**
-   * Get color name from item ID
-   * Based on item ID ranges observed in the game data.
-   * Item ID ranges:
-   * - 10xxx: Blue relics
-   * - 11xxx: Red relics
-   * - 13xxx, 15xxx: Yellow relics
-   * - 14xxx, 17xxx, 18xxx: Green relics
-   * 
-   * Note: This is a simplified mapping. Unknown IDs will default to red
-   * and a warning will be logged to help identify items that need proper mapping.
+   * Get color name from item ID using the items mapping
    */
   static getItemColor(itemId) {
+    if (typeof ItemsMapping !== 'undefined') {
+      return ItemsMapping.getItemColor(itemId);
+    }
+    // Fallback to simplified mapping if ItemsMapping is not available
     const idStr = itemId.toString();
-    
-    // Check known ID ranges
     if (idStr.startsWith("11")) return "Rosso";
     if (idStr.startsWith("10")) return "Blu";
     if (idStr.startsWith("13") || idStr.startsWith("15")) return "Giallo";
     if (idStr.startsWith("14") || idStr.startsWith("17") || idStr.startsWith("18")) return "Verde";
-    
-    // Unknown item ID - log warning and default to red
-    console.warn(`Unknown item ID: ${itemId}. Defaulting to Rosso. Please add this ID to the mapping.`);
-    return "Rosso"; // Default to red for consistency
+    console.warn(`Unknown item ID: ${itemId}. Defaulting to Rosso.`);
+    return "Rosso";
+  }
+
+  /**
+   * Get item name from item ID using the items mapping
+   */
+  static getItemName(itemId) {
+    if (typeof ItemsMapping !== 'undefined') {
+      return ItemsMapping.getItemName(itemId);
+    }
+    return `Reliquia Sconosciuta (ID: ${itemId})`;
   }
 
   /**
