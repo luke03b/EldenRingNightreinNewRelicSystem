@@ -1,0 +1,71 @@
+{
+  "name": "elden-ring-nightreign-relic-browser",
+  "version": "1.0.30",
+  "description": "Browse, search, and manage your Elden Ring Nightreign relics with our powerful save file browser. View all your collected relics, items, and effects across multiple character slots.",
+  "keywords": [
+    "elden-ring",
+    "nightreign",
+    "relic-browser",
+    "save-file",
+    "gaming-tool",
+    "fromsoftware",
+    "bandai-namco",
+    "react",
+    "typescript"
+  ],
+  "author": {
+    "name": "Metin Çelik",
+    "url": "https://buymeacoffee.com/metincelikw"
+  },
+  "license": "MIT",
+  "homepage": "https://relicbrowser.com/",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:wasm && vite",
+    "build": "npm run build:wasm && tsc -b && vite build",
+    "build:wasm": "wasm-pack build wasm/combo_search --target web --release --out-dir pkg",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "type-check": "tsc --project tsconfig.app.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@analytics/google-analytics": "^1.1.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@tanstack/react-virtual": "^3.13.12",
+    "analytics": "^0.8.16",
+    "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.1",
+    "react-router-dom": "^7.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "@vitest/ui": "^3.0.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.6.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4",
+    "vitest": "^3.0.0",
+    "vitest-fetch-mock": "^0.4.5",
+    "wasm-pack": "^0.13.1"
+  }
+}

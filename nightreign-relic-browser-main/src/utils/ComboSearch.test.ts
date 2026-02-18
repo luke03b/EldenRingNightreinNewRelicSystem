@@ -1,0 +1,383 @@
+import fs from "fs";
+import path from "path";
+import { assert, beforeAll, describe, expect, it } from "vitest";
+import init, {
+  search_combinations,
+} from "../../wasm/combo_search/pkg/combo_search.js";
+import { EffectKey } from "../resources/effectKeys.js";
+import { type Effect } from "../resources/effects";
+import type { RelicSlot } from "../types/SaveFile";
+import { anyoneVessels, wylderVessels } from "../utils/Vessels";
+import { buildWasmInput } from "../workers/comboSearchWorker.js";
+import {
+  buildWorkerInput,
+  cancelCurrentSearch,
+  searchCombinations,
+} from "./ComboSearch.js";
+import { getEffect, getEffectByKey } from "./DataUtils";
+import { Nightfarer } from "./Nightfarers";
+import { RelicSlotColor } from "./RelicColor.js";
+import { RelicParser } from "./RelicParser";
+import { SaveFileDecryptor } from "./SaveFileDecryptor";
+
+// helper to build minimal RelicSlot for tests
+let testRelicId = 100000;
+function makeRelic(itemId: number, effect: Effect): RelicSlot {
+  return {
+    id: testRelicId++,
+    itemId,
+    effects: [[effect]],
+    coordinates: [0, 0],
+    coordinatesByColor: [0, 0],
+  } as RelicSlot;
+}
+
+describe("ComboSearch", () => {
+  it("cancelCurrentSearch should reject pending searches", async () => {
+    // In vitest's node environment, `Worker` isn't available, so we can't execute the real worker.
+    // Still, we can validate the cancellation contract: pending promises reject with "Search cancelled".
+    const selectedEffect = getEffectByKey(EffectKey.strengthPlus1);
+    assert(selectedEffect !== undefined);
+
+    const relics: RelicSlot[] = [makeRelic(129, selectedEffect)];
+
+    // Ensure clean state (important when running tests in watch mode)
+    cancelCurrentSearch();
+
+    // Start a search; it will fail to create a Worker in this environment.
+    // But we can still ensure cancelCurrentSearch is safe and results in the expected rejection
+    // for anything that made it into the pending queue.
+    const p = searchCombinations(
+      Nightfarer.Wylder,
+      [selectedEffect],
+      relics,
+      [],
+      [anyoneVessels[2]],
+      [{ effectKey: selectedEffect.key, minStacks: 1, maxStacks: 1 }]
+    );
+
+    cancelCurrentSearch();
+    await expect(p).rejects.toThrow();
+  });
+
+  describe("searchCombinations 10slots.sl2", () => {
+    let relics: RelicSlot[];
+
+    beforeAll(async () => {
+      // Load the test save file directly from filesystem
+      const filePath = path.join(__dirname, "..", "test", "10slots.sl2");
+      const fileBuffer = fs.readFileSync(filePath);
+      const saveFileBuffer = fileBuffer.buffer.slice(
+        fileBuffer.byteOffset,
+        fileBuffer.byteOffset + fileBuffer.byteLength
+      );
+
+      // Decrypt the save file
+      const bnd4Entries =
+        await SaveFileDecryptor.decryptSaveFile(saveFileBuffer);
+      const names = RelicParser.getNames(bnd4Entries[10]);
+      relics = RelicParser.parseCharacterSlot(names[0], bnd4Entries[0]).relics;
+
+      // Initialize WASM once for all tests
+      await init();
+    });
+
+    it("should find valid combinations of relics and vessels for single effect", async () => {
+      const selectedEffects: Effect[] = [getEffect(7000702)];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        selectedEffects,
+        relics,
+        [],
+        wylderVessels,
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      expect(relics.length).toBeGreaterThan(0);
+      expect(result.combinations.length).toBeGreaterThan(0);
+      expect(result.total_combinations_checked).toBeGreaterThan(0);
+    });
+
+    it("should find valid combinations of relics and vessels for multiple effect", async () => {
+      const selectedEffects: Effect[] = [
+        getEffect(7000702),
+        getEffect(8440100),
+      ];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        selectedEffects,
+        relics,
+        [],
+        wylderVessels,
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      expect(relics.length).toBeGreaterThan(0);
+      expect(result.combinations.length).toBeGreaterThan(0);
+      expect(result.total_combinations_checked).toBeGreaterThan(0);
+    });
+
+    it("should combine stackable effects correctly", () => {
+      const selectedEffect = getEffectByKey(EffectKey.dexterityPlus3);
+      assert(selectedEffect !== undefined);
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      for (const combo of result.combinations[0].relic_indices) {
+        assert(combo !== null);
+        if (workerInput.relics[combo] === undefined) {
+          continue;
+        }
+        expect(
+          workerInput.relics[combo].effects.some(([e]) => e === selectedEffect)
+        ).toBe(true);
+      }
+      expect(result.combinations[0].points).toBeGreaterThanOrEqual(
+        1 + 0.9 + 0.9
+      );
+    });
+
+    it("should combine stackable effects of higher levels correctly", () => {
+      const selectedEffect = getEffectByKey(EffectKey.mindPlus1);
+      assert(selectedEffect !== undefined);
+      const higherLevelEffect = getEffectByKey(EffectKey.mindPlus3);
+      assert(higherLevelEffect !== undefined);
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      for (const combo of result.combinations[0].relic_indices) {
+        assert(combo !== null);
+        if (workerInput.relics[combo] === undefined) {
+          continue;
+        }
+        expect(
+          workerInput.relics[combo].effects.some(
+            ([e]) => e === higherLevelEffect
+          )
+        ).toBe(true);
+      }
+      expect(result.combinations[0].points).toBeGreaterThanOrEqual(
+        1 + 0.9 + 0.9
+      );
+    });
+
+    it("should not combine non-stackable effects", () => {
+      const selectedEffect = getEffectByKey(
+        EffectKey.attackPowerPermanentlyIncreasedForEachEvergaolPrisonerDefeated
+      );
+      assert(selectedEffect !== undefined);
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      let stacks = 0;
+      for (const combo of result.combinations[0].relic_indices) {
+        assert(combo !== null);
+        if (workerInput.relics[combo] === undefined) {
+          continue;
+        }
+        if (
+          workerInput.relics[combo].effects.some(([e]) => e === selectedEffect)
+        ) {
+          stacks++;
+        }
+      }
+      expect(stacks).toBe(1);
+    });
+
+    it("should find exactly 1 combo when there is just 1 relic", () => {
+      const selectedEffect = getEffectByKey(EffectKey.strengthPlus1);
+      assert(selectedEffect !== undefined);
+
+      const relics = [makeRelic(129, selectedEffect)];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2], wylderVessels[1]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      expect(result.combinations.length).toBe(1);
+    });
+
+    it("should find combos when there are just 2 relics", () => {
+      const selectedEffect = getEffectByKey(EffectKey.strengthPlus1);
+      assert(selectedEffect !== undefined);
+      const otherEffect = getEffectByKey(EffectKey.vigorPlus1);
+      assert(otherEffect !== undefined);
+
+      const relics = [
+        makeRelic(129, otherEffect),
+        makeRelic(129, selectedEffect),
+      ];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      expect(result.combinations.length).toBeGreaterThan(0);
+    });
+
+    it("should find a combo when there are just 3 relics", () => {
+      const selectedEffect = getEffectByKey(EffectKey.strengthPlus1);
+      assert(selectedEffect !== undefined);
+      const otherEffect = getEffectByKey(EffectKey.vigorPlus1);
+      assert(otherEffect !== undefined);
+
+      const relics = [
+        makeRelic(129, otherEffect),
+        makeRelic(129, selectedEffect),
+        makeRelic(129, otherEffect),
+      ];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [anyoneVessels[2]],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+      const result = search_combinations(input);
+
+      expect(result.combinations.length).toBe(1);
+    });
+
+    it("should not give points for overridden effect", () => {
+      const selectedEffect = getEffectByKey(
+        EffectKey.startingArmamentDealsFireDamage
+      );
+      assert(selectedEffect !== undefined);
+      const overridingEffect = getEffectByKey(
+        EffectKey.startingArmamentDealsHolyDamage
+      );
+      assert(overridingEffect !== undefined);
+
+      const relics: RelicSlot[] = [
+        makeRelic(120, selectedEffect), // yellow
+        makeRelic(102, overridingEffect), // red
+      ];
+
+      const workerInput = buildWorkerInput(
+        Nightfarer.Wylder,
+        [selectedEffect],
+        relics,
+        [],
+        [
+          {
+            name: "Test Vessel",
+            slots: [
+              RelicSlotColor.Red,
+              RelicSlotColor.Green,
+              RelicSlotColor.Yellow,
+              RelicSlotColor.Red,
+              RelicSlotColor.Green,
+              RelicSlotColor.Yellow,
+            ],
+          },
+        ],
+        []
+      );
+      const input = buildWasmInput(workerInput);
+
+      const result = search_combinations(input);
+
+      expect(result.combinations.length).toBe(1);
+      expect(result.combinations[0].points).toBeCloseTo(0.1);
+    });
+  });
+
+  describe("searchCombinations allen.sl2", () => {
+    let relics: RelicSlot[];
+
+    beforeAll(async () => {
+      // Load the test save file directly from filesystem
+      const filePath = path.join(__dirname, "..", "test", "allen.sl2");
+      const fileBuffer = fs.readFileSync(filePath);
+      const saveFileBuffer = fileBuffer.buffer.slice(
+        fileBuffer.byteOffset,
+        fileBuffer.byteOffset + fileBuffer.byteLength
+      );
+
+      // Decrypt the save file
+      const bnd4Entries =
+        await SaveFileDecryptor.decryptSaveFile(saveFileBuffer);
+      const names = RelicParser.getNames(bnd4Entries[10]);
+      relics = RelicParser.parseCharacterSlot(names[0], bnd4Entries[0]).relics;
+
+      // Initialize WASM once for all tests
+      await init();
+    });
+
+    it.for([
+      EffectKey.startingArmamentDealsHolyDamage,
+      EffectKey.changesCompatibleArmamentsIncantationToWrathOfGoldAtStartOfExpedition,
+    ])(
+      "should find valid combinations of relics and vessels for a starting bonus effect %i",
+      async (effectKey) => {
+        const selectedEffect = getEffectByKey(effectKey);
+        assert(selectedEffect !== undefined);
+
+        const workerInput = buildWorkerInput(
+          Nightfarer.Revenant,
+          [selectedEffect],
+          relics,
+          [],
+          anyoneVessels,
+          [{ effectKey: selectedEffect.key, minStacks: 1, maxStacks: 1 }]
+        );
+        const wasmInput = buildWasmInput(workerInput);
+        const result = search_combinations(wasmInput);
+
+        expect(relics.length).toBeGreaterThan(0);
+        expect(result.combinations.length).toBeGreaterThan(0);
+        expect(result.total_combinations_checked).toBeGreaterThan(0);
+      }
+    );
+  });
+});
