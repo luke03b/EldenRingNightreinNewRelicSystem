@@ -1,0 +1,62 @@
+[
+  {
+    "id": "night_atk",
+    "nome": "Attacco Notturno",
+    "stepMax": 3,
+    "descrizioneStep": ["Attacco Notturno +10%", "Attacco Notturno +20%", "Attacco Notturno +30%"]
+  },
+  {
+    "id": "night_def",
+    "nome": "Difesa Notturna",
+    "stepMax": 3,
+    "descrizioneStep": ["Difesa Notturna +10%", "Difesa Notturna +20%", "Difesa Notturna +30%"]
+  },
+  {
+    "id": "dark_power",
+    "nome": "Potenziamento Oscuro",
+    "stepMax": 3,
+    "descrizioneStep": ["Potenza Oscura +8%", "Potenza Oscura +16%", "Potenza Oscura +24%"]
+  },
+  {
+    "id": "night_regen",
+    "nome": "Rigenerazione Notturna",
+    "stepMax": 2,
+    "descrizioneStep": ["Rigenerazione HP +5/s di notte", "Rigenerazione HP +10/s di notte"]
+  },
+  {
+    "id": "shadow_speed",
+    "nome": "Velocità nell'Ombra",
+    "stepMax": 3,
+    "descrizioneStep": ["Velocità Ombra +8%", "Velocità Ombra +16%", "Velocità Ombra +24%"]
+  },
+  {
+    "id": "night_crit",
+    "nome": "Critico Notturno",
+    "stepMax": 3,
+    "descrizioneStep": ["Critico Notturno +8%", "Critico Notturno +16%", "Critico Notturno +24%"]
+  },
+  {
+    "id": "dark_res",
+    "nome": "Resistenza Oscura",
+    "stepMax": 3,
+    "descrizioneStep": ["Resistenza Oscura +10%", "Resistenza Oscura +20%", "Resistenza Oscura +30%"]
+  },
+  {
+    "id": "night_stamina",
+    "nome": "Stamina Notturna",
+    "stepMax": 2,
+    "descrizioneStep": ["Stamina Notturna +15%", "Stamina Notturna +30%"]
+  },
+  {
+    "id": "night_fp",
+    "nome": "Recupero FP Notturno",
+    "stepMax": 2,
+    "descrizioneStep": ["Recupero FP Notturno +5/s", "Recupero FP Notturno +10/s"]
+  },
+  {
+    "id": "moon_blessing",
+    "nome": "Benedizione Lunare",
+    "stepMax": 3,
+    "descrizioneStep": ["Benedizione Lunare I", "Benedizione Lunare II", "Benedizione Lunare III"]
+  }
+]
