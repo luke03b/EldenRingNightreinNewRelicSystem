@@ -1234,7 +1234,7 @@ tr:last-child td {
     <select id="fGrado" onchange="renderInv()"><option value="">Tutti i gradi/grandezze</option><option value="1">G1 — Piccola</option><option value="2">G2 — Media</option><option value="3">G3 — Grande</option></select>
     <select id="fColore" onchange="renderInv()"><option value="">Tutti i colori</option><option value="Rosso">Rosso</option><option value="Blu">Blu</option><option value="Giallo">Giallo</option><option value="Verde">Verde</option></select>
     <select id="fTipo" onchange="renderInv()"><option value="">Tutte le tipologie</option><option value="normale">Normale</option><option value="notte">Notte</option></select>
-    <select id="fEffetto" onchange="renderInv()"><option value="">Tutti gli effetti</option></select>
+    <select id="fEffetto" onchange="renderInv()" aria-label="Filtra per effetto"><option value="">Tutti gli effetti</option></select>
     <select id="fOrd" onchange="renderInv()"><option value="nome">Per nome</option><option value="grado">Per grado</option><option value="proprietario">Per proprietario</option></select>
   </div>
   <div id="invList"></div>
@@ -1298,7 +1298,7 @@ tr:last-child td {
   <div class="filters">
     <select id="rfGioc" onchange="renderReg()"><option value="">Tutti i giocatori</option></select>
     <select id="rfDeg" onchange="renderReg()"><option value="">Tutti gli esiti</option><option value="si">Degradata</option><option value="no">Non degradata</option></select>
-    <select id="rfEffetto" onchange="renderReg()"><option value="">Tutti gli effetti</option></select>
+    <select id="rfEffetto" onchange="renderReg()" aria-label="Filtra per effetto"><option value="">Tutti gli effetti</option></select>
     <button class="btn btn-sm" onclick="esportaCSV()">📊 Esporta CSV</button>
   </div>
   <div id="regTab" style="overflow-x:auto"></div>
