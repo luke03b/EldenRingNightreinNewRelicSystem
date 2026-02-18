@@ -569,6 +569,7 @@ function apriModaleNuovaRel() {
   document.getElementById('mrAddEff').classList.remove('hidden');
   aggiornaDropdown();
   document.getElementById('mrEff').innerHTML = '';
+  aggiornaAddEffBtn();
   document.getElementById('modalRel').classList.add('open');
 }
 
@@ -591,7 +592,7 @@ function aggiornaAddEffBtn() {
   const max = grado;
   if (count >= max) {
     btn.disabled = true;
-    btn.textContent = `Massimo ${max} slot raggiunto`;
+    btn.textContent = max === 1 ? 'Massimo 1 slot raggiunto' : `Massimo ${max} slot raggiunti`;
   } else {
     btn.disabled = false;
     btn.textContent = tipo === 'notte'
@@ -1231,6 +1232,7 @@ function usaTCreaz() {
   aggiornaDropdown();
   document.getElementById('mrProp').value = g;
   document.getElementById('mrEff').innerHTML = '';
+  aggiornaAddEffBtn();
   document.getElementById('modalRel').classList.add('open');
 }
 
