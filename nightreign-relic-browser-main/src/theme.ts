@@ -3,9 +3,6 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
   palette: {
     mode: "dark",
-    warning: {
-      main: "#5693b4",
-    },
   },
   typography: {
     h1: {

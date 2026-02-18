@@ -32,24 +32,12 @@ export function RelicBrowser({
   const [colorFilter, setColorFilter] = useState<ColorFilterOption>(
     colorFilterOptions[0]
   );
-  const [selectedEffects, setSelectedEffects] = useState<Effect[]>([]);
-
-  const handleEffectSelect = (effect: Effect) => {
-    if (!selectedEffects.some((e) => e.key === effect.key)) {
-      setSelectedEffects([...selectedEffects, effect]);
-    }
-  };
-
-  const handleEffectRemove = (effect: Effect) => {
-    setSelectedEffects(selectedEffects.filter((e) => e.key !== effect.key));
-  };
 
   const matchingRelics = useMemo(() => {
     if (
       !searchTerm.trim() &&
       colorFilter.color === RelicSlotColor.Any &&
-      !filterSell &&
-      selectedEffects.length === 0
+      !filterSell
     ) {
       return currentSlot.relics;
     }
@@ -81,21 +69,6 @@ export function RelicBrowser({
         }
       }
 
-      // Filter by selected effects - show relics that have at least one of the selected effects
-      if (selectedEffects.length > 0) {
-        const relicEffectKeys = effects.flatMap(([effect, debuff]) =>
-          debuff !== undefined
-            ? [effect.key, debuff.key]
-            : [effect.key]
-        );
-        const hasAnySelectedEffect = selectedEffects.some((selectedEffect) =>
-          relicEffectKeys.includes(selectedEffect.key)
-        );
-        if (!hasAnySelectedEffect) {
-          return false;
-        }
-      }
-
       const itemName = getItemName(itemId);
       const effectNames = effects.flatMap(([effect, debuff]) =>
         debuff !== undefined
@@ -116,7 +89,6 @@ export function RelicBrowser({
     colorFilter.type,
     filterSell,
     currentSlot.relics,
-    selectedEffects,
   ]);
 
   const normalRelicsCount = useMemo(() => {
@@ -149,9 +121,6 @@ export function RelicBrowser({
         availableEffects={availableEffects}
         filterSell={filterSell}
         onFilterSellChange={setFilterSell}
-        selectedEffects={selectedEffects}
-        onEffectSelect={handleEffectSelect}
-        onEffectRemove={handleEffectRemove}
       />
 
       <Typography variant="subtitle2" textAlign="center" gutterBottom>
