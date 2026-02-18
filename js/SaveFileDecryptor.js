@@ -2,7 +2,7 @@
 // Elden Ring Nightreign save file decryption
 
 // Elden Ring Nightreign save file decryption key
-const DS2_KEY = new Uint8Array([
+const NIGHTREIGN_KEY = new Uint8Array([
   0x18, 0xf6, 0x32, 0x66, 0x05, 0xbd, 0x17, 0x8a, 0x55, 0x24, 0x52, 0x3a, 0xc0,
   0xa0, 0xc6, 0x09,
 ]);
@@ -66,7 +66,7 @@ class SaveFileDecryptor {
   static async decryptEntry(entry) {
     try {
       const decryptedRaw = await this.decryptAES(
-        DS2_KEY,
+        NIGHTREIGN_KEY,
         entry.iv,
         entry.encryptedPayload
       );

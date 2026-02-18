@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elden Ring Nightreign — The True Relic System</title>
+<!-- 
+  Browser Requirements for .sl2 file loading:
+  - Chrome 92+ / Edge 92+ (crypto.randomUUID, Web Crypto API)
+  - Firefox 95+ (crypto.randomUUID)
+  - Safari 15.4+ (crypto.randomUUID)
+  Older browsers will work for JSON database management but not .sl2 import
+-->
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ========================================
@@ -622,8 +629,8 @@ function confermaImportazioneSL2() {
         });
         
         const relic = {
-          id: crypto.randomUUID(),
-          nome: `Reliquia ${colore} (ID: ${relicData.itemId})`,
+          id: crypto.randomUUID(), // Modern browsers only (Chrome 92+, Firefox 95+, Safari 15.4+)
+          nome: `Reliquia ${colore} G${grado} (da ${slot.name})`,
           proprietario: playerName,
           grado: grado,
           grandezza: grandezza,

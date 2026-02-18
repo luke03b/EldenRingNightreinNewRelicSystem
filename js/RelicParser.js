@@ -277,19 +277,29 @@ class RelicParser {
   }
 
   /**
-   * Get color name from item ID (simplified mapping)
+   * Get color name from item ID
+   * Based on item ID ranges observed in the game data.
+   * Item ID ranges:
+   * - 10xxx: Blue relics
+   * - 11xxx: Red relics
+   * - 13xxx, 15xxx: Yellow relics
+   * - 14xxx, 17xxx, 18xxx: Green relics
+   * 
+   * Note: This is a simplified mapping. Unknown IDs will default to red
+   * and a warning will be logged to help identify items that need proper mapping.
    */
   static getItemColor(itemId) {
-    // This is a simplified color mapping
-    // Red items: 11xxx, Blue items: 10xxx, Yellow items: 13xxx/15xxx, Green items: 14xxx/17xxx/18xxx
     const idStr = itemId.toString();
+    
+    // Check known ID ranges
     if (idStr.startsWith("11")) return "Rosso";
     if (idStr.startsWith("10")) return "Blu";
     if (idStr.startsWith("13") || idStr.startsWith("15")) return "Giallo";
     if (idStr.startsWith("14") || idStr.startsWith("17") || idStr.startsWith("18")) return "Verde";
     
-    // Random color if unknown
-    return ["Rosso", "Blu", "Giallo", "Verde"][Math.floor(Math.random() * 4)];
+    // Unknown item ID - log warning and default to red
+    console.warn(`Unknown item ID: ${itemId}. Defaulting to Rosso. Please add this ID to the mapping.`);
+    return "Rosso"; // Default to red for consistency
   }
 
   /**
