@@ -187,6 +187,13 @@ tr:hover{background:#1e1e1e}
       <button class="btn btn-primary" onclick="caricaJSON()">Carica file</button>
     </div>
     <div class="card flex-1">
+      <h3>💾 Carica Salvataggio .sl2</h3>
+      <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Importa reliquie da un file di salvataggio di Elden Ring Nightreign.</p>
+      <input type="file" id="sl2Input" accept=".sl2" style="margin-bottom:.4rem;background:#222;padding:.3rem;border:1px solid #444;border-radius:4px;color:#ccc;width:100%">
+      <button class="btn btn-primary" onclick="caricaSL2()">Carica .sl2</button>
+      <div id="sl2LoadingMsg" class="mt1" style="display:none;color:#88aadd;font-size:.85rem">⏳ Caricamento in corso...</div>
+    </div>
+    <div class="card flex-1">
       <h3>🆕 Nuovo Database</h3>
       <p style="color:#999;font-size:.85rem;margin-bottom:.5rem">Crea un database vuoto con i nomi dei 3 giocatori.</p>
       <div class="form-group"><label>Giocatore 1</label><input type="text" id="np1" placeholder="Nome giocatore 1"></div>
@@ -326,6 +333,8 @@ tr:hover{background:#1e1e1e}
   </div>
 </div>
 
+<script src="js/SaveFileDecryptor.js"></script>
+<script src="js/RelicParser.js"></script>
 <script>
 // ================================================================
 // VARIABILI GLOBALI
@@ -398,6 +407,248 @@ function caricaJSON() {
     } catch (err) { alert('Errore nel file JSON: ' + err.message); }
   };
   reader.readAsText(f);
+}
+
+async function caricaSL2() {
+  const f = document.getElementById('sl2Input').files[0];
+  if (!f) { alert('Seleziona un file .sl2.'); return; }
+  
+  const loadingMsg = document.getElementById('sl2LoadingMsg');
+  const homeMsg = document.getElementById('homeMsg');
+  
+  try {
+    loadingMsg.style.display = 'block';
+    homeMsg.innerHTML = '';
+    
+    // Read the file as ArrayBuffer
+    const fileBuffer = await f.arrayBuffer();
+    
+    // Decrypt the save file
+    const bnd4Entries = await SaveFileDecryptor.decryptSaveFile(fileBuffer);
+    
+    if (bnd4Entries.length === 0) {
+      throw new Error('Nessuna entry trovata nel file .sl2');
+    }
+    
+    // Extract character names and relics from entries
+    const characterSlots = parseCharacterSlotsFromSL2(bnd4Entries);
+    
+    // Create a modal to let user choose which character and assign to which player
+    mostraSelezionePersonaggi(characterSlots);
+    
+    loadingMsg.style.display = 'none';
+    homeMsg.innerHTML = '<div class="msg msg-ok fade-in">✅ File .sl2 caricato con successo! Seleziona i personaggi da importare.</div>';
+    
+  } catch (err) {
+    console.error('Errore caricamento .sl2:', err);
+    loadingMsg.style.display = 'none';
+    homeMsg.innerHTML = '<div class="msg msg-err fade-in">❌ Errore: ' + err.message + '</div>';
+  }
+}
+
+function parseCharacterSlotsFromSL2(bnd4Entries) {
+  // Use RelicParser to extract character data
+  const characterSlots = [];
+  
+  try {
+    // Parse character names from entry 10
+    const namesEntry = bnd4Entries[10];
+    if (!namesEntry) {
+      throw new Error('Entry dei nomi non trovata');
+    }
+    
+    const nameByteArrays = RelicParser.getNames(namesEntry);
+    
+    // Parse each character slot (0-9)
+    for (let i = 0; i < Math.min(10, nameByteArrays.length); i++) {
+      const entry = bnd4Entries[i];
+      if (!entry) continue;
+      
+      const slotData = RelicParser.parseCharacterSlot(nameByteArrays[i], entry);
+      
+      characterSlots.push({
+        index: i,
+        name: slotData.name,
+        relicCount: slotData.relics.length,
+        relics: slotData.relics,
+        entry: entry
+      });
+    }
+    
+  } catch (error) {
+    console.error('Errore nel parsing degli slot:', error);
+  }
+  
+  return characterSlots;
+}
+
+let selectedCharacterSlots = [];
+
+function mostraSelezionePersonaggi(characterSlots) {
+  selectedCharacterSlots = characterSlots;
+  
+  // Create a modal to show character selection
+  const modalHTML = `
+    <div class="modal-bg open" id="modalSL2" style="display:flex">
+      <div class="modal" style="max-width:650px">
+        <h3 style="margin-bottom:1rem">📂 Importa Reliquie da .sl2</h3>
+        <p style="color:#999;font-size:.9rem;margin-bottom:1rem">
+          Seleziona i personaggi da cui importare le reliquie. Le reliquie verranno aggiunte al database attuale o ne verrà creato uno nuovo.
+        </p>
+        
+        <div id="sl2CharList"></div>
+        
+        <div class="form-group" style="margin-top:1rem">
+          <label>Assegna tutte le reliquie a:</label>
+          <select id="sl2PlayerAssign">
+            <option value="">-- Crea nomi automaticamente --</option>
+            ${db && db.giocatori ? db.giocatori.map((p, i) => `<option value="${i}">${p}</option>`).join('') : ''}
+          </select>
+        </div>
+        
+        <div style="display:flex;gap:.5rem;margin-top:1rem">
+          <button class="btn btn-primary" onclick="confermaImportazioneSL2()">Importa Selezionati</button>
+          <button class="btn" onclick="chiudiModaleSL2()">Annulla</button>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  
+  // Populate character list
+  const charList = document.getElementById('sl2CharList');
+  let html = '<div style="max-height:300px;overflow-y:auto">';
+  
+  characterSlots.forEach((slot, index) => {
+    if (slot.relicCount > 0 || slot.name) {
+      html += `
+        <label style="display:flex;align-items:center;padding:.5rem;background:#222;margin-bottom:.3rem;border-radius:4px;cursor:pointer">
+          <input type="checkbox" id="sl2Char${index}" value="${index}" checked style="margin-right:.5rem">
+          <span style="flex:1">
+            <strong>${slot.name || 'Personaggio ' + (slot.index + 1)}</strong>
+            <span style="color:#999;margin-left:.5rem">(${slot.relicCount} reliquie)</span>
+          </span>
+        </label>
+      `;
+    }
+  });
+  
+  html += '</div>';
+  charList.innerHTML = html;
+}
+
+function chiudiModaleSL2() {
+  const modal = document.getElementById('modalSL2');
+  if (modal) modal.remove();
+}
+
+function confermaImportazioneSL2() {
+  const playerAssign = document.getElementById('sl2PlayerAssign').value;
+  const selectedIndices = [];
+  
+  selectedCharacterSlots.forEach((slot, i) => {
+    const checkbox = document.getElementById(`sl2Char${i}`);
+    if (checkbox && checkbox.checked) {
+      selectedIndices.push(i);
+    }
+  });
+  
+  if (selectedIndices.length === 0) {
+    alert('Seleziona almeno un personaggio.');
+    return;
+  }
+  
+  // If no database exists, create one
+  if (!db) {
+    const playerNames = selectedIndices.map((i) => {
+      const slot = selectedCharacterSlots[i];
+      return slot.name || `Giocatore ${i + 1}`;
+    });
+    
+    // Ensure we have exactly 3 players
+    while (playerNames.length < 3) {
+      playerNames.push(`Giocatore ${playerNames.length + 1}`);
+    }
+    if (playerNames.length > 3) {
+      playerNames.length = 3;
+    }
+    
+    db = {
+      versione: '1.0',
+      giocatori: playerNames,
+      reliquie: [],
+      registroFusioni: [],
+      registroToken: []
+    };
+  }
+  
+  // Import relics from selected characters
+  let totalImported = 0;
+  selectedIndices.forEach((i) => {
+    const slot = selectedCharacterSlots[i];
+    
+    // Determine which player to assign to
+    let playerName;
+    if (playerAssign !== '') {
+      playerName = db.giocatori[parseInt(playerAssign)];
+    } else {
+      playerName = slot.name || db.giocatori[0];
+    }
+    
+    // Import actual parsed relics
+    if (slot.relics && slot.relics.length > 0) {
+      slot.relics.forEach((relicData, j) => {
+        // Determine relic properties
+        const effectCount = relicData.effects.length;
+        const grado = RelicParser.getRelicGrade(effectCount);
+        const grandezza = RelicParser.getRelicSize(grado);
+        const colore = RelicParser.getItemColor(relicData.itemId);
+        
+        // Check if it's a night relic (has debuff)
+        const hasDebuff = relicData.effects.some(e => e.debuff !== undefined);
+        const tipologia = hasDebuff ? 'notte' : 'normale';
+        
+        // Convert effects to the format expected by the application
+        const effetti = relicData.effects.map(effect => {
+          if (hasDebuff && effect.debuff !== undefined) {
+            return {
+              buff: { id: effect.buff, step: 1 },
+              debuff: { id: effect.debuff, step: 1 }
+            };
+          } else {
+            return { id: effect.buff, step: 1 };
+          }
+        });
+        
+        const relic = {
+          id: crypto.randomUUID(),
+          nome: `Reliquia ${colore} (ID: ${relicData.itemId})`,
+          proprietario: playerName,
+          grado: grado,
+          grandezza: grandezza,
+          colore: colore,
+          tipologia: tipologia,
+          effetti: effetti,
+          isFusa: false,
+          stadioCartena: 0,
+          storiaCrafting: [],
+          importataDa: '.sl2',
+          itemId: relicData.itemId
+        };
+        
+        db.reliquie.push(relic);
+        totalImported++;
+      });
+    }
+  });
+  
+  chiudiModaleSL2();
+  aggiornaUI();
+  renderInv();
+  
+  document.getElementById('homeMsg').innerHTML = 
+    `<div class="msg msg-ok fade-in">✅ Importate ${totalImported} reliquie da file .sl2! Verifica e modifica i dettagli nell'Inventario.</div>`;
 }
 
 function nuovoDB() {
