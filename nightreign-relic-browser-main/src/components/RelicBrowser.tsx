@@ -81,17 +81,17 @@ export function RelicBrowser({
         }
       }
 
-      // Filter by selected effects
+      // Filter by selected effects - show relics that have at least one of the selected effects
       if (selectedEffects.length > 0) {
         const relicEffectKeys = effects.flatMap(([effect, debuff]) =>
           debuff !== undefined
             ? [effect.key, debuff.key]
             : [effect.key]
         );
-        const hasAllSelectedEffects = selectedEffects.every((selectedEffect) =>
+        const hasAnySelectedEffect = selectedEffects.some((selectedEffect) =>
           relicEffectKeys.includes(selectedEffect.key)
         );
-        if (!hasAllSelectedEffects) {
+        if (!hasAnySelectedEffect) {
           return false;
         }
       }

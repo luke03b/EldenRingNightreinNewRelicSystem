@@ -560,10 +560,11 @@ export function ComboFinder(props: ComboFinderProps) {
 
     const filteredCombinations = searchResults.combinations.filter((combo) => {
       // Check if any relic in the combination matches the filters
+      // This allows users to find combinations that contain relics with the desired effects
       return combo.relicCombination.some((relic) => {
         if (!relic) return false;
 
-        // Filter by selected effects
+        // Filter by selected effects - show combinations where at least one relic has any of the selected effects
         if (resultFilterEffects.length > 0) {
           const relicEffectKeys = relic.effects.flatMap(([effect, debuff]) =>
             debuff !== undefined ? [effect.key, debuff.key] : [effect.key]
