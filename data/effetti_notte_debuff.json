@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hp_reduction",
+    "nome": "Riduzione HP Massimi",
+    "stepMax": 3,
+    "descrizioneStep": ["HP Massimi -5%", "HP Massimi -10%", "HP Massimi -15%"]
+  },
+  {
+    "id": "def_reduction",
+    "nome": "Riduzione Difesa",
+    "stepMax": 2,
+    "descrizioneStep": ["Difesa -8%", "Difesa -16%"]
+  },
+  {
+    "id": "fp_consumption",
+    "nome": "Consumo FP Aumentato",
+    "stepMax": 2,
+    "descrizioneStep": ["Consumo FP +10%", "Consumo FP +20%"]
+  },
+  {
+    "id": "stamina_drain",
+    "nome": "Perdita Stamina Rapida",
+    "stepMax": 3,
+    "descrizioneStep": ["Perdita Stamina +5%", "Perdita Stamina +10%", "Perdita Stamina +15%"]
+  },
+  {
+    "id": "fire_vuln",
+    "nome": "Vulnerabilità al Fuoco",
+    "stepMax": 2,
+    "descrizioneStep": ["Vulnerabilità Fuoco +10%", "Vulnerabilità Fuoco +20%"]
+  },
+  {
+    "id": "mov_penalty",
+    "nome": "Penalità Movimento",
+    "stepMax": 2,
+    "descrizioneStep": ["Velocità -5%", "Velocità -10%"]
+  },
+  {
+    "id": "vision_reduction",
+    "nome": "Riduzione Visuale",
+    "stepMax": 1,
+    "descrizioneStep": ["Visuale ridotta del 15%"]
+  },
+  {
+    "id": "temp_curse",
+    "nome": "Maledizione Temporanea",
+    "stepMax": 3,
+    "descrizioneStep": ["Maledizione Lieve", "Maledizione Media", "Maledizione Grave"]
+  }
+]
