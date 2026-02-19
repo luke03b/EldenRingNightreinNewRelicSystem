@@ -1396,6 +1396,7 @@ tr:last-child td {
 
 <script src="js/i18n.js"></script>
 <script src="js/ItemsMapping.js"></script>
+<script src="js/resources/nightfarers.js"></script>
 <script src="js/resources/effectKeys.js"></script>
 <script src="js/resources/effects.js"></script>
 <script src="js/SaveFileDecryptor.js"></script>
@@ -1479,7 +1480,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   // Effects are now loaded from js/resources/effects.js (already loaded via script tag)
-  console.log('Effect mapping system loaded:', EffectsModule ? 'OK' : 'ERROR');
+  console.log('Effect mapping system loaded:', window.effects ? 'OK' : 'ERROR');
+  if (window.effects) {
+    console.log('Total effects loaded:', window.effects.size);
+  }
 });
 
 // ================================================================
@@ -1831,9 +1835,9 @@ function getEffInfo(id) {
  * For string IDs, returns false (legacy system didn't distinguish)
  */
 function isDebuff(id) {
-  if (typeof id === 'number' && EffectsModule) {
-    const effect = EffectsModule.getEffect(id);
-    return effect && effect.type === EffectsModule.EffectType.Debuff;
+  if (typeof id === 'number' && window.effects) {
+    const effect = window.effects.get(id);
+    return effect && effect.type === window.EffectType.Debuff;
   }
   return false;
 }
