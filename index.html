@@ -2462,12 +2462,13 @@ function estraiEff(k) {
           const exInfo = getEffInfo(exByGroup.id);
           const exEffect = window.effects.get(exByGroup.id);
           
-          // Can upgrade if drawn effect is higher level and not already upgraded this fusion
-          if (drEffect.level > exEffect.level && !s.upgSet.has(exByGroup.id)) {
+          // Can upgrade if drawn effect is higher level and group not already upgraded this fusion
+          const groupKey = `group_${drEffect.group}`;
+          if (drEffect.level > exEffect.level && !s.upgSet.has(groupKey)) {
             // Replace with higher level effect from same group
             exByGroup.id = dr.id;
             exByGroup.step = dr.step || 1;
-            s.upgSet.add(dr.id);
+            s.upgSet.add(groupKey);  // Track that this group was upgraded
             s.pool.splice(i, 1);
             break;
           } else {
