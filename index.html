@@ -1396,6 +1396,9 @@ tr:last-child td {
 
 <script src="js/i18n.js"></script>
 <script src="js/ItemsMapping.js"></script>
+<script src="js/resources/nightfarers.js"></script>
+<script src="js/resources/effectKeys.js"></script>
+<script src="js/resources/effects.js"></script>
 <script src="js/SaveFileDecryptor.js"></script>
 <script src="js/RelicParser.js"></script>
 <script>
@@ -1403,9 +1406,9 @@ tr:last-child td {
 // VARIABILI GLOBALI
 // ================================================================
 let db = null;                // Database in memoria
-let effNormBuff = [];         // Effetti normali buff
-let effNotteBuff = [];        // Effetti notte buff
-let effNotteDebuff = [];      // Effetti notte debuff
+
+// Note: Effect data is now loaded from js/resources/effects.js
+// Old JSON files (effetti_*.json) are no longer used
 let wizS = {};                // Stato wizard (chiave: 'n' o 't')
 let isCreazMode = false;      // Flag gettone creazione
 
@@ -1476,26 +1479,12 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (t === 'home') aggiornaHome();
     });
   });
-  caricaEffetti();
-});
-
-// Carica file JSON effetti
-async function caricaEffetti() {
-  try {
-    const [r1, r2, r3] = await Promise.all([
-      fetch('./data/effetti_normali_buff.json'),
-      fetch('./data/effetti_notte_buff.json'),
-      fetch('./data/effetti_notte_debuff.json')
-    ]);
-    if (!r1.ok || !r2.ok || !r3.ok) throw new Error('File non trovati (404)');
-    effNormBuff = await r1.json();
-    effNotteBuff = await r2.json();
-    effNotteDebuff = await r3.json();
-  } catch (e) {
-    console.error(e);
-    document.getElementById('homeMsg').innerHTML = '<div class="msg msg-err">⚠️ Impossibile caricare i file degli effetti dalla cartella data/. Assicurati che i file JSON siano presenti e il sito sia servito tramite un server HTTP (es. GitHub Pages).</div>';
+  // Effects are now loaded from js/resources/effects.js (already loaded via script tag)
+  console.log('Effect mapping system loaded:', window.effects ? 'OK' : 'ERROR');
+  if (window.effects) {
+    console.log('Total effects loaded:', window.effects.size);
   }
-}
+});
 
 // ================================================================
 // SEZIONE 1: HOME / CARICA DATI
@@ -1813,15 +1802,44 @@ function aggiornaDropdown() {
 // ================================================================
 // UTILITÀ EFFETTI
 // ================================================================
+/**
+ * Get effect information by ID
+ * Supports both numeric IDs (from save files) and legacy string IDs (from manual databases)
+ */
 function getEffInfo(id) {
-  return effNormBuff.find(e => e.id === id)
-    || effNotteBuff.find(e => e.id === id)
-    || effNotteDebuff.find(e => e.id === id)
-    || { nome: id, stepMax: 1, descrizioneStep: [id] };
+  // Check if it's a numeric ID (from save file)
+  if (typeof id === 'number') {
+    const effectName = i18n.getEffectName(id);
+    if (effectName && !effectName.startsWith('Effect ')) {
+      // Found in the mapping system
+      return {
+        nome: effectName,
+        stepMax: 1, // Save file effects don't use step system
+        descrizioneStep: [effectName]
+      };
+    }
+  }
+  
+  // Legacy string ID support (for old manual databases)
+  // Return a default structure for unknown effects
+  return {
+    nome: String(id),
+    stepMax: 1,
+    descrizioneStep: [String(id)]
+  };
 }
 
+/**
+ * Check if an effect is a debuff
+ * For numeric IDs, checks the effect type in the mapping system
+ * For string IDs, returns false (legacy system didn't distinguish)
+ */
 function isDebuff(id) {
-  return effNotteDebuff.some(e => e.id === id);
+  if (typeof id === 'number' && window.effects) {
+    const effect = window.effects.get(id);
+    return effect && effect.type === window.EffectType.Debuff;
+  }
+  return false;
 }
 
 // ================================================================
@@ -1970,6 +1988,12 @@ function addEffModale() {
   const c = document.getElementById('mrEff');
   if (c.children.length >= grado) { alert(`Massimo ${grado} slot per grado ${grado}.`); return; }
 
+  // Manual effect selection is no longer supported
+  // Effects are now imported from save files with numeric IDs
+  alert('La creazione manuale di reliquie con effetti non è più supportata.\n\nCarica reliquie da file .sl2 per ottenere effetti reali dal gioco.\n\nPuoi comunque creare reliquie senza effetti per scopi di test.');
+  return;
+
+  /* OLD MANUAL CREATION CODE - DISABLED
   if (tipo === 'notte') {
     // Night relic: each slot has a buff + debuff pair
     if (!effNotteBuff.length || !effNotteDebuff.length) { alert('Pool effetti notte vuoto. Verifica i file JSON.'); return; }
@@ -2005,6 +2029,7 @@ function addEffModale() {
     c.appendChild(d);
   }
   aggiornaAddEffBtn();
+  */ // END OLD MANUAL CREATION CODE
 }
 
 function salvaRel() {

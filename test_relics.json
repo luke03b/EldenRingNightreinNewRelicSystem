@@ -1,0 +1,27 @@
+{
+  "versione": "1.0",
+  "giocatori": ["Player1", "Player2", "Player3"],
+  "reliquie": [
+    {
+      "id": "test-relic-1",
+      "nome": "Test Relic with Real Effects",
+      "proprietario": "Player1",
+      "grado": 3,
+      "grandezza": "Grande",
+      "colore": "Red",
+      "tipologia": "normale",
+      "effetti": [
+        {"id": 6001401, "step": 1},
+        {"id": 6006000, "step": 1},
+        {"id": 6040000, "step": 1}
+      ],
+      "isFusa": false,
+      "stadioCartena": 0,
+      "storiaCrafting": [],
+      "importataDa": ".sl2",
+      "itemId": 11001
+    }
+  ],
+  "registroFusioni": [],
+  "registroToken": []
+}

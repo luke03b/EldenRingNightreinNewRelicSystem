@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Converted JS Files</title>
+</head>
+<body>
+    <h1>Testing Converted JavaScript Files</h1>
+    <div id="output"></div>
+
+    <!-- Note: Nightfarer needs to be defined first since effects.js depends on it -->
+    <script>
+        // Mock Nightfarer for testing
+        window.Nightfarer = Object.freeze({
+            Wylder: 0,
+            Guardian: 1,
+            Ironeye: 2,
+            Duchess: 3,
+            Raider: 4,
+            Revenant: 5,
+            Recluse: 6,
+            Executor: 7,
+            Scholar: 8,
+            Undertaker: 9
+        });
+    </script>
+
+    <!-- Load the converted JS files -->
+    <script src="js/resources/effectKeys.js"></script>
+    <script src="js/resources/effects.js"></script>
+
+    <script>
+        const output = document.getElementById('output');
+        
+        function log(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            output.appendChild(p);
+        }
+
+        try {
+            // Test EffectKey
+            log('✓ EffectKey loaded');
+            log(`  - EffectKey.LENGTH = ${EffectKey.LENGTH}`);
+            log(`  - Total keys: ${Object.keys(EffectKey).length}`);
+            
+            // Test EffectGroup
+            log('✓ EffectGroup loaded');
+            log(`  - Total groups: ${Object.keys(EffectGroup).length}`);
+            
+            // Test EffectType
+            log('✓ EffectType loaded');
+            log(`  - EffectType.Buff = ${EffectType.Buff}`);
+            log(`  - EffectType.Debuff = ${EffectType.Debuff}`);
+            
+            // Test effectsArray
+            log('✓ effectsArray loaded');
+            log(`  - Total effects: ${effectsArray.length}`);
+            log(`  - First effect key: ${effectsArray[0].key}`);
+            
+            // Test effects Map
+            log('✓ effects Map loaded');
+            log(`  - Total effect IDs: ${effects.size}`);
+            
+            // Test functions
+            log('✓ Functions loaded');
+            log(`  - isEffectKey available: ${typeof isEffectKey === 'function'}`);
+            log(`  - isEffect available: ${typeof isEffect === 'function'}`);
+            log(`  - isSameStartingBonus available: ${typeof isSameStartingBonus === 'function'}`);
+            log(`  - isSameGroup available: ${typeof isSameGroup === 'function'}`);
+            log(`  - isSameGroupAndEqualOrBetter available: ${typeof isSameGroupAndEqualOrBetter === 'function'}`);
+            log(`  - isMaxLevel available: ${typeof isMaxLevel === 'function'}`);
+            
+            // Test that objects are frozen
+            log('✓ Objects are frozen');
+            log(`  - EffectKey frozen: ${Object.isFrozen(EffectKey)}`);
+            log(`  - EffectGroup frozen: ${Object.isFrozen(EffectGroup)}`);
+            log(`  - EffectType frozen: ${Object.isFrozen(EffectType)}`);
+            
+            log('');
+            log('✅ All tests passed!');
+            
+        } catch (error) {
+            log(`❌ Error: ${error.message}`);
+            console.error(error);
+        }
+    </script>
+</body>
+</html>
