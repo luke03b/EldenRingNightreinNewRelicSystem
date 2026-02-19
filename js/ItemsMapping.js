@@ -349,9 +349,6 @@ const ItemsMapping = (() => {
     },
 
     /**
-     * Get item color by ID
-     */
-    /**
      * Get item color by ID (returns color key, use i18n to translate)
      */
     getItemColor: (itemId) => {
