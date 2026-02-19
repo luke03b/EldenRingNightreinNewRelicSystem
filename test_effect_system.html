@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Effect System</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #ddd; }
+h1 { color: #d4af37; }
+.test { margin: 20px 0; padding: 15px; border: 1px solid #444; background: #2a2a2a; }
+.pass { border-left: 4px solid #4CAF50; }
+.fail { border-left: 4px solid #f44336; }
+pre { background: #333; padding: 10px; overflow-x: auto; }
+button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>⚔️ Relic System Test Suite</h1>
+<div id="results"></div>
+
+<script src="js/resources/effectKeys.js"></script>
+<script src="js/resources/nightfarers.js"></script>
+<script src="js/resources/effects.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+const results = document.getElementById('results');
+
+function addResult(name, passed, details) {
+  const div = document.createElement('div');
+  div.className = `test ${passed ? 'pass' : 'fail'}`;
+  div.innerHTML = `
+    <h3>${passed ? '✅' : '❌'} ${name}</h3>
+    <pre>${details}</pre>
+  `;
+  results.appendChild(div);
+}
+
+// Test 1: Load effect pools
+async function test1() {
+  try {
+    const resp = await fetch('./data/effetti_normali_buff.json');
+    const data = await resp.json();
+    const hasGroups = data.some(e => e.group !== null);
+    const hasLevels = data.some(e => e.level > 0);
+    addResult(
+      'Load Effect Pools',
+      data.length > 0 && hasGroups && hasLevels,
+      `Loaded ${data.length} effects\nEffects with groups: ${data.filter(e => e.group).length}\nEffects with levels: ${data.filter(e => e.level > 0).length}`
+    );
+  } catch (err) {
+    addResult('Load Effect Pools', false, `Error: ${err.message}`);
+  }
+}
+
+// Test 2: Check effect mapping
+function test2() {
+  const totalEffects = window.effects ? window.effects.size : 0;
+  const hasGroups = window.effects ? Array.from(window.effects.values()).some(e => e.group !== undefined) : false;
+  addResult(
+    'Effect Mapping System',
+    totalEffects > 1000 && hasGroups,
+    `Total effects: ${totalEffects}\nWith groups: ${Array.from(window.effects.values()).filter(e => e.group !== undefined).length}`
+  );
+}
+
+// Test 3: Check effect groups
+function test3() {
+  const groups = window.EffectGroup ? Object.keys(window.EffectGroup) : [];
+  addResult(
+    'Effect Groups',
+    groups.length > 50,
+    `Total groups: ${groups.length}\nSample groups: ${groups.slice(0, 10).join(', ')}`
+  );
+}
+
+// Test 4: Check i18n translations
+function test4() {
+  const testId = 7000700; // Arcane +1
+  const name = i18n.getEffectName(testId);
+  addResult(
+    'i18n Translations',
+    name && name !== `Effect ${testId}`,
+    `Effect ${testId}: "${name}"`
+  );
+}
+
+// Test 5: Check grouped effects
+function test5() {
+  const arcaneEffects = [];
+  window.effects.forEach((effect, id) => {
+    if (effect.group === window.EffectGroup.arcane) {
+      arcaneEffects.push({ id, level: effect.level });
+    }
+  });
+  arcaneEffects.sort((a, b) => a.level - b.level);
+  addResult(
+    'Grouped Effects (Arcane)',
+    arcaneEffects.length === 3,
+    `Found ${arcaneEffects.length} Arcane effects:\n${arcaneEffects.map(e => `  ID ${e.id}: Level ${e.level} - ${i18n.getEffectName(e.id)}`).join('\n')}`
+  );
+}
+
+// Test 6: Check night debuffs
+async function test6() {
+  try {
+    const resp = await fetch('./data/effetti_notte_debuff.json');
+    const data = await resp.json();
+    addResult(
+      'Night Debuffs',
+      data.length > 40,
+      `Loaded ${data.length} night debuffs\nSample: ${data.slice(0, 3).map(e => e.nome).join(', ')}`
+    );
+  } catch (err) {
+    addResult('Night Debuffs', false, `Error: ${err.message}`);
+  }
+}
+
+// Run all tests
+async function runTests() {
+  results.innerHTML = '<h2>Running tests...</h2>';
+  await test1();
+  test2();
+  test3();
+  test4();
+  test5();
+  await test6();
+  results.innerHTML += '<h2>✨ Test suite complete!</h2>';
+}
+
+// Auto-run tests when page loads
+window.addEventListener('load', () => {
+  setTimeout(runTests, 100);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Build artifacts
+node_modules/
+dist/
+*.log
+
+# Temporary files
+/tmp/
+*.tmp
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user

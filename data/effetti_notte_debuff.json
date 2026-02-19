@@ -1,0 +1,450 @@
+[
+  {
+    "id": 6800000,
+    "key": "reducedVigor",
+    "nome": "Reduced Vigor",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6800200,
+    "key": "reducedEndurance",
+    "nome": "Reduced Endurance",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6820000,
+    "key": "takingDamageCausesPoisonBuildup",
+    "nome": "Taking Damage Causes Poison Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820100,
+    "key": "takingDamageCausesRotBuildup",
+    "nome": "Taking Damage Causes Rot Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820200,
+    "key": "takingDamageCausesFrostBuildup",
+    "nome": "Taking Damage Causes Frost Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820300,
+    "key": "takingDamageCausesBloodLossBuildup",
+    "nome": "Taking Damage Causes Blood Loss Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820400,
+    "key": "takingDamageCausesMadnessBuildup",
+    "nome": "Taking Damage Causes Madness Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820500,
+    "key": "takingDamageCausesSleepBuildup",
+    "nome": "Taking Damage Causes Sleep Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6820600,
+    "key": "takingDamageCausesDeathBuildup",
+    "nome": "Taking Damage Causes Death Buildup",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6830000,
+    "key": "reducedStrengthAndIntelligence",
+    "nome": "Reduced Strength and Intelligence",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6830100,
+    "key": "reducedDexterityAndFaith",
+    "nome": "Reduced Dexterity and Faith",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6830200,
+    "key": "reducedIntelligenceAndDexterity",
+    "nome": "Reduced Intelligence and Dexterity",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6830300,
+    "key": "reducedFaithAndStrength",
+    "nome": "Reduced Faith and Strength",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6830400,
+    "key": "reducedVigorAndArcane",
+    "nome": "Reduced Vigor and Arcane",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6840000,
+    "key": "reducedRuneAcquisition",
+    "nome": "Reduced Rune Acquisition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6840100,
+    "key": "reducedFlaskHPRestoration",
+    "nome": "Reduced Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850300,
+    "key": "reducedFlaskHPRestoration",
+    "nome": "Reduced Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8763000,
+    "key": "reducedFlaskHPRestoration",
+    "nome": "Reduced Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6840200,
+    "key": "ultimateArtChargingImpaired",
+    "nome": "Ultimate Art Charging Impaired",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850100,
+    "key": "impairedAffinityDamageNegation",
+    "nome": "Impaired Affinity Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8761100,
+    "key": "impairedAffinityDamageNegation",
+    "nome": "Impaired Affinity Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6850200,
+    "key": "allResistancesDown",
+    "nome": "All Resistances Down",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8762000,
+    "key": "allResistancesDown",
+    "nome": "All Resistances Down",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850400,
+    "key": "surgeSprintingDrainsMoreStamina",
+    "nome": "Surge Sprinting Drains More Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 370002,
+    "key": "continuousHPLoss",
+    "nome": "Continuous HP Loss",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850500,
+    "key": "continuousHPLoss",
+    "nome": "Continuous HP Loss",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8766000,
+    "key": "continuousHPLoss",
+    "nome": "Continuous HP Loss",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850600,
+    "key": "increasedDrainOnStaminaForEvasion",
+    "nome": "Increased Drain on Stamina for Evasion",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6850700,
+    "key": "moreDamageTakenAfterEvasion",
+    "nome": "More Damage Taken After Evasion",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8800100,
+    "key": "moreDamageTakenAfterEvasion",
+    "nome": "More Damage Taken After Evasion",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850800,
+    "key": "repeatedEvasionsLowerDamageNegation",
+    "nome": "Repeated Evasions Lower Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8800200,
+    "key": "repeatedEvasionsLowerDamageNegation",
+    "nome": "Repeated Evasions Lower Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6850900,
+    "key": "reducedDamageNegationForFlaskUsages",
+    "nome": "Reduced Damage Negation for Flask Usages",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8801000,
+    "key": "reducedDamageNegationForFlaskUsages",
+    "nome": "Reduced Damage Negation for Flask Usages",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6851000,
+    "key": "sleepBuildupForFlaskUsages",
+    "nome": "Sleep Buildup for Flask Usages",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6851100,
+    "key": "madnessBuildupForFlaskUsages",
+    "nome": "Madness Buildup for Flask Usages",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6851200,
+    "key": "lowerAttackWhenBelowMaxHP",
+    "nome": "Lower Attack When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8810000,
+    "key": "lowerAttackWhenBelowMaxHP",
+    "nome": "Lower Attack When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6851300,
+    "key": "poisonBuildupWhenBelowMaxHP",
+    "nome": "Poison Buildup When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8810300,
+    "key": "poisonBuildupWhenBelowMaxHP",
+    "nome": "Poison Buildup When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6851400,
+    "key": "rotBuildupWhenBelowMaxHP",
+    "nome": "Rot Buildup When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8810400,
+    "key": "rotBuildupWhenBelowMaxHP",
+    "nome": "Rot Buildup When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6851500,
+    "key": "maxHPReducesAttackPower",
+    "nome": "Max HP Reduces Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6851600,
+    "key": "nearDeathSpillsFlask",
+    "nome": "Near Death Spills Flask",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6851700,
+    "key": "nearDeathReducesMaxHP",
+    "nome": "Near Death Reduces Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8831200,
+    "key": "nearDeathReducesMaxHP",
+    "nome": "Near Death Reduces Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8760000,
+    "key": "reducedMaximumHP",
+    "nome": "Reduced Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8760100,
+    "key": "reducedMaximumFP",
+    "nome": "Reduced Maximum FP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8760200,
+    "key": "reducedMaximumStamina",
+    "nome": "Reduced Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8770000,
+    "key": "nightsTideDamageIncreased",
+    "nome": "Night's Tide Damage Increased",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8771000,
+    "key": "damageIncreasedByNightsEncroachment",
+    "nome": "Damage Increased by Night's Encroachment",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8810200,
+    "key": "slowerArtGaugeWhenBelowMaxHP",
+    "nome": "Slower Art Gauge When Below Max HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8813100,
+    "key": "lowerStaminaImpairsDmgNegation",
+    "nome": "Lower Stamina Impairs Dmg Negation",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8821000,
+    "key": "attacksImpairedOnOccasion",
+    "nome": "Attacks Impaired on Occasion",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8830000,
+    "key": "ailmentsCauseIncreasedDamage",
+    "nome": "Ailments Cause Increased Damage",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8831000,
+    "key": "nearDeathReducesArtGauge",
+    "nome": "Near Death Reduces Art Gauge",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  }
+]
