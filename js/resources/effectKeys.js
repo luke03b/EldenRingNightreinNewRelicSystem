@@ -857,6 +857,18 @@
 
   Object.freeze(EffectKey);
 
+  // Create reverse lookup map: numeric value -> key name
+  const EffectKeyNames = {};
+  for (const [name, value] of Object.entries(EffectKey)) {
+    EffectKeyNames[value] = name;
+  }
+
   // Export to window object
   window.EffectKey = EffectKey;
+  window.EffectKeyNames = EffectKeyNames;
+  
+  // Helper function to get effect key name from numeric value
+  window.getEffectKeyName = function(keyValue) {
+    return EffectKeyNames[keyValue] || null;
+  };
 })();

@@ -3204,10 +3204,14 @@ const i18n = (() => {
      */
     getEffectName: (effectId) => {
       // Check if effects map is available (from effects.js)
-      if (typeof window !== 'undefined' && window.effects) {
+      if (typeof window !== 'undefined' && window.effects && window.getEffectKeyName) {
         const effect = window.effects.get(effectId);
-        if (effect && effect.key) {
-          return translations[currentLanguage].effects[effect.key] || effect.key;
+        if (effect && effect.key !== undefined) {
+          // Get the key name from the numeric enum value
+          const keyName = window.getEffectKeyName(effect.key);
+          if (keyName) {
+            return translations[currentLanguage].effects[keyName] || keyName;
+          }
         }
       }
       return `Effect ${effectId}`;
