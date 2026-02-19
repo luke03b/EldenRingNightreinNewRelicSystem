@@ -2432,17 +2432,56 @@ function estraiEff(k) {
   while (tries-- > 0 && s.pool.length) {
     const i = Math.floor(Math.random() * s.pool.length);
     const dr = s.pool[i];
-    const ex = s.eff.find(e => e.id === dr.id);
-    if (ex) {
-      const info = getEffInfo(dr.id);
-      if (s.upgSet.has(dr.id) || ex.step >= info.stepMax) { s.pool.splice(i, 1); continue; }
-      ex.step = Math.min(ex.step + 1, info.stepMax);
+    const drInfo = getEffInfo(dr.id);
+    
+    // Check if we have an effect with the same ID
+    const exById = s.eff.find(e => e.id === dr.id);
+    if (exById) {
+      // Same effect ID - try to upgrade if not maxed and not already upgraded this fusion
+      if (s.upgSet.has(dr.id) || exById.step >= drInfo.stepMax) { 
+        s.pool.splice(i, 1); 
+        continue; 
+      }
+      exById.step = Math.min(exById.step + 1, drInfo.stepMax);
       s.upgSet.add(dr.id);
       s.pool.splice(i, 1);
-    } else {
-      s.eff.push({ id: dr.id, step: dr.step || 1 });
-      s.pool.splice(i, 1);
+      break;
     }
+    
+    // Check if we have an effect in the same group (for group-based upgrades)
+    if (drInfo.group && window.effects) {
+      const drEffect = window.effects.get(dr.id);
+      if (drEffect && drEffect.group !== undefined) {
+        // Find any existing effect in the same group
+        const exByGroup = s.eff.find(e => {
+          const eEffect = window.effects.get(e.id);
+          return eEffect && eEffect.group === drEffect.group;
+        });
+        
+        if (exByGroup) {
+          const exInfo = getEffInfo(exByGroup.id);
+          const exEffect = window.effects.get(exByGroup.id);
+          
+          // Can upgrade if drawn effect is higher level and not already upgraded this fusion
+          if (drEffect.level > exEffect.level && !s.upgSet.has(exByGroup.id)) {
+            // Replace with higher level effect from same group
+            exByGroup.id = dr.id;
+            exByGroup.step = dr.step || 1;
+            s.upgSet.add(dr.id);
+            s.pool.splice(i, 1);
+            break;
+          } else {
+            // Cannot upgrade - discard and try again
+            s.pool.splice(i, 1);
+            continue;
+          }
+        }
+      }
+    }
+    
+    // No existing effect with same ID or group - add as new
+    s.eff.push({ id: dr.id, step: dr.step || 1 });
+    s.pool.splice(i, 1);
     break;
   }
   renderWiz(k);
