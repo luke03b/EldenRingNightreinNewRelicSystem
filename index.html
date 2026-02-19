@@ -186,6 +186,50 @@ h3 {
 }
 
 /* ========================================
+   LANGUAGE SELECTOR
+   ======================================== */
+.lang-selector {
+  display: flex;
+  gap: 0.3rem;
+  background: rgba(26, 26, 36, 0.6);
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #2a2a34;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) inset;
+}
+
+.lang-btn {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #2a2a34;
+  background: rgba(15, 15, 20, 0.6);
+  color: #6b6b7b;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  background: rgba(26, 26, 36, 0.8);
+  color: #d4af37;
+  border-color: #3a3a44;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.lang-btn.active {
+  background: linear-gradient(180deg, #d4af37, #b8963f);
+  color: #0a0a0d;
+  border-color: #d4af37;
+  font-weight: 600;
+  box-shadow: 
+    0 2px 8px rgba(212, 175, 55, 0.4),
+    0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ========================================
    NAVIGATION TABS - Elegant RPG Menu
    ======================================== */
 .tabs {
@@ -1168,6 +1212,7 @@ tr:last-child td {
 <header class="header">
   <h1>⚔️ The True Relic System</h1>
   <div class="header-right">
+    <div class="lang-selector" id="langSelector" style="margin-right: 1rem;"></div>
     <button class="btn btn-primary" id="btnExport" onclick="esportaJSON()" disabled>📥 Esporta reliquie.json</button>
   </div>
 </header>
@@ -1349,6 +1394,7 @@ tr:last-child td {
   </div>
 </div>
 
+<script src="js/i18n.js"></script>
 <script src="js/ItemsMapping.js"></script>
 <script src="js/SaveFileDecryptor.js"></script>
 <script src="js/RelicParser.js"></script>
@@ -1364,9 +1410,55 @@ let wizS = {};                // Stato wizard (chiave: 'n' o 't')
 let isCreazMode = false;      // Flag gettone creazione
 
 // ================================================================
+// LANGUAGE / TRANSLATION SYSTEM
+// ================================================================
+function initLanguageSelector() {
+  const langSelector = document.getElementById('langSelector');
+  if (!langSelector) return;
+  
+  const languages = i18n.getAvailableLanguages();
+  const currentLang = i18n.getLanguage();
+  
+  let html = '';
+  languages.forEach(lang => {
+    const activeClass = lang.code === currentLang ? ' active' : '';
+    html += `<button class="lang-btn${activeClass}" onclick="changeLanguage('${lang.code}')">${lang.code.toUpperCase()}</button>`;
+  });
+  
+  langSelector.innerHTML = html;
+}
+
+function changeLanguage(langCode) {
+  if (i18n.setLanguage(langCode)) {
+    // Update language selector buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      // Compare the uppercase version since button text is uppercase
+      if (btn.textContent.trim().toUpperCase() === langCode.toUpperCase()) {
+        btn.classList.add('active');
+      }
+    });
+    
+    // Refresh the current view if database is loaded
+    if (db) {
+      renderInv();
+      aggiornaHome();
+    }
+  }
+}
+
+// Listen for language change events
+window.addEventListener('languageChanged', (e) => {
+  console.log('Language changed to:', e.detail.language);
+});
+
+// ================================================================
 // INIZIALIZZAZIONE
 // ================================================================
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize language selector
+  initLanguageSelector();
+  
   // Navigazione tab
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
