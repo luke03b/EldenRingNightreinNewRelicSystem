@@ -1,0 +1,7746 @@
+[
+  {
+    "id": 8500102,
+    "key": "runes60kAtStart30kOnDeath",
+    "nome": "[Runes] 60k at start, 30k on death",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8882200,
+    "key": "acidMistUponChargedThrust",
+    "nome": "Acid Mist upon Charged Thrust",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110700,
+    "key": "addFireToWeapon",
+    "nome": "Add Fire to Weapon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8111000,
+    "key": "addHolyToWeapon",
+    "nome": "Add Holy to Weapon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110900,
+    "key": "addLightningToWeapon",
+    "nome": "Add Lightning to Weapon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110800,
+    "key": "addMagicToWeapon",
+    "nome": "Add Magic to Weapon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120101,
+    "key": "armamentDealsFireDamagePlus1AtStartOfExpedition",
+    "nome": "Armament deals fire damage +1 at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8150300,
+    "key": "attackBoostDragons",
+    "nome": "Attack Boost [Dragons]",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8150000,
+    "key": "attackBoostLifeformsBornOfFallingStars",
+    "nome": "Attack Boost [Lifeforms Born of Falling Stars]",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8150100,
+    "key": "attackBoostThoseWhoLiveInDeath",
+    "nome": "Attack Boost [Those Who Live in Death]",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7012600,
+    "key": "attackBoostFromNearbyAllies",
+    "nome": "Attack Boost from Nearby Allies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7060000,
+    "key": "attackPowerPermanentlyIncreasedForEachEvergaolPrisonerDefeated",
+    "nome": "Attack power permanently increased for each evergaol prisoner defeated",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7060200,
+    "key": "attackPowerUpAfterDefeatingANightInvader",
+    "nome": "Attack power up after defeating a Night Invader",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260600,
+    "key": "attacksCreateMagicBurstsVersusSleepingEnemies",
+    "nome": "Attacks Create Magic Bursts Versus Sleeping Enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002200,
+    "key": "attacksInflictDeathBlight",
+    "nome": "Attacks Inflict Death Blight",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110300,
+    "key": "attacksInflictDeathBlight",
+    "nome": "Attacks Inflict Death Blight",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7000700,
+    "key": "arcanePlus1",
+    "nome": "Arcane +1",
+    "group": "arcane",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000701,
+    "key": "arcanePlus2",
+    "nome": "Arcane +2",
+    "group": "arcane",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000702,
+    "key": "arcanePlus3",
+    "nome": "Arcane +3",
+    "group": "arcane",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7030600,
+    "key": "artGaugeChargedFromSuccessfulGuarding",
+    "nome": "Art gauge charged from successful guarding",
+    "group": "artGaugeChargedFromSuccessfulGuarding",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7030800,
+    "key": "artGaugeFillsModeratelyUponCriticalHit",
+    "nome": "Art gauge fills moderately upon critical hit",
+    "group": "artGaugeFillsModeratelyUponCriticalHit",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260400,
+    "key": "attackPowerUpWhenFacingFrostbiteAfflictedEnemy",
+    "nome": "Attack power up when facing frostbite-afflicted enemy",
+    "group": "attackPowerUpWhenFacingFrostbiteAfflictedEnemy",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260000,
+    "key": "attackPowerUpWhenFacingPoisonAfflictedEnemy",
+    "nome": "Attack power up when facing poison-afflicted enemy",
+    "group": "attackPowerUpWhenFacingPoisonAfflictedEnemy",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260300,
+    "key": "attackPowerUpWhenFacingScarletRotAfflictedEnemy",
+    "nome": "Attack power up when facing scarlet rot-afflicted enemy",
+    "group": "attackPowerUpWhenFacingScarletRotAfflictedEnemy",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260200,
+    "key": "attackPowerUpWhenFacingSleepAfflictedEnemy",
+    "nome": "Attack power up when facing sleep-afflicted enemy",
+    "group": "attackPowerUpWhenFacingSleepAfflictedEnemy",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 321600,
+    "key": "bloodLossInVicinityIncreasesAttackPower",
+    "nome": "Blood Loss in Vicinity Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8883400,
+    "key": "bloodfliesUponPrecisionAiming",
+    "nome": "Bloodflies upon Precision Aiming",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8884300,
+    "key": "brokenStanceActivatesEndure",
+    "nome": "Broken Stance Activates Endure",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002002,
+    "key": "attacksInflictBloodLossPlus2",
+    "nome": "Attacks Inflict Blood Loss +2",
+    "group": "attacksInflictBloodLoss",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 8110500,
+    "key": "attacksInflictFrost",
+    "nome": "Attacks Inflict Frost",
+    "group": "attacksInflictFrost",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8880200,
+    "key": "blackFlamesUponChargedSlash",
+    "nome": "Black Flames upon Charged Slash",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8960100,
+    "key": "changedStrongAttacks",
+    "nome": "Changed Strong Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123700,
+    "key": "changesCompatibleArmamentsSkillToBloodBladeAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Blood Blade at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123900,
+    "key": "changesCompatibleArmamentsSkillToChillingMistAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Chilling Mist at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124600,
+    "key": "changesCompatibleArmamentsSkillToDeterminationAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Determination at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124300,
+    "key": "changesCompatibleArmamentsSkillToEndureAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Endure at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123000,
+    "key": "changesCompatibleArmamentsSkillToEruptionAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Eruption at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122900,
+    "key": "changesCompatibleArmamentsSkillToFlamingStrikeAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Flaming Strike at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122700,
+    "key": "changesCompatibleArmamentsSkillToGlintbladePhalanxAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Glintblade Phalanx at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122800,
+    "key": "changesCompatibleArmamentsSkillToGravitasAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Gravitas at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124000,
+    "key": "changesCompatibleArmamentsSkillToHoarfrostStompAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Hoarfrost Stomp at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123200,
+    "key": "changesCompatibleArmamentsSkillToLightningSlashAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Lightning Slash at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123600,
+    "key": "changesCompatibleArmamentsSkillToPoisonMothFlightAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Poison Moth Flight at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123500,
+    "key": "changesCompatibleArmamentsSkillToPoisonousMistAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Poisonous Mist at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123400,
+    "key": "changesCompatibleArmamentsSkillToPrayerfulStrikeAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Prayerful Strike at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124400,
+    "key": "changesCompatibleArmamentsSkillToQuickstepAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Quickstep at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124700,
+    "key": "changesCompatibleArmamentsSkillToRainOfArrowsAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Rain of Arrows at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123300,
+    "key": "changesCompatibleArmamentsSkillToSacredBladeAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Sacred Blade at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123800,
+    "key": "changesCompatibleArmamentsSkillToSeppukuAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Seppuku at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124500,
+    "key": "changesCompatibleArmamentsSkillToStormStompAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Storm Stomp at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7123100,
+    "key": "changesCompatibleArmamentsSkillToThunderboltAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to Thunderbolt at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7124100,
+    "key": "changesCompatibleArmamentsSkillToWhiteShadowsLureAtStartOfExpedition",
+    "nome": "Changes compatible armament's skill to White Shadow's Lure at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8370000,
+    "key": "characterSkillCooldownReduction",
+    "nome": "Character Skill Cooldown Reduction",
+    "group": "characterSkillCooldownReduction",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8882500,
+    "key": "chargedThrustInvokesSleepMist",
+    "nome": "Charged Thrust Invokes Sleep Mist",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7033700,
+    "key": "colossalArmamentsCoatedInRockWhenPerformingChargedAttacks",
+    "nome": "Colossal armaments are coated in rock when performing charged attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330700,
+    "key": "communionGrantsAntiDragonEffect",
+    "nome": "Communion Grants Anti-Dragon Effect",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035200,
+    "key": "consecutiveGuardsHardenSkin",
+    "nome": "Consecutive Guards Harden Skin",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 350200,
+    "key": "continuousHpRecovery",
+    "nome": "Continuous HP Recovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7001100,
+    "key": "continuousHpRecovery",
+    "nome": "Continuous HP Recovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8540000,
+    "key": "continuousHpRecovery",
+    "nome": "Continuous HP Recovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660300,
+    "key": "createsHolyGroundAtLowHP",
+    "nome": "Creates Holy Ground at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035000,
+    "key": "criticalHitAddsLightningEffect",
+    "nome": "Critical Hit Adds Lightning Effect",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035300,
+    "key": "criticalHitCreatesSleepMist",
+    "nome": "Critical Hit Creates Sleep Mist",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 350600,
+    "key": "criticalHitFPRestoration",
+    "nome": "Critical Hit FP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640100,
+    "key": "criticalHitFPRestoration",
+    "nome": "Critical Hit FP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 350500,
+    "key": "criticalHitHPRestoration",
+    "nome": "Critical Hit HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7034900,
+    "key": "criticalHitHPRestoration",
+    "nome": "Critical Hit HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640000,
+    "key": "criticalHitHPRestoration",
+    "nome": "Critical Hit HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8921400,
+    "key": "criticalHitsBoostAttackPower",
+    "nome": "Critical Hits Boost Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7100000,
+    "key": "criticalHitsDealHugeDamageOnPoisonedEnemies",
+    "nome": "Critical hits deal huge damage on poisoned enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6031900,
+    "key": "criticalHitsEarnRunes",
+    "nome": "Critical Hits Earn Runes",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6031901,
+    "key": "criticalHitsEarnRunes",
+    "nome": "Critical Hits Earn Runes",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7031900,
+    "key": "criticalHitsEarnRunes",
+    "nome": "Critical Hits Earn Runes",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660200,
+    "key": "criticalHitsInflictBloodLoss",
+    "nome": "Critical Hits Inflict Blood Loss",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121600,
+    "key": "crystalDartsInPossessionAtStartOfExpedition",
+    "nome": "Crystal Darts in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8640600,
+    "key": "crystalShardsUponMagicCriticalHit",
+    "nome": "Crystal Shards upon Magic Critical Hit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640200,
+    "key": "damageBoostedAfterCriticalHit",
+    "nome": "Damage Boosted after Critical Hit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8460000,
+    "key": "darknessConcealsCasterWhileWalking",
+    "nome": "Darkness Conceals Caster While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8641200,
+    "key": "deathCritHitCallsDeathLightning",
+    "nome": "Death Crit. Hit Calls Death Lightning",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 361100,
+    "key": "defeatingEnemiesRestoresFP",
+    "nome": "Defeating Enemies Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630101,
+    "key": "defeatingEnemiesRestoresFP",
+    "nome": "Defeating Enemies Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630102,
+    "key": "defeatingEnemiesRestoresFP",
+    "nome": "Defeating Enemies Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 350300,
+    "key": "defeatingEnemiesRestoresHP",
+    "nome": "Defeating Enemies Restores HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630000,
+    "key": "defeatingEnemiesRestoresHP",
+    "nome": "Defeating Enemies Restores HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630001,
+    "key": "defeatingEnemiesRestoresHP",
+    "nome": "Defeating Enemies Restores HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002402,
+    "key": "attacksInflictFrostPlus2",
+    "nome": "Attacks Inflict Frost +2",
+    "group": "attacksInflictFrost",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7002403,
+    "key": "attacksInflictFrostPlus3",
+    "nome": "Attacks Inflict Frost +3",
+    "group": "attacksInflictFrost",
+    "level": 3,
+    "stacks": false
+  },
+  {
+    "id": 7000800,
+    "key": "characterSkillCooldownReductionPlus1",
+    "nome": "Character Skill Cooldown Reduction +1",
+    "group": "characterSkillCooldownReduction",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000801,
+    "key": "characterSkillCooldownReductionPlus2",
+    "nome": "Character Skill Cooldown Reduction +2",
+    "group": "characterSkillCooldownReduction",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000802,
+    "key": "characterSkillCooldownReductionPlus3",
+    "nome": "Character Skill Cooldown Reduction +3",
+    "group": "characterSkillCooldownReduction",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6035101,
+    "key": "criticalHitBoostsStaminaRecoverySpeed",
+    "nome": "Critical Hit Boosts Stamina Recovery Speed",
+    "group": "criticalHitBoostsStaminaRecoverySpeed",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035100,
+    "key": "criticalHitBoostsStaminaRecoverySpeed",
+    "nome": "Critical Hit Boosts Stamina Recovery Speed",
+    "group": "criticalHitBoostsStaminaRecoverySpeed",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7090000,
+    "key": "defeatingEnemiesFillsMoreOfTheArtGauge",
+    "nome": "Defeating enemies fills more of the Art gauge",
+    "group": "defeatingEnemiesFillsMoreOfTheArtGauge",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7030900,
+    "key": "attackPowerIncreasesAfterUsingGreaseItems",
+    "nome": "Attack power increases after using grease items",
+    "group": "physicalAttackPowerIncreasesAfterUsingGreaseItems",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8310000,
+    "key": "attackUpWhenWieldingTwoArmaments",
+    "nome": "Attack Up when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8310001,
+    "key": "attackUpWhenWieldingTwoArmaments",
+    "nome": "Attack Up when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8310002,
+    "key": "attackUpWhenWieldingTwoArmaments",
+    "nome": "Attack Up when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7002000,
+    "key": "attacksInflictBloodLoss",
+    "nome": "Attacks Inflict Blood Loss",
+    "group": "attacksInflictBloodLoss",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110100,
+    "key": "attacksInflictBloodLoss",
+    "nome": "Attacks Inflict Blood Loss",
+    "group": "attacksInflictBloodLoss",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630100,
+    "key": "defeatingEnemiesRestoresFP",
+    "nome": "Defeating Enemies Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002001,
+    "key": "attacksInflictBloodLossPlus1",
+    "nome": "Attacks Inflict Blood Loss +1",
+    "group": "attacksInflictBloodLoss",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7002400,
+    "key": "attacksInflictFrost",
+    "nome": "Attacks Inflict Frost",
+    "group": "attacksInflictFrost",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002500,
+    "key": "attacksInflictMadness",
+    "nome": "Attacks Inflict Madness",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110600,
+    "key": "attacksInflictMadness",
+    "nome": "Attacks Inflict Madness",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110400,
+    "key": "attacksInflictRot",
+    "nome": "Attacks Inflict Rot",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122000,
+    "key": "bewitchingBranchesInPossessionAtStartOfExpedition",
+    "nome": "Bewitching Branches in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8710000,
+    "key": "bloodLossIncreasesAttackPower",
+    "nome": "Blood Loss Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7002401,
+    "key": "attacksInflictFrostPlus1",
+    "nome": "Attacks Inflict Frost +1",
+    "group": "attacksInflictFrost",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7001900,
+    "key": "attacksInflictPoison",
+    "nome": "Attacks Inflict Poison",
+    "group": "attacksInflictPoison",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110000,
+    "key": "attacksInflictPoison",
+    "nome": "Attacks Inflict Poison",
+    "group": "attacksInflictPoison",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640800,
+    "key": "bloodLossCritThornsOfPunishment",
+    "nome": "Blood Loss Crit: Thorns of Punishment",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035800,
+    "key": "boostsAttackPowerOfAddedAffinityAttacks",
+    "nome": "Boosts Attack Power of Added Affinity Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8630002,
+    "key": "defeatingEnemiesRestoresHP",
+    "nome": "Defeating Enemies Restores HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7090100,
+    "key": "defeatingEnemiesRestoresHPForAlliesButNotForSelf",
+    "nome": "Defeating enemies restores HP for allies but not for self",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630400,
+    "key": "defeatingGroupCallsVengefulSpirits",
+    "nome": "Defeating Group Calls Vengeful Spirits",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630800,
+    "key": "defeatingGroupFiresGoldenShockwave",
+    "nome": "Defeating Group Fires Golden Shockwave",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630300,
+    "key": "defeatingGroupReleasesMistOfCharm",
+    "nome": "Defeating Group Releases Mist of Charm",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630600,
+    "key": "defeatingGroupReleasesMistOfFrost",
+    "nome": "Defeating Group Releases Mist of Frost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630200,
+    "key": "defeatingGroupSummonsWraiths",
+    "nome": "Defeating Group Summons Wraiths",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630700,
+    "key": "defeatingGroupUnleashesLightning",
+    "nome": "Defeating Group Unleashes Lightning",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330900,
+    "key": "dmgNegationUpWhileCastingSpells",
+    "nome": "Dmg Negation Up While Casting Spells",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330901,
+    "key": "dmgNegationUpWhileCastingSpells",
+    "nome": "Dmg Negation Up While Casting Spells",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330902,
+    "key": "dmgNegationUpWhileCastingSpells",
+    "nome": "Dmg Negation Up While Casting Spells",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320400,
+    "key": "dmgNegationUpWhileChargingAttacks",
+    "nome": "Dmg Negation Up while Charging Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320401,
+    "key": "dmgNegationUpWhileChargingAttacks",
+    "nome": "Dmg Negation Up while Charging Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320402,
+    "key": "dmgNegationUpWhileChargingAttacks",
+    "nome": "Dmg Negation Up while Charging Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7030700,
+    "key": "drawEnemyAttentionWhileGuarding",
+    "nome": "Draw enemy attention while guarding",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 330600,
+    "key": "extendedSpellDuration",
+    "nome": "Extended Spell Duration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006400,
+    "key": "extendedSpellDuration",
+    "nome": "Extended Spell Duration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8330500,
+    "key": "extendedSpellDuration",
+    "nome": "Extended Spell Duration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8885100,
+    "key": "failingToCastSorceryRestoresFP",
+    "nome": "Failing to Cast Sorcery Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610400,
+    "key": "fireAttackFollowsChargeAttacks",
+    "nome": "Fire Attack Follows Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7034800,
+    "key": "fireCriticalHitGrantsMaxStaminaBoost",
+    "nome": "Fire Critical Hit Grants Max Stamina Boost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002700,
+    "key": "fireDamageNegationUp",
+    "nome": "Fire Damage Negation Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7122200,
+    "key": "fireGreaseInPossessionAtStartOfExpedition",
+    "nome": "Fire Grease in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7121100,
+    "key": "firePotsInPossessionAtStartOfExpedition",
+    "nome": "Fire Pots in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8460200,
+    "key": "flameOfFrenzyWhileWalking",
+    "nome": "Flame of Frenzy While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7010200,
+    "key": "flaskAlsoHealsAllies",
+    "nome": "Flask Also Heals Allies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8440100,
+    "key": "flaskAlsoHealsAllies",
+    "nome": "Flask Also Heals Allies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8885000,
+    "key": "flaskHealingAlsoRestoresFP",
+    "nome": "Flask Healing Also Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8650100,
+    "key": "fpRecoveryFromSuccessfulGuarding",
+    "nome": "FP Recovery From Successful Guarding",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8600200,
+    "key": "fpRestorationUponAttacks",
+    "nome": "FP Restoration upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8600201,
+    "key": "fpRestorationUponAttacks",
+    "nome": "FP Restoration upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8600202,
+    "key": "fpRestorationUponAttacks",
+    "nome": "FP Restoration upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351000,
+    "key": "fpRestorationUponAxeAttacks",
+    "nome": "FP Restoration upon Axe Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352400,
+    "key": "fpRestorationUponBowAttacks",
+    "nome": "FP Restoration upon Bow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352100,
+    "key": "fpRestorationUponClawAttacks",
+    "nome": "FP Restoration upon Claw Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350300,
+    "key": "fpRestorationUponColossalSwordAttacks",
+    "nome": "FP Restoration upon Colossal Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352300,
+    "key": "fpRestorationUponColossalWeaponAttacks",
+    "nome": "FP Restoration upon Colossal Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350500,
+    "key": "fpRestorationUponCurvedGreatswordAttacks",
+    "nome": "FP Restoration upon Curved Greatsword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350400,
+    "key": "fpRestorationUponCurvedSwordAttacks",
+    "nome": "FP Restoration upon Curved Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350000,
+    "key": "fpRestorationUponDaggerAttacks",
+    "nome": "FP Restoration upon Dagger Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352000,
+    "key": "fpRestorationUponFistAttacks",
+    "nome": "FP Restoration upon Fist Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351400,
+    "key": "fpRestorationUponFlailAttacks",
+    "nome": "FP Restoration upon Flail Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351300,
+    "key": "fpRestorationUponGreatHammerAttacks",
+    "nome": "FP Restoration upon Great Hammer Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351700,
+    "key": "fpRestorationUponGreatSpearAttacks",
+    "nome": "FP Restoration upon Great Spear Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351100,
+    "key": "fpRestorationUponGreataxeAttacks",
+    "nome": "FP Restoration upon Greataxe Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350200,
+    "key": "fpRestorationUponGreatswordAttacks",
+    "nome": "FP Restoration upon Greatsword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351800,
+    "key": "fpRestorationUponHalberdAttacks",
+    "nome": "FP Restoration upon Halberd Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351200,
+    "key": "fpRestorationUponHammerAttacks",
+    "nome": "FP Restoration upon Hammer Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350900,
+    "key": "fpRestorationUponHeavyThrustingSwordAttacks",
+    "nome": "FP Restoration upon Heavy Thrusting Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350600,
+    "key": "fpRestorationUponKatanaAttacks",
+    "nome": "FP Restoration upon Katana Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351600,
+    "key": "fpRestorationUponPikeAttacks",
+    "nome": "FP Restoration upon Pike Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351900,
+    "key": "fpRestorationUponReaperAttacks",
+    "nome": "FP Restoration upon Reaper Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7351500,
+    "key": "fpRestorationUponSpearAttacks",
+    "nome": "FP Restoration upon Spear Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350100,
+    "key": "fpRestorationUponStraightSwordAttacks",
+    "nome": "FP Restoration upon Straight Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 10000,
+    "key": "fpRestorationUponSuccessiveAttacks",
+    "nome": "FP Restoration upon Successive Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7036000,
+    "key": "fpRestorationUponSuccessiveAttacks",
+    "nome": "FP Restoration upon Successive Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8610100,
+    "key": "fpRestorationUponSuccessiveAttacks",
+    "nome": "FP Restoration upon Successive Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7350800,
+    "key": "fpRestorationUponThrustingSwordAttacks",
+    "nome": "FP Restoration upon Thrusting Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7350700,
+    "key": "fpRestorationUponTwinbladeAttacks",
+    "nome": "FP Restoration upon Twinblade Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352200,
+    "key": "fpRestorationUponWhipAttacks",
+    "nome": "FP Restoration upon Whip Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8740000,
+    "key": "frostbiteIncreasesAttackPower",
+    "nome": "Frostbite Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8690300,
+    "key": "frostbiteProducesAMistOfFrost",
+    "nome": "Frostbite Produces a Mist of Frost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035400,
+    "key": "gestureCrossedLegsBuildsUpMadness",
+    "nome": "Gesture Crossed Legs Builds Up Madness",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035410,
+    "key": "gestureCrossedLegsBuildsUpMadness",
+    "nome": "Gesture Crossed Legs Builds Up Madness",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121800,
+    "key": "glintstoneScrapsInPossessionAtStartOfExpedition",
+    "nome": "Glintstone Scraps in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8440200,
+    "key": "gradualRestorationByFlask",
+    "nome": "Gradual Restoration by Flask",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121900,
+    "key": "gravityStoneChunksInPossessionAtStartOfExpedition",
+    "nome": "Gravity Stone Chunks in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7150000,
+    "key": "guardCounterIsGivenABoostBasedOnCurrentHP",
+    "nome": "Guard counter is given a boost based on current HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8420100,
+    "key": "guardCountersActivateHolyAttacks",
+    "nome": "Guard Counters Activate Holy Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7012700,
+    "key": "guardCountersCastLightPillar",
+    "nome": "Guard Counters Cast Light Pillar",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8420200,
+    "key": "guardCountersLaunchSummoningAttack",
+    "nome": "Guard Counters Launch Summoning Attack",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8885200,
+    "key": "guardingUpsAttackAndCastingSpeeds",
+    "nome": "Guarding Ups Attack & Casting Speeds",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610600,
+    "key": "holyAttackFollowsChargeAttacks",
+    "nome": "Holy Attack Follows Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7000400,
+    "key": "dexterityPlus1",
+    "nome": "Dexterity +1",
+    "group": "dexterity",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000401,
+    "key": "dexterityPlus2",
+    "nome": "Dexterity +2",
+    "group": "dexterity",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000402,
+    "key": "dexterityPlus3",
+    "nome": "Dexterity +3",
+    "group": "dexterity",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7000200,
+    "key": "endurancePlus1",
+    "nome": "Endurance +1",
+    "group": "endurance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000201,
+    "key": "endurancePlus2",
+    "nome": "Endurance +2",
+    "group": "endurance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000202,
+    "key": "endurancePlus3",
+    "nome": "Endurance +3",
+    "group": "endurance",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7000600,
+    "key": "faithPlus1",
+    "nome": "Faith +1",
+    "group": "faith",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000601,
+    "key": "faithPlus2",
+    "nome": "Faith +2",
+    "group": "faith",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000602,
+    "key": "faithPlus3",
+    "nome": "Faith +3",
+    "group": "faith",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7001600,
+    "key": "fireAttackPowerUp",
+    "nome": "Fire Attack Power Up",
+    "group": "fireAttackPowerUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7001601,
+    "key": "fireAttackPowerUpPlus1",
+    "nome": "Fire Attack Power Up +1",
+    "group": "fireAttackPowerUp",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001602,
+    "key": "fireAttackPowerUpPlus2",
+    "nome": "Fire Attack Power Up +2",
+    "group": "fireAttackPowerUp",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7001800,
+    "key": "holyAttackPowerUp",
+    "nome": "Holy Attack Power Up",
+    "group": "holyAttackPowerUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7002900,
+    "key": "holyDamageNegationUp",
+    "nome": "Holy Damage Negation Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7122500,
+    "key": "holyGreaseInPossessionAtStartOfExpedition",
+    "nome": "Holy Grease in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8881000,
+    "key": "holyShockwaveUponChargedStrike",
+    "nome": "Holy Shockwave upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121400,
+    "key": "holyWaterPotsInPossessionAtStartOfExpedition",
+    "nome": "Holy Water Pots in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7036100,
+    "key": "hpRecoveryFromSuccessfulGuarding",
+    "nome": "HP Recovery from Successful Guarding",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8650000,
+    "key": "hpRecoveryFromSuccessfulGuardingPlus",
+    "nome": "HP Recovery From Successful Guarding",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8600100,
+    "key": "hpRestorationUponAttacks",
+    "nome": "HP Restoration upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341000,
+    "key": "hpRestorationUponAxeAttacks",
+    "nome": "HP Restoration upon Axe Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342400,
+    "key": "hpRestorationUponBowAttacks",
+    "nome": "HP Restoration upon Bow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342100,
+    "key": "hpRestorationUponClawAttacks",
+    "nome": "HP Restoration upon Claw Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340300,
+    "key": "hpRestorationUponColossalSwordAttacks",
+    "nome": "HP Restoration upon Colossal Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342300,
+    "key": "hpRestorationUponColossalWeaponAttacks",
+    "nome": "HP Restoration upon Colossal Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340500,
+    "key": "hpRestorationUponCurvedGreatswordAttacks",
+    "nome": "HP Restoration upon Curved Greatsword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340400,
+    "key": "hpRestorationUponCurvedSwordAttacks",
+    "nome": "HP Restoration upon Curved Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340000,
+    "key": "hpRestorationUponDaggerAttacks",
+    "nome": "HP Restoration upon Dagger Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342000,
+    "key": "hpRestorationUponFistAttacks",
+    "nome": "HP Restoration upon Fist Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341400,
+    "key": "hpRestorationUponFlailAttacks",
+    "nome": "HP Restoration upon Flail Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341300,
+    "key": "hpRestorationUponGreatHammerAttacks",
+    "nome": "HP Restoration upon Great Hammer Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341700,
+    "key": "hpRestorationUponGreatSpearAttacks",
+    "nome": "HP Restoration upon Great Spear Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341100,
+    "key": "hpRestorationUponGreataxeAttacks",
+    "nome": "HP Restoration upon Greataxe Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340200,
+    "key": "hpRestorationUponGreatswordAttacks",
+    "nome": "HP Restoration upon Greatsword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341800,
+    "key": "hpRestorationUponHalberdAttacks",
+    "nome": "HP Restoration upon Halberd Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341200,
+    "key": "hpRestorationUponHammerAttacks",
+    "nome": "HP Restoration upon Hammer Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340900,
+    "key": "hpRestorationUponHeavyThrustingSwordAttacks",
+    "nome": "HP Restoration upon Heavy Thrusting Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340600,
+    "key": "hpRestorationUponKatanaAttacks",
+    "nome": "HP Restoration upon Katana Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341600,
+    "key": "hpRestorationUponPikeAttacks",
+    "nome": "HP Restoration upon Pike Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341900,
+    "key": "hpRestorationUponReaperAttacks",
+    "nome": "HP Restoration upon Reaper Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7341500,
+    "key": "hpRestorationUponSpearAttacks",
+    "nome": "HP Restoration upon Spear Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340100,
+    "key": "hpRestorationUponStraightSwordAttacks",
+    "nome": "HP Restoration upon Straight Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610000,
+    "key": "hpRestorationUponSuccessiveAttacks",
+    "nome": "HP Restoration upon Successive Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340800,
+    "key": "hpRestorationUponThrustingSwordAttacks",
+    "nome": "HP Restoration upon Thrusting Sword Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7340700,
+    "key": "hpRestorationUponTwinbladeAttacks",
+    "nome": "HP Restoration upon Twinblade Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342200,
+    "key": "hpRestorationUponWhipAttacks",
+    "nome": "HP Restoration upon Whip Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7001901,
+    "key": "attacksInflictPoisonPlus1",
+    "nome": "Attacks Inflict Poison +1",
+    "group": "attacksInflictPoison",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7001902,
+    "key": "attacksInflictPoisonPlus2",
+    "nome": "Attacks Inflict Poison +2",
+    "group": "attacksInflictPoison",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7002300,
+    "key": "attacksInflictScarletRot",
+    "nome": "Attacks Inflict Scarlet Rot",
+    "group": "attacksInflictScarletRot",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002301,
+    "key": "attacksInflictScarletRotPlus1",
+    "nome": "Attacks Inflict Scarlet Rot +1",
+    "group": "attacksInflictScarletRot",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7002302,
+    "key": "attacksInflictScarletRotPlus2",
+    "nome": "Attacks Inflict Scarlet Rot +2",
+    "group": "attacksInflictScarletRot",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7002100,
+    "key": "attacksInflictSleep",
+    "nome": "Attacks Inflict Sleep",
+    "group": "attacksInflictSleep",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8110200,
+    "key": "attacksInflictSleep",
+    "nome": "Attacks Inflict Sleep",
+    "group": "attacksInflictSleep",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002101,
+    "key": "attacksInflictSleepPlus1",
+    "nome": "Attacks Inflict Sleep +1",
+    "group": "attacksInflictSleep",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7002102,
+    "key": "attacksInflictSleepPlus2",
+    "nome": "Attacks Inflict Sleep +2",
+    "group": "attacksInflictSleep",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7002103,
+    "key": "attacksInflictSleepPlus3",
+    "nome": "Attacks Inflict Sleep +3",
+    "group": "attacksInflictSleep",
+    "level": 3,
+    "stacks": false
+  },
+  {
+    "id": 7001801,
+    "key": "holyAttackPowerUpPlus1",
+    "nome": "Holy Attack Power Up +1",
+    "group": "holyAttackPowerUp",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001802,
+    "key": "holyAttackPowerUpPlus2",
+    "nome": "Holy Attack Power Up +2",
+    "group": "holyAttackPowerUp",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7160000,
+    "key": "hpRestorationUponThrustingCounterattack",
+    "nome": "HP Restoration upon Thrusting Counterattack",
+    "group": "hpRestorationUponThrustingCounterattack",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7200000,
+    "key": "hpRestorationWithHeadShots",
+    "nome": "HP Restoration with Head Shots",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7030200,
+    "key": "hpRestoredWhenUsingMedicinalBolusesEtc",
+    "nome": "HP restored when using medicinal boluses, etc.",
+    "group": "hpRestoredWhenUsingMedicinalBolusesEtc",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7230001,
+    "key": "hugeRuneDiscountForShopPurchasesWhileOnExpedition",
+    "nome": "Huge rune discount for shop purchases while on expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8450100,
+    "key": "iceStormSurgeSprint",
+    "nome": "Ice Storm Surge Sprint",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8880000,
+    "key": "iceStormUponChargedSlash",
+    "nome": "Ice Storm upon Charged Slash",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8641000,
+    "key": "iceStormUponCriticalHitWithFrost",
+    "nome": "Ice Storm upon Critical Hit with Frost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 340701,
+    "key": "impairedDamageNegation",
+    "nome": "Impaired Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6810100,
+    "key": "impairedDamageNegation",
+    "nome": "Impaired Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320001,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320101,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320201,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320301,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6850000,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8761000,
+    "key": "impairedPhysicalDamageNegation",
+    "nome": "Impaired Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320500,
+    "key": "improvedAttackPowerAtFullHP",
+    "nome": "Improved Attack Power at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8670000,
+    "key": "improvedAttackPowerAtFullHP",
+    "nome": "Improved Attack Power at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8670001,
+    "key": "improvedAttackPowerAtFullHP",
+    "nome": "Improved Attack Power at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8670002,
+    "key": "improvedAttackPowerAtFullHP",
+    "nome": "Improved Attack Power at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320400,
+    "key": "improvedAttackPowerAtLowHP",
+    "nome": "Improved Attack Power at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660000,
+    "key": "improvedAttackPowerAtLowHP",
+    "nome": "Improved Attack Power at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660001,
+    "key": "improvedAttackPowerAtLowHP",
+    "nome": "Improved Attack Power at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660002,
+    "key": "improvedAttackPowerAtLowHP",
+    "nome": "Improved Attack Power at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8300000,
+    "key": "improvedAttackPowerWhenTwoHanding",
+    "nome": "Improved Attack Power when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8300001,
+    "key": "improvedAttackPowerWhenTwoHanding",
+    "nome": "Improved Attack Power when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8300002,
+    "key": "improvedAttackPowerWhenTwoHanding",
+    "nome": "Improved Attack Power when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081000,
+    "key": "improvedAttackPowerWith3PlusAxesEquipped",
+    "nome": "Improved Attack Power with 3+ Axes Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082400,
+    "key": "improvedAttackPowerWith3PlusBowsEquipped",
+    "nome": "Improved Attack Power with 3+ Bows Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082100,
+    "key": "improvedAttackPowerWith3PlusClawsEquipped",
+    "nome": "Improved Attack Power with 3+ Claws Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080300,
+    "key": "improvedAttackPowerWith3PlusColossalSwordsEquipped",
+    "nome": "Improved Attack Power with 3+ Colossal Swords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082300,
+    "key": "improvedAttackPowerWith3PlusColossalWeaponsEquipped",
+    "nome": "Improved Attack Power with 3+ Colossal Weapons Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080500,
+    "key": "improvedAttackPowerWith3PlusCurvedGreatswordsEquipped",
+    "nome": "Improved Attack Power with 3+ Curved Greatswords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080400,
+    "key": "improvedAttackPowerWith3PlusCurvedSwordsEquipped",
+    "nome": "Improved Attack Power with 3+ Curved Swords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080000,
+    "key": "improvedAttackPowerWith3PlusDaggersEquipped",
+    "nome": "Improved Attack Power with 3+ Daggers Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082000,
+    "key": "improvedAttackPowerWith3PlusFistsEquipped",
+    "nome": "Improved Attack Power with 3+ Fists Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081400,
+    "key": "improvedAttackPowerWith3PlusFlailsEquipped",
+    "nome": "Improved Attack Power with 3+ Flails Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081300,
+    "key": "improvedAttackPowerWith3PlusGreatHammersEquipped",
+    "nome": "Improved Attack Power with 3+ Great Hammers Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081700,
+    "key": "improvedAttackPowerWith3PlusGreatSpearsEquipped",
+    "nome": "Improved Attack Power with 3+ Great Spears Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081100,
+    "key": "improvedAttackPowerWith3PlusGreataxesEquipped",
+    "nome": "Improved Attack Power with 3+ Greataxes Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080200,
+    "key": "improvedAttackPowerWith3PlusGreatswordsEquipped",
+    "nome": "Improved Attack Power with 3+ Greatswords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081800,
+    "key": "improvedAttackPowerWith3PlusHalberdsEquipped",
+    "nome": "Improved Attack Power with 3+ Halberds Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081200,
+    "key": "improvedAttackPowerWith3PlusHammersEquipped",
+    "nome": "Improved Attack Power with 3+ Hammers Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080900,
+    "key": "improvedAttackPowerWith3PlusHeavyThrustingSwordsEquipped",
+    "nome": "Improved Attack Power with 3+ Heavy Thrusting Swords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080600,
+    "key": "improvedAttackPowerWith3PlusKatanaEquipped",
+    "nome": "Improved Attack Power with 3+ Katana Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081900,
+    "key": "improvedAttackPowerWith3PlusReapersEquipped",
+    "nome": "Improved Attack Power with 3+ Reapers Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7081500,
+    "key": "improvedAttackPowerWith3PlusSpearsEquipped",
+    "nome": "Improved Attack Power with 3+ Spears Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080100,
+    "key": "improvedAttackPowerWith3PlusStraightSwordsEquipped",
+    "nome": "Improved Attack Power with 3+ Straight Swords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080800,
+    "key": "improvedAttackPowerWith3PlusThrustingSwordsEquipped",
+    "nome": "Improved Attack Power with 3+ Thrusting Swords Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7080700,
+    "key": "improvedAttackPowerWith3PlusTwinbladesEquipped",
+    "nome": "Improved Attack Power with 3+ Twinblades Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082200,
+    "key": "improvedAttackPowerWith3PlusWhipsEquipped",
+    "nome": "Improved Attack Power with 3+ Whips Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7331000,
+    "key": "improvedAxeAttackPower",
+    "nome": "Improved Axe Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044400,
+    "key": "improvedBestialIncantations",
+    "nome": "Improved Bestial Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 312001,
+    "key": "improvedBloodLossAndFrostResistance",
+    "nome": "Improved Blood Loss & Frost Resistance",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311600,
+    "key": "improvedBloodLossResistance",
+    "nome": "Improved Blood Loss Resistance",
+    "group": "improvedBloodLossResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003100,
+    "key": "improvedBloodLossResistance",
+    "nome": "Improved Blood Loss Resistance",
+    "group": "improvedBloodLossResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210100,
+    "key": "improvedBloodLossResistance",
+    "nome": "Improved Blood Loss Resistance",
+    "group": "improvedBloodLossResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210101,
+    "key": "improvedBloodLossResistance",
+    "nome": "Improved Blood Loss Resistance",
+    "group": "improvedBloodLossResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210102,
+    "key": "improvedBloodLossResistance",
+    "nome": "Improved Blood Loss Resistance",
+    "group": "improvedBloodLossResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7332400,
+    "key": "improvedBowAttackPower",
+    "nome": "Improved Bow Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043300,
+    "key": "improvedCarianSwordSorcery",
+    "nome": "Improved Carian Sword Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 321200,
+    "key": "improvedChainAttackFinishers",
+    "nome": "Improved Chain Attack Finishers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320000,
+    "key": "improvedChainAttackFinishers",
+    "nome": "Improved Chain Attack Finishers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320001,
+    "key": "improvedChainAttackFinishers",
+    "nome": "Improved Chain Attack Finishers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320002,
+    "key": "improvedChainAttackFinishers",
+    "nome": "Improved Chain Attack Finishers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 321300,
+    "key": "improvedChargeAttacks",
+    "nome": "Improved Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320100,
+    "key": "improvedChargeAttacks",
+    "nome": "Improved Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320101,
+    "key": "improvedChargeAttacks",
+    "nome": "Improved Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320102,
+    "key": "improvedChargeAttacks",
+    "nome": "Improved Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330300,
+    "key": "improvedChargedIncantation",
+    "nome": "Improved Charged Incantation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330301,
+    "key": "improvedChargedIncantation",
+    "nome": "Improved Charged Incantation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330302,
+    "key": "improvedChargedIncantation",
+    "nome": "Improved Charged Incantation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350100,
+    "key": "improvedChargedSkillAttackPower",
+    "nome": "Improved Charged Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330200,
+    "key": "improvedChargedSorceries",
+    "nome": "Improved Charged Sorceries",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330201,
+    "key": "improvedChargedSorceries",
+    "nome": "Improved Charged Sorceries",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330202,
+    "key": "improvedChargedSorceries",
+    "nome": "Improved Charged Sorceries",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 330900,
+    "key": "improvedChargedSpellsAndSkills",
+    "nome": "Improved Charged Spells & Skills",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7332100,
+    "key": "improvedClawAttackPower",
+    "nome": "Improved Claw Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330300,
+    "key": "improvedColossalSwordAttackPower",
+    "nome": "Improved Colossal Sword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7332300,
+    "key": "improvedColossalWeaponAttackPower",
+    "nome": "Improved Colossal Weapon Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320900,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040200,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8130000,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8130001,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8130002,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8130003,
+    "key": "improvedCriticalHits",
+    "nome": "Improved Critical Hits",
+    "group": "improvedCriticalHits",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043600,
+    "key": "improvedCrystalianSorcery",
+    "nome": "Improved Crystalian Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330500,
+    "key": "improvedCurvedGreatswordAttackPower",
+    "nome": "Improved Curved Greatsword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330400,
+    "key": "improvedCurvedSwordAttackPower",
+    "nome": "Improved Curved Sword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330000,
+    "key": "improvedDaggerAttackPower",
+    "nome": "Improved Dagger Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 340900,
+    "key": "improvedDamageNegationAtFullHP",
+    "nome": "Improved Damage Negation at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8670101,
+    "key": "improvedDamageNegationAtFullHP",
+    "nome": "Improved Damage Negation at Full HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 340800,
+    "key": "improvedDamageNegationAtLowHP",
+    "nome": "Improved Damage Negation at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6012300,
+    "key": "improvedDamageNegationAtLowHP",
+    "nome": "Improved Damage Negation at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6012301,
+    "key": "improvedDamageNegationAtLowHP",
+    "nome": "Improved Damage Negation at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7012300,
+    "key": "improvedDamageNegationAtLowHP",
+    "nome": "Improved Damage Negation at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8660101,
+    "key": "improvedDamageNegationAtLowHP",
+    "nome": "Improved Damage Negation at Low HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040201,
+    "key": "improvedCriticalHitsPlus1",
+    "nome": "Improved Critical Hits +1",
+    "group": "improvedCriticalHits",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 311900,
+    "key": "improvedDeathBlightResistance",
+    "nome": "Improved Death Blight Resistance",
+    "group": "improvedDeathBlightResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003300,
+    "key": "improvedDeathBlightResistance",
+    "nome": "Improved Death Blight Resistance",
+    "group": "improvedDeathBlightResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210300,
+    "key": "improvedDeathBlightResistance",
+    "nome": "Improved Death Blight Resistance",
+    "group": "improvedDeathBlightResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210301,
+    "key": "improvedDeathBlightResistance",
+    "nome": "Improved Death Blight Resistance",
+    "group": "improvedDeathBlightResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210302,
+    "key": "improvedDeathBlightResistance",
+    "nome": "Improved Death Blight Resistance",
+    "group": "improvedDeathBlightResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 312500,
+    "key": "improvedDexterity",
+    "nome": "Improved Dexterity",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 340700,
+    "key": "improvedDodging",
+    "nome": "Improved Dodging",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8410000,
+    "key": "improvedDodging",
+    "nome": "Improved Dodging",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7044600,
+    "key": "improvedDragonCommunionIncantations",
+    "nome": "Improved Dragon Communion Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044100,
+    "key": "improvedDragonCultIncantations",
+    "nome": "Improved Dragon Cult Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320200,
+    "key": "improvedFireAttackPower",
+    "nome": "Improved Fire Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100200,
+    "key": "improvedFireAttackPower",
+    "nome": "Improved Fire Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100201,
+    "key": "improvedFireAttackPower",
+    "nome": "Improved Fire Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 340200,
+    "key": "improvedFireDamageNegation",
+    "nome": "Improved Fire Damage Negation",
+    "group": "improvedFireDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200200,
+    "key": "improvedFireDamageNegation",
+    "nome": "Improved Fire Damage Negation",
+    "group": "improvedFireDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200201,
+    "key": "improvedFireDamageNegation",
+    "nome": "Improved Fire Damage Negation",
+    "group": "improvedFireDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200202,
+    "key": "improvedFireDamageNegation",
+    "nome": "Improved Fire Damage Negation",
+    "group": "improvedFireDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7332000,
+    "key": "improvedFistAttackPower",
+    "nome": "Improved Fist Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331400,
+    "key": "improvedFlailAttackPower",
+    "nome": "Improved Flail Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044500,
+    "key": "improvedFrenziedFlameIncantations",
+    "nome": "Improved Frenzied Flame Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311601,
+    "key": "improvedFrostResistance",
+    "nome": "Improved Frost Resistance",
+    "group": "improvedFrostResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003500,
+    "key": "improvedFrostResistance",
+    "nome": "Improved Frost Resistance",
+    "group": "improvedFrostResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210500,
+    "key": "improvedFrostResistance",
+    "nome": "Improved Frost Resistance",
+    "group": "improvedFrostResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210501,
+    "key": "improvedFrostResistance",
+    "nome": "Improved Frost Resistance",
+    "group": "improvedFrostResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210502,
+    "key": "improvedFrostResistance",
+    "nome": "Improved Frost Resistance",
+    "group": "improvedFrostResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044000,
+    "key": "improvedFundamentalistIncantations",
+    "nome": "Improved Fundamentalist Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044200,
+    "key": "improvedGiantsFlameIncantations",
+    "nome": "Improved Giants' Flame Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043400,
+    "key": "improvedGlintbladeSorcery",
+    "nome": "Improved Glintblade Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7044300,
+    "key": "improvedGodslayerIncantations",
+    "nome": "Improved Godslayer Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043700,
+    "key": "improvedGravitySorcery",
+    "nome": "Improved Gravity Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331300,
+    "key": "improvedGreatHammerAttackPower",
+    "nome": "Improved Great Hammer Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331700,
+    "key": "improvedGreatSpearAttackPower",
+    "nome": "Improved Great Spear Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331100,
+    "key": "improvedGreataxeAttackPower",
+    "nome": "Improved Greataxe Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330200,
+    "key": "improvedGreatswordAttackPower",
+    "nome": "Improved Greatsword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320700,
+    "key": "improvedGuardBreaking",
+    "nome": "Improved Guard Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8140000,
+    "key": "improvedGuardBreaking",
+    "nome": "Improved Guard Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8140001,
+    "key": "improvedGuardBreaking",
+    "nome": "Improved Guard Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8140002,
+    "key": "improvedGuardBreaking",
+    "nome": "Improved Guard Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 322000,
+    "key": "improvedGuardCounters",
+    "nome": "Improved Guard Counters",
+    "group": "improvedGuardCounters",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040100,
+    "key": "improvedGuardCounters",
+    "nome": "Improved Guard Counters",
+    "group": "improvedGuardCounters",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8420000,
+    "key": "improvedGuardCounters",
+    "nome": "Improved Guard Counters",
+    "group": "improvedGuardCounters",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8420001,
+    "key": "improvedGuardCounters",
+    "nome": "Improved Guard Counters",
+    "group": "improvedGuardCounters",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8420002,
+    "key": "improvedGuardCounters",
+    "nome": "Improved Guard Counters",
+    "group": "improvedGuardCounters",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 341000,
+    "key": "improvedGuardingAbility",
+    "nome": "Improved Guarding Ability",
+    "group": "improvedGuardingAbility",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8220000,
+    "key": "improvedGuardingAbility",
+    "nome": "Improved Guarding Ability",
+    "group": "improvedGuardingAbility",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331800,
+    "key": "improvedHalberdAttackPower",
+    "nome": "Improved Halberd Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331200,
+    "key": "improvedHammerAttackPower",
+    "nome": "Improved Hammer Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330900,
+    "key": "improvedHeavyThrustingSwordAttackPower",
+    "nome": "Improved Heavy Thrusting Sword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320300,
+    "key": "improvedHolyAttackPower",
+    "nome": "Improved Holy Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100400,
+    "key": "improvedHolyAttackPower",
+    "nome": "Improved Holy Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100401,
+    "key": "improvedHolyAttackPower",
+    "nome": "Improved Holy Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040290,
+    "key": "improvedCriticalHitsPlus1",
+    "nome": "Improved Critical Hits +1",
+    "group": "improvedCriticalHits",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 8220001,
+    "key": "improvedGuardingAbilityPlus1",
+    "nome": "Improved Guarding Ability +1",
+    "group": "improvedGuardingAbility",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 340400,
+    "key": "improvedHolyDamageNegation",
+    "nome": "Improved Holy Damage Negation",
+    "group": "improvedHolyDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200400,
+    "key": "improvedHolyDamageNegation",
+    "nome": "Improved Holy Damage Negation",
+    "group": "improvedHolyDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200401,
+    "key": "improvedHolyDamageNegation",
+    "nome": "Improved Holy Damage Negation",
+    "group": "improvedHolyDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200402,
+    "key": "improvedHolyDamageNegation",
+    "nome": "Improved Holy Damage Negation",
+    "group": "improvedHolyDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 330400,
+    "key": "improvedIncantations",
+    "nome": "Improved Incantations",
+    "group": "improvedIncantations",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6611300,
+    "key": "improvedIncantations",
+    "nome": "Improved Incantations",
+    "group": "improvedIncantations",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8330100,
+    "key": "improvedIncantations",
+    "nome": "Improved Incantations",
+    "group": "improvedIncantations",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6040000,
+    "key": "improvedInitialStandardAttack",
+    "nome": "Improved Initial Standard Attack",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6040001,
+    "key": "improvedInitialStandardAttack",
+    "nome": "Improved Initial Standard Attack",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040000,
+    "key": "improvedInitialStandardAttack",
+    "nome": "Improved Initial Standard Attack",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043500,
+    "key": "improvedInvisibilitySorcery",
+    "nome": "Improved Invisibility Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311000,
+    "key": "improvedItemDiscovery",
+    "nome": "Improved Item Discovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 370000,
+    "key": "improvedItemDiscovery",
+    "nome": "Improved Item Discovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8510000,
+    "key": "improvedItemDiscovery",
+    "nome": "Improved Item Discovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8510001,
+    "key": "improvedItemDiscovery",
+    "nome": "Improved Item Discovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8510002,
+    "key": "improvedItemDiscovery",
+    "nome": "Improved Item Discovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 321800,
+    "key": "improvedJumpAttacks",
+    "nome": "Improved Jump Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320300,
+    "key": "improvedJumpAttacks",
+    "nome": "Improved Jump Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320301,
+    "key": "improvedJumpAttacks",
+    "nome": "Improved Jump Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320302,
+    "key": "improvedJumpAttacks",
+    "nome": "Improved Jump Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7330600,
+    "key": "improvedKatanaAttackPower",
+    "nome": "Improved Katana Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320100,
+    "key": "improvedLightningAttackPower",
+    "nome": "Improved Lightning Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100300,
+    "key": "improvedLightningAttackPower",
+    "nome": "Improved Lightning Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100301,
+    "key": "improvedLightningAttackPower",
+    "nome": "Improved Lightning Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 340300,
+    "key": "improvedLightningDamageNegation",
+    "nome": "Improved Lightning Damage Negation",
+    "group": "improvedLightningDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200300,
+    "key": "improvedLightningDamageNegation",
+    "nome": "Improved Lightning Damage Negation",
+    "group": "improvedLightningDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200301,
+    "key": "improvedLightningDamageNegation",
+    "nome": "Improved Lightning Damage Negation",
+    "group": "improvedLightningDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200302,
+    "key": "improvedLightningDamageNegation",
+    "nome": "Improved Lightning Damage Negation",
+    "group": "improvedLightningDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 311801,
+    "key": "improvedMadnessResistance",
+    "nome": "Improved Madness Resistance",
+    "group": "improvedMadnessResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003600,
+    "key": "improvedMadnessResistance",
+    "nome": "Improved Madness Resistance",
+    "group": "improvedMadnessResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210600,
+    "key": "improvedMadnessResistance",
+    "nome": "Improved Madness Resistance",
+    "group": "improvedMadnessResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210601,
+    "key": "improvedMadnessResistance",
+    "nome": "Improved Madness Resistance",
+    "group": "improvedMadnessResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210602,
+    "key": "improvedMadnessResistance",
+    "nome": "Improved Madness Resistance",
+    "group": "improvedMadnessResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320000,
+    "key": "improvedMagicAttackPower",
+    "nome": "Improved Magic Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100100,
+    "key": "improvedMagicAttackPower",
+    "nome": "Improved Magic Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100101,
+    "key": "improvedMagicAttackPower",
+    "nome": "Improved Magic Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 340100,
+    "key": "improvedMagicDamageNegation",
+    "nome": "Improved Magic Damage Negation",
+    "group": "improvedMagicDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200100,
+    "key": "improvedMagicDamageNegation",
+    "nome": "Improved Magic Damage Negation",
+    "group": "improvedMagicDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200101,
+    "key": "improvedMagicDamageNegation",
+    "nome": "Improved Magic Damage Negation",
+    "group": "improvedMagicDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200102,
+    "key": "improvedMagicDamageNegation",
+    "nome": "Improved Magic Damage Negation",
+    "group": "improvedMagicDamageNegation",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7043900,
+    "key": "improvedNightSorcery",
+    "nome": "Improved Night Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8920100,
+    "key": "improvedNonPhysicalAttackPower",
+    "nome": "Improved Non-Physical Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8920101,
+    "key": "improvedNonPhysicalAttackPower",
+    "nome": "Improved Non-Physical Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8920102,
+    "key": "improvedNonPhysicalAttackPower",
+    "nome": "Improved Non-Physical Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 340500,
+    "key": "improvedNonPhysicalDamageNegation",
+    "nome": "Improved Non-Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8200500,
+    "key": "improvedNonPhysicalDamageNegation",
+    "nome": "Improved Non-Physical Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 322200,
+    "key": "improvedPerfumingArts",
+    "nome": "Improved Perfuming Arts",
+    "group": "improvedPerfumingArts",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043100,
+    "key": "improvedPerfumingArts",
+    "nome": "Improved Perfuming Arts",
+    "group": "improvedPerfumingArts",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8400000,
+    "key": "improvedPerfumingArts",
+    "nome": "Improved Perfuming Arts",
+    "group": "improvedPerfumingArts",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8100000,
+    "key": "improvedPhysicalAttackPower",
+    "nome": "Improved Physical Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 340000,
+    "key": "improvedPhysicalDamageNegation",
+    "nome": "Improved Physical Damage Negation",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6611000,
+    "key": "improvedPhysicalDamageNegation",
+    "nome": "Improved Physical Damage Negation",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006200,
+    "key": "improvedPhysicalDamageNegation",
+    "nome": "Improved Physical Damage Negation",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8200000,
+    "key": "improvedPhysicalDamageNegation",
+    "nome": "Improved Physical Damage Negation",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331600,
+    "key": "improvedPikeAttackPower",
+    "nome": "Improved Pike Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 312100,
+    "key": "improvedPoise",
+    "nome": "Improved Poise",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8230000,
+    "key": "improvedPoise",
+    "nome": "Improved Poise",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8230001,
+    "key": "improvedPoise",
+    "nome": "Improved Poise",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7240000,
+    "key": "improvedPoiseDamageNegationWhenKnockedBackByDamage",
+    "nome": "Improved Poise & Damage Negation When Knocked Back by Damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 312000,
+    "key": "improvedPoisonRotResistance",
+    "nome": "Improved Poison & Rot Resistance",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311700,
+    "key": "improvedPoisonResistance",
+    "nome": "Improved Poison Resistance",
+    "group": "improvedPoisonResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003000,
+    "key": "improvedPoisonResistance",
+    "nome": "Improved Poison Resistance",
+    "group": "improvedPoisonResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210000,
+    "key": "improvedPoisonResistance",
+    "nome": "Improved Poison Resistance",
+    "group": "improvedPoisonResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210001,
+    "key": "improvedPoisonResistance",
+    "nome": "Improved Poison Resistance",
+    "group": "improvedPoisonResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210002,
+    "key": "improvedPoisonResistance",
+    "nome": "Improved Poison Resistance",
+    "group": "improvedPoisonResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 321500,
+    "key": "improvedRangedWeaponAttacks",
+    "nome": "Improved Ranged Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8340000,
+    "key": "improvedRangedWeaponAttacks",
+    "nome": "Improved Ranged Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8340001,
+    "key": "improvedRangedWeaponAttacks",
+    "nome": "Improved Ranged Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8340002,
+    "key": "improvedRangedWeaponAttacks",
+    "nome": "Improved Ranged Weapon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7331900,
+    "key": "improvedReaperAttackPower",
+    "nome": "Improved Reaper Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 321900,
+    "key": "improvedRoarAndBreathAttacks",
+    "nome": "Improved Roar & Breath Attacks",
+    "group": "improvedRoarAndBreathAttacks",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043000,
+    "key": "improvedRoarAndBreathAttacks",
+    "nome": "Improved Roar & Breath Attacks",
+    "group": "improvedRoarAndBreathAttacks",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8380000,
+    "key": "improvedRoarAndBreathAttacks",
+    "nome": "Improved Roar & Breath Attacks",
+    "group": "improvedRoarAndBreathAttacks",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311701,
+    "key": "improvedRotResistance",
+    "nome": "Improved Rot Resistance",
+    "group": "improvedRotResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003400,
+    "key": "improvedRotResistance",
+    "nome": "Improved Rot Resistance",
+    "group": "improvedRotResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210400,
+    "key": "improvedRotResistance",
+    "nome": "Improved Rot Resistance",
+    "group": "improvedRotResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210401,
+    "key": "improvedRotResistance",
+    "nome": "Improved Rot Resistance",
+    "group": "improvedRotResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210402,
+    "key": "improvedRotResistance",
+    "nome": "Improved Rot Resistance",
+    "group": "improvedRotResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 312300,
+    "key": "improvedSkillAttackPower",
+    "nome": "Improved Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006700,
+    "key": "improvedSkillAttackPower",
+    "nome": "Improved Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8350000,
+    "key": "improvedSkillAttackPower",
+    "nome": "Improved Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8350001,
+    "key": "improvedSkillAttackPower",
+    "nome": "Improved Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8350002,
+    "key": "improvedSkillAttackPower",
+    "nome": "Improved Skill Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 312002,
+    "key": "improvedSleepMadnessResistance",
+    "nome": "Improved Sleep & Madness Resistance",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 311800,
+    "key": "improvedSleepResistance",
+    "nome": "Improved Sleep Resistance",
+    "group": "improvedSleepResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7003200,
+    "key": "improvedSleepResistance",
+    "nome": "Improved Sleep Resistance",
+    "group": "improvedSleepResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210200,
+    "key": "improvedSleepResistance",
+    "nome": "Improved Sleep Resistance",
+    "group": "improvedSleepResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210201,
+    "key": "improvedSleepResistance",
+    "nome": "Improved Sleep Resistance",
+    "group": "improvedSleepResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8210202,
+    "key": "improvedSleepResistance",
+    "nome": "Improved Sleep Resistance",
+    "group": "improvedSleepResistance",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 330000,
+    "key": "improvedSorceries",
+    "nome": "Improved Sorceries",
+    "group": "improvedSorceries",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6611200,
+    "key": "improvedSorceries",
+    "nome": "Improved Sorceries",
+    "group": "improvedSorceries",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8330000,
+    "key": "improvedSorceries",
+    "nome": "Improved Sorceries",
+    "group": "improvedSorceries",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7331500,
+    "key": "improvedSpearAttackPower",
+    "nome": "Improved Spear Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 330700,
+    "key": "improvedSpellCastingSpeed",
+    "nome": "Improved Spell Casting Speed",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330400,
+    "key": "improvedSpellCastingSpeed",
+    "nome": "Improved Spell Casting Speed",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330401,
+    "key": "improvedSpellCastingSpeed",
+    "nome": "Improved Spell Casting Speed",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8220002,
+    "key": "improvedGuardingAbilityPlus2",
+    "nome": "Improved Guarding Ability +2",
+    "group": "improvedGuardingAbility",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 311500,
+    "key": "improvedStaminaRecovery",
+    "nome": "Improved Stamina Recovery",
+    "group": "improvedStaminaRecovery",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8020200,
+    "key": "improvedStaminaRecovery",
+    "nome": "Improved Stamina Recovery",
+    "group": "improvedStaminaRecovery",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8850300,
+    "key": "improvedStaminaRecovery",
+    "nome": "Improved Stamina Recovery",
+    "group": "improvedStaminaRecovery",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8120000,
+    "key": "improvedStanceBreaking",
+    "nome": "Improved Stance-Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8120001,
+    "key": "improvedStanceBreaking",
+    "nome": "Improved Stance-Breaking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6006000,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6006001,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006000,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006001,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8300100,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8300101,
+    "key": "improvedStanceBreakingWhenTwoHanding",
+    "nome": "Improved Stance-Breaking when Two-Handing",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6006100,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6006101,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006100,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006101,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8310100,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8310101,
+    "key": "improvedStanceBreakingWhenWieldingTwoArmaments",
+    "nome": "Improved Stance-Breaking when Wielding Two Armaments",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7200100,
+    "key": "improvedStanceBreakingWithHeadShots",
+    "nome": "Improved Stance-Breaking with Head Shots",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7043200,
+    "key": "improvedStonediggerSorcery",
+    "nome": "Improved Stonedigger Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330100,
+    "key": "improvedStraightSwordAttackPower",
+    "nome": "Improved Straight Sword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7043800,
+    "key": "improvedThornSorcery",
+    "nome": "Improved Thorn Sorcery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040400,
+    "key": "improvedThrowingKnifeDamage",
+    "nome": "Improved Throwing Knife Damage",
+    "group": "improvedThrowingKnifeDamage",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7040300,
+    "key": "improvedThrowingPotDamage",
+    "nome": "Improved Throwing Pot Damage",
+    "group": "improvedThrowingPotDamage",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 322100,
+    "key": "improvedThrowingPots",
+    "nome": "Improved Throwing Pots",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8390000,
+    "key": "improvedThrowingPots",
+    "nome": "Improved Throwing Pots",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7040500,
+    "key": "improvedGlintstoneAndGravityStoneDamage",
+    "nome": "Improved Glintstone and Gravity Stone Damage",
+    "group": "improvedGlintstoneAndGravityStoneDamage",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 320600,
+    "key": "improvedThrustingCounterattack",
+    "nome": "Improved Thrusting Counterattack",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8430000,
+    "key": "improvedThrustingCounterattack",
+    "nome": "Improved Thrusting Counterattack",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7330800,
+    "key": "improvedThrustingSwordAttackPower",
+    "nome": "Improved Thrusting Sword Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7330700,
+    "key": "improvedTwinbladeAttackPower",
+    "nome": "Improved Twinblade Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7332200,
+    "key": "improvedWhipAttackPower",
+    "nome": "Improved Whip Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 310100,
+    "key": "increasedMaximumFP",
+    "nome": "Increased Maximum FP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6610500,
+    "key": "increasedMaximumFP",
+    "nome": "Increased Maximum FP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7000190,
+    "key": "increasedMaximumFP",
+    "nome": "Increased Maximum FP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8010000,
+    "key": "increasedMaximumFP",
+    "nome": "Increased Maximum FP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 310000,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 310400,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6610400,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7000090,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8000000,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8000001,
+    "key": "increasedMaximumHP",
+    "nome": "Increased Maximum HP",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 310200,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 310401,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6610600,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7000290,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8020000,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8020001,
+    "key": "increasedMaximumStamina",
+    "nome": "Increased Maximum Stamina",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7110000,
+    "key": "increasedRuneAcquisitionForSelfAndAllies",
+    "nome": "Increased rune acquisition for self and allies",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7050100,
+    "key": "itemsConferEffectToAllNearbyAllies",
+    "nome": "Items confer effect to all nearby allies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7012500,
+    "key": "jumpingConjuresMagicProjectiles",
+    "nome": "Jumping Conjures Magic Projectiles",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8520000,
+    "key": "lessLikelyToBeTargeted",
+    "nome": "Less Likely to Be Targeted",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8640500,
+    "key": "lightningCriticalHitImbuesArmament",
+    "nome": "Lightning Critical Hit Imbues Armament",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610500,
+    "key": "lightningFollowsChargeAttacks",
+    "nome": "Lightning Follows Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122400,
+    "key": "lightningGreaseInPossessionAtStartOfExpedition",
+    "nome": "Lightning Grease in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7121300,
+    "key": "lightningPotsInPossessionAtStartOfExpedition",
+    "nome": "Lightning Pots in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8882100,
+    "key": "lightningUponChargedThrust",
+    "nome": "Lightning upon Charged Thrust",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8410100,
+    "key": "lightningUponDodging",
+    "nome": "Lightning upon Dodging",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8883100,
+    "key": "lightningUponPrecisionAiming",
+    "nome": "Lightning upon Precision Aiming",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8660400,
+    "key": "lowHpCritHitFullyRestoresHP",
+    "nome": "Low HP Crit. Hit Fully Restores HP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8881200,
+    "key": "luringEnemiesUponChargedStrike",
+    "nome": "Luring Enemies upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035500,
+    "key": "madnessContinuallyRecoversFP",
+    "nome": "Madness Continually Recovers FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035510,
+    "key": "madnessContinuallyRecoversFP",
+    "nome": "Madness Continually Recovers FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8641100,
+    "key": "madnessCritHitFiresFrenziedFlame",
+    "nome": "Madness Crit. Hit Fires Frenzied Flame",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8750000,
+    "key": "madnessIncreasesAttackPower",
+    "nome": "Madness Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8690100,
+    "key": "madnessProducesAFlameOfFrenzy",
+    "nome": "Madness Produces a Flame of Frenzy",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610300,
+    "key": "magicAttackFollowsChargeAttacks",
+    "nome": "Magic Attack Follows Charge Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8690000,
+    "key": "poisonProducesAMistOfPoison",
+    "nome": "Poison Produces a Mist of Poison",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121500,
+    "key": "poisonboneDartsInPossessionAtStartOfExpedition",
+    "nome": "Poisonbone Darts in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9030900,
+    "key": "powerOfDarkMoon",
+    "nome": "Power of Dark Moon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9071000,
+    "key": "powerOfDespair",
+    "nome": "Power of Despair",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9040200,
+    "key": "powerOfDestinedDeath",
+    "nome": "Power of Destined Death",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9040800,
+    "key": "powerOfDestruction",
+    "nome": "Power of Destruction",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9330900,
+    "key": "powerOfFullMoon",
+    "nome": "Power of Full Moon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9031500,
+    "key": "powerOfHouseMarais",
+    "nome": "Power of House Marais",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9021400,
+    "key": "powerOfNightAndFlame",
+    "nome": "Power of Night and Flame",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9151100,
+    "key": "powerOfTheAncestralSpirit",
+    "nome": "Power of the Ancestral Spirit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9031400,
+    "key": "powerOfTheBlasphemous",
+    "nome": "Power of the Blasphemous",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9122000,
+    "key": "powerOfTheBlasphemous",
+    "nome": "Power of the Blasphemous",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9170100,
+    "key": "powerOfTheBloodLord",
+    "nome": "Power of the Blood Lord",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9060400,
+    "key": "powerOfTheDragonlord",
+    "nome": "Power of the Dragonlord",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9230500,
+    "key": "powerOfTheFirstLord",
+    "nome": "Power of the First Lord",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9210600,
+    "key": "powerOfTheFlyingDragon",
+    "nome": "Power of the Flying Dragon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9420000,
+    "key": "powerOfTheGeneral",
+    "nome": "Power of the General",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9200600,
+    "key": "powerOfTheGiant",
+    "nome": "Power of the Giant",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9150400,
+    "key": "powerOfTheGoldenLineage",
+    "nome": "Power of the Golden Lineage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9031700,
+    "key": "powerOfTheGoldenOrder",
+    "nome": "Power of the Golden Order",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9160900,
+    "key": "powerOfTheGreatAncientDragon",
+    "nome": "Power of the Great Ancient Dragon",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9031000,
+    "key": "powerOfTheGreaterWill",
+    "nome": "Power of the Greater Will",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9130300,
+    "key": "powerOfTheLightlessVoid",
+    "nome": "Power of the Lightless Void",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9081000,
+    "key": "powerOfTheOmenKing",
+    "nome": "Power of the Omen King",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9111500,
+    "key": "powerOfTheQueen",
+    "nome": "Power of the Queen",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9040500,
+    "key": "powerOfTheStarscourge",
+    "nome": "Power of the Starscourge",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9090200,
+    "key": "powerOfTheUndefeated",
+    "nome": "Power of the Undefeated",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 9041000,
+    "key": "powerOfVengeance",
+    "nome": "Power of Vengeance",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 321000,
+    "key": "projectileDamageDropOffReduced",
+    "nome": "Projectile Damage Drop-Off Reduced",
+    "group": "projectileDamageDropOffReduced",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8340100,
+    "key": "projectileDamageDropOffReduced",
+    "nome": "Projectile Damage Drop-Off Reduced",
+    "group": "projectileDamageDropOffReduced",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8340101,
+    "key": "projectileDamageDropOffReduced",
+    "nome": "Projectile Damage Drop-Off Reduced",
+    "group": "projectileDamageDropOffReduced",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8883000,
+    "key": "projectilesLaunchedUponAttacks",
+    "nome": "Projectiles Launched upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8881100,
+    "key": "projectilesUponChargedStrike",
+    "nome": "Projectiles upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7050000,
+    "key": "raisedStaminaRecoveryForNearbyAlliesButNotForSelf",
+    "nome": "Raised stamina recovery for nearby allies, but not for self",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8210700,
+    "key": "raisesResistanceToAllAilments",
+    "nome": "Raises resistance to all ailments",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330104,
+    "key": "raisesSorceryIncantationPotency",
+    "nome": "Raises sorcery/incantation potency",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 360200,
+    "key": "reducedSkillFpCost",
+    "nome": "Reduced Skill FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350200,
+    "key": "reducedSkillFpCost",
+    "nome": "Reduced Skill FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350201,
+    "key": "reducedSkillFpCost",
+    "nome": "Reduced Skill FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350202,
+    "key": "reducedSkillFpCost",
+    "nome": "Reduced Skill FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 330800,
+    "key": "reducedSpellFpCost",
+    "nome": "Reduced Spell FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330600,
+    "key": "reducedSpellFpCost",
+    "nome": "Reduced Spell FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330601,
+    "key": "reducedSpellFpCost",
+    "nome": "Reduced Spell FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8330602,
+    "key": "reducedSpellFpCost",
+    "nome": "Reduced Spell FP Cost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8020100,
+    "key": "reducedStaminaConsumption",
+    "nome": "Reduced Stamina Consumption",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8880100,
+    "key": "ringOfLightUponChargedSlash",
+    "nome": "Ring of Light upon Charged Slash",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8880400,
+    "key": "roaringFlamesUponChargedSlash",
+    "nome": "Roaring Flames upon Charged Slash",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640900,
+    "key": "rotCriticalHitFiresPestThreads",
+    "nome": "Rot Critical Hit Fires Pest Threads",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8883300,
+    "key": "rotMistUponPrecisionAiming",
+    "nome": "Rot Mist upon Precision Aiming",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8690200,
+    "key": "rotProducesAMistOfScarletRot",
+    "nome": "Rot Produces a Mist of Scarlet Rot",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7230000,
+    "key": "runeDiscountForShopPurchasesWhileOnExpedition",
+    "nome": "Rune discount for shop purchases while on expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640300,
+    "key": "sacredOrderUponHolyCriticalHit",
+    "nome": "Sacred Order upon Holy Critical Hit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8460100,
+    "key": "savageFlamesRoarWhileWalking",
+    "nome": "Savage Flames Roar While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122600,
+    "key": "shieldGreaseInPossessionAtStartOfExpedition",
+    "nome": "Shield Grease in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8884200,
+    "key": "shieldingCreatesHolyGround",
+    "nome": "Shielding Creates Holy Ground",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8884000,
+    "key": "shieldingImprovesDamageNegation",
+    "nome": "Shielding Improves Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8884100,
+    "key": "shieldingInvokesIndomitableVow",
+    "nome": "Shielding Invokes Indomitable Vow",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7031700,
+    "key": "shockwaveProducedFromSuccessfulGuarding",
+    "nome": "Shockwave Produced From Successful Guarding",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8881300,
+    "key": "shockwaveUponChargedStrike",
+    "nome": "Shockwave upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350300,
+    "key": "skillActivationImprovesPoise",
+    "nome": "Skill Activation Improves Poise",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8720000,
+    "key": "sleepIncreasesAttackPower",
+    "nome": "Sleep Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8690400,
+    "key": "sleepProducesAMistOfSleep",
+    "nome": "Sleep Produces a Mist of Sleep",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7012200,
+    "key": "slowlyRestoreHpForSelfAndNearbyAlliesWhenHpIsLow",
+    "nome": "Slowly restore HP for self and nearby allies when HP is low",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7121000,
+    "key": "smallPouchInPossessionAtStartOfExpedition",
+    "nome": "Small Pouch in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7121001,
+    "key": "smallPouchInPossessionAtStartOfExpedition",
+    "nome": "Small Pouch in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8340102,
+    "key": "projectileDamageDropOffReducedPlus1",
+    "nome": "Projectile damage drop-off reduced +1",
+    "group": "projectileDamageDropOffReduced",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 8010001,
+    "key": "raisesMaximumFpPlus1",
+    "nome": "Raises maximum FP +1",
+    "group": "raisesMaximumFp",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 8200501,
+    "key": "raisesNonPhysicalDamageNegationPlus1",
+    "nome": "Raises non-physical damage negation +1",
+    "group": "raisesNonPhysicalDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 8100001,
+    "key": "raisesPhysicalAttackPowerPlus1",
+    "nome": "Raises physical attack power +1",
+    "group": "raisesPhysicalAttackPower",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7100100,
+    "key": "staminaRecoveryUponLandingAttacks",
+    "nome": "Stamina Recovery upon Landing Attacks",
+    "group": "staminaRecoveryUponLandingAttacks",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7126000,
+    "key": "starlightShardsInPossessionAtStartOfExpedition",
+    "nome": "Starlight Shards in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7126001,
+    "key": "starlightShardsInPossessionAtStartOfExpedition",
+    "nome": "Starlight Shards in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7126002,
+    "key": "starlightShardsInPossessionAtStartOfExpedition",
+    "nome": "Starlight Shards in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7120100,
+    "key": "startingArmamentDealsFireDamage",
+    "nome": "Starting armament deals fire damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120300,
+    "key": "startingArmamentDealsHolyDamage",
+    "nome": "Starting armament deals holy damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120200,
+    "key": "startingArmamentDealsLightningDamage",
+    "nome": "Starting armament deals lightning damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120000,
+    "key": "startingArmamentDealsMagicDamage",
+    "nome": "Starting armament deals magic damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120600,
+    "key": "startingArmamentInflictsBloodLoss",
+    "nome": "Starting armament inflicts blood loss",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120400,
+    "key": "startingArmamentInflictsFrost",
+    "nome": "Starting armament inflicts frost",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120500,
+    "key": "startingArmamentInflictsPoison",
+    "nome": "Starting armament inflicts poison",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120700,
+    "key": "startingArmamentInflictsScarletRot",
+    "nome": "Starting armament inflicts scarlet rot",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7120900,
+    "key": "stoneswordKeyInPossessionAtStartOfExpedition",
+    "nome": "Stonesword Key in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8460500,
+    "key": "stormOfRedLightningWhileWalking",
+    "nome": "Storm of Red Lightning While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7012400,
+    "key": "strongAttackCreatesWideWaveOfHeat",
+    "nome": "Strong Attack Creates Wide Wave of Heat",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8320200,
+    "key": "strongAttacksImprovePoise",
+    "nome": "Strong Attacks Improve Poise",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8960200,
+    "key": "strongJumpAttacksCreateShockwave",
+    "nome": "Strong Jump Attacks Create Shockwave",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652100,
+    "key": "successfulGuardingUpsDmgNegation",
+    "nome": "Successful Guarding Ups Dmg Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652101,
+    "key": "successfulGuardingUpsDmgNegation",
+    "nome": "Successful Guarding Ups Dmg Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652102,
+    "key": "successfulGuardingUpsDmgNegation",
+    "nome": "Successful Guarding Ups Dmg Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652000,
+    "key": "successfulGuardingUpsPoise",
+    "nome": "Successful Guarding Ups Poise",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652001,
+    "key": "successfulGuardingUpsPoise",
+    "nome": "Successful Guarding Ups Poise",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8652002,
+    "key": "successfulGuardingUpsPoise",
+    "nome": "Successful Guarding Ups Poise",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 350400,
+    "key": "successiveAttackHpRestoration",
+    "nome": "Successive Attack HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 312501,
+    "key": "successiveAttacksBoostAttackPower",
+    "nome": "Successive Attacks Boost Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 320800,
+    "key": "successiveAttacksBoostAttackPower",
+    "nome": "Successive Attacks Boost Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7037600,
+    "key": "successiveAttacksBoostAttackPower",
+    "nome": "Successive Attacks Boost Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610200,
+    "key": "successiveAttacksBoostAttackPower",
+    "nome": "Successive Attacks Boost Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610700,
+    "key": "successiveAttacksNegateDamage",
+    "nome": "Successive Attacks Negate Damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610701,
+    "key": "successiveAttacksNegateDamage",
+    "nome": "Successive Attacks Negate Damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8610702,
+    "key": "successiveAttacksNegateDamage",
+    "nome": "Successive Attacks Negate Damage",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8600300,
+    "key": "suddenEnemyDeathUponAttacks",
+    "nome": "Sudden Enemy Death upon Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035600,
+    "key": "surgeSprintLandingsSplitEarth",
+    "nome": "Surge Sprint Landings Split Earth",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035700,
+    "key": "switchingWeaponsAddsAnAffinityAttack",
+    "nome": "Switching Weapons Adds an Affinity Attack",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 10002,
+    "key": "switchingWeaponsBoostsAttackPower",
+    "nome": "Switching Weapons Boosts Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7035900,
+    "key": "switchingWeaponsBoostsAttackPower",
+    "nome": "Switching Weapons Boosts Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 10001,
+    "key": "takingAttacksImprovesAttackPower",
+    "nome": "Taking attacks improves attack power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 100000,
+    "key": "takingAttacksImprovesAttackPower",
+    "nome": "Taking attacks improves attack power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6032200,
+    "key": "takingAttacksImprovesAttackPower",
+    "nome": "Taking attacks improves attack power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6032201,
+    "key": "takingAttacksImprovesAttackPower",
+    "nome": "Taking attacks improves attack power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7032200,
+    "key": "takingAttacksImprovesAttackPower",
+    "nome": "Taking attacks improves attack power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620100,
+    "key": "takingDamageBoostsDamageNegation",
+    "nome": "Taking Damage Boosts Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620101,
+    "key": "takingDamageBoostsDamageNegation",
+    "nome": "Taking Damage Boosts Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620102,
+    "key": "takingDamageBoostsDamageNegation",
+    "nome": "Taking Damage Boosts Damage Negation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620000,
+    "key": "takingDamageRestoresFp",
+    "nome": "Taking Damage Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620001,
+    "key": "takingDamageRestoresFp",
+    "nome": "Taking Damage Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8620002,
+    "key": "takingDamageRestoresFp",
+    "nome": "Taking Damage Restores FP",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7000500,
+    "key": "intelligencePlus1",
+    "nome": "Intelligence +1",
+    "group": "intelligence",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000501,
+    "key": "intelligencePlus2",
+    "nome": "Intelligence +2",
+    "group": "intelligence",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000502,
+    "key": "intelligencePlus3",
+    "nome": "Intelligence +3",
+    "group": "intelligence",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7001700,
+    "key": "lightningAttackPowerUp",
+    "nome": "Lightning Attack Power Up",
+    "group": "lightningAttackPowerUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7002800,
+    "key": "lightningDamageNegationUp",
+    "nome": "Lightning Damage Negation Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7001701,
+    "key": "lightningAttackPowerUpPlus1",
+    "nome": "Lightning Attack Power Up +1",
+    "group": "lightningAttackPowerUp",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001500,
+    "key": "magicAttackPowerUp",
+    "nome": "Magic Attack Power Up",
+    "group": "magicAttackPowerUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8881600,
+    "key": "magicBubblesUponChargedStrike",
+    "nome": "Magic Bubbles upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7002600,
+    "key": "magicDamageNegationUp",
+    "nome": "Magic Damage Negation Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7122300,
+    "key": "magicGreaseInPossessionAtStartOfExpedition",
+    "nome": "Magic Grease in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7121200,
+    "key": "magicPotsInPossessionAtStartOfExpedition",
+    "nome": "Magic Pots in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8450000,
+    "key": "magmaSurgeSprint",
+    "nome": "Magma Surge Sprint",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8881500,
+    "key": "magmaUponChargedStrike",
+    "nome": "Magma upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8630500,
+    "key": "magmaUponDefeatingMultipleEnemies",
+    "nome": "Magma upon Defeating Multiple Enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640400,
+    "key": "magmaUponFireCriticalHit",
+    "nome": "Magma upon Fire Critical Hit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8530100,
+    "key": "manyPeriodicalGlintblades",
+    "nome": "Many Periodical Glintblades",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7060100,
+    "key": "maxFpPermanentlyIncreasedAfterReleasingSorcerersRiseMechanism",
+    "nome": "Max FP permanently increased after releasing Sorcerer's Rise mechanism",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082600,
+    "key": "maxFpUpWith3PlusSacredSealsEquipped",
+    "nome": "Max FP Up with 3+ Sacred Seals Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082500,
+    "key": "maxFpUpWith3PlusStavesEquipped",
+    "nome": "Max FP Up with 3+ Staves Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082900,
+    "key": "maxHpUpWith3PlusGreatshieldsEquipped",
+    "nome": "Max HP Up with 3+ Greatshields Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082800,
+    "key": "maxHpUpWith3PlusMediumShieldsEquipped",
+    "nome": "Max HP Up with 3+ Medium Shields Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7082700,
+    "key": "maxHpUpWith3PlusSmallShieldsEquipped",
+    "nome": "Max HP Up with 3+ Small Shields Equipped",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 330801,
+    "key": "maximumHpDown",
+    "nome": "Maximum HP Down",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 311100,
+    "key": "moreRunesFromDefeatedEnemies",
+    "nome": "More Runes From Defeated Enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 370001,
+    "key": "moreRunesFromDefeatedEnemies",
+    "nome": "More Runes From Defeated Enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8500000,
+    "key": "moreRunesFromDefeatedEnemies",
+    "nome": "More Runes From Defeated Enemies",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8530000,
+    "key": "multiplePeriodicalGlintblades",
+    "nome": "Multiple Periodical Glintblades",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260700,
+    "key": "nearbyFrostbiteConcealsSelf",
+    "nome": "Nearby Frostbite Conceals Self",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 360700,
+    "key": "noRuneLossOrLevelDownUponDeath",
+    "nome": "No Rune Loss or Level Down Upon Death",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8350400,
+    "key": "parriesActivateGoldenRetaliation",
+    "nome": "Parries Activate Golden Retaliation",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7031600,
+    "key": "performingConsecutiveSuccessfulGuardsImprovesGuardAbilityAndDeflectsBigAttacks",
+    "nome": "Performing consecutive successful guards improves guard ability and deflects big attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8530200,
+    "key": "periodicalGiantGlintblades",
+    "nome": "Periodical Giant Glintblades",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8882300,
+    "key": "pestThreadsUponChargedThrust",
+    "nome": "Pest Threads upon Charged Thrust",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8880300,
+    "key": "phantomAttackUponChargedSlash",
+    "nome": "Phantom Attack upon Charged Slash",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8881400,
+    "key": "phantomAttackUponChargedStrike",
+    "nome": "Phantom Attack upon Charged Strike",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8882000,
+    "key": "phantomAttackUponChargedThrust",
+    "nome": "Phantom Attack upon Charged Thrust",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 321700,
+    "key": "poisonAndRotImprovesAttackPower",
+    "nome": "Poison & Rot Improves Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260710,
+    "key": "poisonAndRotInVicinityIncreasesAttackPower",
+    "nome": "Poison & Rot in Vicinity Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260800,
+    "key": "poisonAndRotInVicinityIncreasesAttackPower",
+    "nome": "Poison & Rot in Vicinity Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8700000,
+    "key": "poisonIncreasesAttackPower",
+    "nome": "Poison Increases Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8882400,
+    "key": "poisonMistUponChargedThrust",
+    "nome": "Poison Mist upon Charged Thrust",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8640700,
+    "key": "poisonMistUponPoisonCriticalHit",
+    "nome": "Poison Mist upon Poison Critical Hit",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8883200,
+    "key": "poisonMistUponPrecisionAiming",
+    "nome": "Poison Mist upon Precision Aiming",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7001702,
+    "key": "lightningAttackPowerUpPlus2",
+    "nome": "Lightning Attack Power Up +2",
+    "group": "lightningAttackPowerUp",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7001501,
+    "key": "magicAttackPowerUpPlus1",
+    "nome": "Magic Attack Power Up +1",
+    "group": "magicAttackPowerUp",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001502,
+    "key": "magicAttackPowerUpPlus2",
+    "nome": "Magic Attack Power Up +2",
+    "group": "magicAttackPowerUp",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000100,
+    "key": "mindPlus1",
+    "nome": "Mind +1",
+    "group": "mind",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000101,
+    "key": "mindPlus2",
+    "nome": "Mind +2",
+    "group": "mind",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000102,
+    "key": "mindPlus3",
+    "nome": "Mind +3",
+    "group": "mind",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7005600,
+    "key": "partialHpRestorationUponPostDamageAttacks",
+    "nome": "Partial HP Restoration upon Post-Damage Attacks",
+    "group": "partialHPRestorationUponPostDamageAttacks",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7001400,
+    "key": "physicalAttackUp",
+    "nome": "Physical Attack Up",
+    "group": "physicalAttackUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7001409,
+    "key": "physicalAttackUp",
+    "nome": "Physical Attack Up",
+    "group": "physicalAttackUp",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990400,
+    "key": "theDuchessGrief",
+    "nome": "The Duchess' Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990800,
+    "key": "theExecutorsGrief",
+    "nome": "The Executor's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990801,
+    "key": "theExecutorsGrief",
+    "nome": "The Executor's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990802,
+    "key": "theExecutorsGrief",
+    "nome": "The Executor's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990200,
+    "key": "theGuardiansGrief",
+    "nome": "The Guardian's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990201,
+    "key": "theGuardiansGrief",
+    "nome": "The Guardian's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990202,
+    "key": "theGuardiansGrief",
+    "nome": "The Guardian's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990300,
+    "key": "theIroneyesGrief",
+    "nome": "The Ironeye's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990301,
+    "key": "theIroneyesGrief",
+    "nome": "The Ironeye's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990302,
+    "key": "theIroneyesGrief",
+    "nome": "The Ironeye's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990500,
+    "key": "theRaidersGrief",
+    "nome": "The Raider's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990501,
+    "key": "theRaidersGrief",
+    "nome": "The Raider's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990502,
+    "key": "theRaidersGrief",
+    "nome": "The Raider's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990700,
+    "key": "theReclusesGrief",
+    "nome": "The Recluse's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990701,
+    "key": "theReclusesGrief",
+    "nome": "The Recluse's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990702,
+    "key": "theReclusesGrief",
+    "nome": "The Recluse's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990600,
+    "key": "theRevenantsGrief",
+    "nome": "The Revenant's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990601,
+    "key": "theRevenantsGrief",
+    "nome": "The Revenant's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990602,
+    "key": "theRevenantsGrief",
+    "nome": "The Revenant's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990100,
+    "key": "theWyldersGrief",
+    "nome": "The Wylder's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990101,
+    "key": "theWyldersGrief",
+    "nome": "The Wylder's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 9990102,
+    "key": "theWyldersGrief",
+    "nome": "The Wylder's Grief",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7121700,
+    "key": "throwingDaggersInPossessionAtStartOfExpedition",
+    "nome": "Throwing Daggers in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7070000,
+    "key": "treasureMarkedUponMap",
+    "nome": "Treasure marked upon map",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8360000,
+    "key": "ultimateArtGaugeChargeSpeedUp",
+    "nome": "Ultimate Art Gauge Charge Speed Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8460400,
+    "key": "viciousStarRainPoursWhileWalking",
+    "nome": "Vicious Star Rain Pours While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7122100,
+    "key": "wraithCallingBellInPossessionAtStartOfExpedition",
+    "nome": "Wraith Calling Bell in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8460300,
+    "key": "wraithsWhileWalking",
+    "nome": "Wraiths While Walking",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6060300,
+    "key": "maxHPIncreasedForEachGreatEnemyDefeatedAtAGreatChurch",
+    "nome": "Max HP increased for each great enemy defeated at a Great Church.",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6060400,
+    "key": "runesAndItemDiscoveryIncreasedForEachGreatEnemyDefeatedAtAFort",
+    "nome": "Runes and Item Discovery increased for each great enemy defeated at a Fort",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6060500,
+    "key": "arcaneIncreasedForEachGreatEnemyDefeatedAtARuin",
+    "nome": "Arcane increased for each great enemy defeated at a Ruin",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6060600,
+    "key": "maxStaminaIncreasedForEachGreatEnemyDefeatedAtAGreatEncampment",
+    "nome": "Max stamina increased for each great enemy defeated at a Great Encampment",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6030600,
+    "key": "artGaugeChargedFromSuccessfulGuardingPlus1",
+    "nome": "Art gauge charged from successful guarding +1",
+    "group": "artGaugeChargedFromSuccessfulGuarding",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6030601,
+    "key": "artGaugeChargedFromSuccessfulGuardingPlus2",
+    "nome": "Art gauge charged from successful guarding +2",
+    "group": "artGaugeChargedFromSuccessfulGuarding",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6030800,
+    "key": "artGaugeFillsModeratelyUponCriticalHitPlus1",
+    "nome": "Art gauge fills moderately upon critical hit +1",
+    "group": "artGaugeFillsModeratelyUponCriticalHit",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6030801,
+    "key": "artGaugeFillsModeratelyUponCriticalHitPlus2",
+    "nome": "Art gauge fills moderately upon critical hit +2",
+    "group": "artGaugeFillsModeratelyUponCriticalHit",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6260400,
+    "key": "attackPowerUpWhenFacingFrostbiteAfflictedEnemyPlus1",
+    "nome": "Attack power up when facing frostbite-afflicted enemy +1",
+    "group": "attackPowerUpWhenFacingFrostbiteAfflictedEnemy",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6260401,
+    "key": "attackPowerUpWhenFacingFrostbiteAfflictedEnemyPlus2",
+    "nome": "Attack power up when facing frostbite-afflicted enemy +2",
+    "group": "attackPowerUpWhenFacingFrostbiteAfflictedEnemy",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6260000,
+    "key": "attackPowerUpWhenFacingPoisonAfflictedEnemyPlus1",
+    "nome": "Attack power up when facing poison-afflicted enemy +1",
+    "group": "attackPowerUpWhenFacingPoisonAfflictedEnemy",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6260001,
+    "key": "attackPowerUpWhenFacingPoisonAfflictedEnemyPlus2",
+    "nome": "Attack power up when facing poison-afflicted enemy +2",
+    "group": "attackPowerUpWhenFacingPoisonAfflictedEnemy",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6260300,
+    "key": "attackPowerUpWhenFacingScarletRotAfflictedEnemyPlus1",
+    "nome": "Attack power up when facing scarlet rot-afflicted enemy +1",
+    "group": "attackPowerUpWhenFacingScarletRotAfflictedEnemy",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6260301,
+    "key": "attackPowerUpWhenFacingScarletRotAfflictedEnemyPlus2",
+    "nome": "Attack power up when facing scarlet rot-afflicted enemy +2",
+    "group": "attackPowerUpWhenFacingScarletRotAfflictedEnemy",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6000800,
+    "key": "characterSkillCooldownReductionPlus4",
+    "nome": "Character Skill Cooldown Reduction +4",
+    "group": "characterSkillCooldownReduction",
+    "level": 4,
+    "stacks": false
+  },
+  {
+    "id": 6000801,
+    "key": "characterSkillCooldownReductionPlus5",
+    "nome": "Character Skill Cooldown Reduction +5",
+    "group": "characterSkillCooldownReduction",
+    "level": 5,
+    "stacks": false
+  },
+  {
+    "id": 6035100,
+    "key": "criticalHitBoostsStaminaRecoverySpeedPlus1",
+    "nome": "Critical Hit Boosts Stamina Recovery Speed +1",
+    "group": "criticalHitBoostsStaminaRecoverySpeed",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6090000,
+    "key": "defeatingEnemiesFillsMoreOfTheArtGaugePlus1",
+    "nome": "Defeating enemies fills more of the Art gauge +1",
+    "group": "defeatingEnemiesFillsMoreOfTheArtGauge",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6090001,
+    "key": "defeatingEnemiesFillsMoreOfTheArtGaugePlus2",
+    "nome": "Defeating enemies fills more of the Art gauge +2",
+    "group": "defeatingEnemiesFillsMoreOfTheArtGauge",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6001600,
+    "key": "fireAttackPowerUpPlus3",
+    "nome": "Fire Attack Power Up +3",
+    "group": "fireAttackPowerUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001601,
+    "key": "fireAttackPowerUpPlus4",
+    "nome": "Fire Attack Power Up +4",
+    "group": "fireAttackPowerUp",
+    "level": 4,
+    "stacks": true
+  },
+  {
+    "id": 6001800,
+    "key": "holyAttackPowerUpPlus3",
+    "nome": "Holy Attack Power Up +3",
+    "group": "holyAttackPowerUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001801,
+    "key": "holyAttackPowerUpPlus4",
+    "nome": "Holy Attack Power Up +4",
+    "group": "holyAttackPowerUp",
+    "level": 4,
+    "stacks": true
+  },
+  {
+    "id": 6160000,
+    "key": "hpRestorationUponThrustingCounterattackPlus1",
+    "nome": "HP Restoration upon Thrusting Counterattack +1",
+    "group": "hpRestorationUponThrustingCounterattack",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6160001,
+    "key": "hpRestorationUponThrustingCounterattackPlus2",
+    "nome": "HP Restoration upon Thrusting Counterattack +2",
+    "group": "hpRestorationUponThrustingCounterattack",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6030200,
+    "key": "hpRestoredWhenUsingMedicinalBolusesEtcPlus1",
+    "nome": "HP restored when using medicinal boluses, etc. +1",
+    "group": "hpRestoredWhenUsingMedicinalBolusesEtc",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6030201,
+    "key": "hpRestoredWhenUsingMedicinalBolusesEtcPlus2",
+    "nome": "HP restored when using medicinal boluses, etc. +2",
+    "group": "hpRestoredWhenUsingMedicinalBolusesEtc",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6610800,
+    "key": "improvedAffinityAttackPower",
+    "nome": "Improved Affinity Attack Power",
+    "group": "improvedAffinityAttackPower",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6610801,
+    "key": "improvedAffinityAttackPowerPlus1",
+    "nome": "Improved Affinity Attack Power +1",
+    "group": "improvedAffinityAttackPower",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6610802,
+    "key": "improvedAffinityAttackPowerPlus2",
+    "nome": "Improved Affinity Attack Power +2",
+    "group": "improvedAffinityAttackPower",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6611100,
+    "key": "improvedAffinityDamageNegation",
+    "nome": "Improved Affinity Damage Negation",
+    "group": "improvedAffinityDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006300,
+    "key": "improvedAffinityDamageNegation",
+    "nome": "Improved Affinity Damage Negation",
+    "group": "improvedAffinityDamageNegation",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 350000,
+    "key": "improvedFlaskHPRestoration",
+    "nome": "Improved Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6611400,
+    "key": "improvedFlaskHPRestoration",
+    "nome": "Improved Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8440000,
+    "key": "improvedFlaskHPRestoration",
+    "nome": "Improved Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8440001,
+    "key": "improvedFlaskHPRestoration",
+    "nome": "Improved Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8851900,
+    "key": "improvedFlaskHPRestoration",
+    "nome": "Improved Flask HP Restoration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621000,
+    "key": "crimsonspillCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Crimsonspill Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621100,
+    "key": "crimsonCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Crimson Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621200,
+    "key": "ceruleanCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Cerulean Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621300,
+    "key": "speckledHardtearInPossessionAtStartOfExpedition",
+    "nome": "Speckled Hardtear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621400,
+    "key": "crimsonBubbletearInPossessionAtStartOfExpedition",
+    "nome": "Crimson Bubbletear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621500,
+    "key": "opalineBubbletearInPossessionAtStartOfExpedition",
+    "nome": "Opaline Bubbletear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621600,
+    "key": "crimsonburstCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Crimsonburst Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621700,
+    "key": "greenburstCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Greenburst Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621800,
+    "key": "opalineHardtearInPossessionAtStartOfExpedition",
+    "nome": "Opaline Hardtear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6621900,
+    "key": "thornyCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Thorny Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622000,
+    "key": "spikedCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Spiked Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622100,
+    "key": "windyCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Windy Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622200,
+    "key": "rupturedCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Ruptured Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622300,
+    "key": "leadenHardtearInPossessionAtStartOfExpedition",
+    "nome": "Leaden Hardtear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622400,
+    "key": "twiggyCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Twiggy Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622500,
+    "key": "crimsonwhorlBubbletearInPossessionAtStartOfExpedition",
+    "nome": "Crimsonwhorl Bubbletear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622600,
+    "key": "ceruleanHiddenTearInPossessionAtStartOfExpedition",
+    "nome": "Cerulean Hidden Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622700,
+    "key": "stonebarbCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Stonebarb Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622800,
+    "key": "flameShroudingCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Flame-Shrouding Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6622900,
+    "key": "magicShroudingCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Magic-Shrouding Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6623000,
+    "key": "lightningShroudingCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Lightning-Shrouding Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6623100,
+    "key": "holyShroudingCrackedTearInPossessionAtStartOfExpedition",
+    "nome": "Holy-Shrouding Cracked Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624000,
+    "key": "upliftingAromaticInPossessionAtStartOfExpedition",
+    "nome": "Uplifting Aromatic in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624100,
+    "key": "sparkAromaticInPossessionAtStartOfExpedition",
+    "nome": "Spark Aromatic in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624200,
+    "key": "ironjarAromaticInPossessionAtStartOfExpedition",
+    "nome": "Ironjar Aromatic in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624300,
+    "key": "bloodboilAromaticInPossessionAtStartOfExpedition",
+    "nome": "Bloodboil Aromatic in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624400,
+    "key": "poisonSpraymistInPossessionAtStartOfExpedition",
+    "nome": "Poison Spraymist in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6624500,
+    "key": "acidSpraymistInPossessionAtStartOfExpedition",
+    "nome": "Acid Spraymist in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6630000,
+    "key": "dormantPowerHelpsDiscoverDaggers",
+    "nome": "Dormant Power Helps Discover Daggers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630100,
+    "key": "dormantPowerHelpsDiscoverStraightSwords",
+    "nome": "Dormant Power Helps Discover Straight Swords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630200,
+    "key": "dormantPowerHelpsDiscoverGreatswords",
+    "nome": "Dormant Power Helps Discover Greatswords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630300,
+    "key": "dormantPowerHelpsDiscoverColossalSwords",
+    "nome": "Dormant Power Helps Discover Colossal Swords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630400,
+    "key": "dormantPowerHelpsDiscoverCurvedSwords",
+    "nome": "Dormant Power Helps Discover Curved Swords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630500,
+    "key": "dormantPowerHelpsDiscoverCurvedGreatswords",
+    "nome": "Dormant Power Helps Discover Curved Greatswords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630600,
+    "key": "dormantPowerHelpsDiscoverKatana",
+    "nome": "Dormant Power Helps Discover Katana",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630700,
+    "key": "dormantPowerHelpsDiscoverTwinblades",
+    "nome": "Dormant Power Helps Discover Twinblades",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630800,
+    "key": "dormantPowerHelpsDiscoverThrustingSwords",
+    "nome": "Dormant Power Helps Discover Thrusting Swords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6630900,
+    "key": "dormantPowerHelpsDiscoverHeavyThrustingSwords",
+    "nome": "Dormant Power Helps Discover Heavy Thrusting Swords",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631000,
+    "key": "dormantPowerHelpsDiscoverAxes",
+    "nome": "Dormant Power Helps Discover Axes",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631100,
+    "key": "dormantPowerHelpsDiscoverGreataxes",
+    "nome": "Dormant Power Helps Discover Greataxes",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631200,
+    "key": "dormantPowerHelpsDiscoverHammers",
+    "nome": "Dormant Power Helps Discover Hammers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631300,
+    "key": "dormantPowerHelpsDiscoverGreatHammers",
+    "nome": "Dormant Power Helps Discover Great Hammers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631400,
+    "key": "dormantPowerHelpsDiscoverFlails",
+    "nome": "Dormant Power Helps Discover Flails",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631500,
+    "key": "dormantPowerHelpsDiscoverSpears",
+    "nome": "Dormant Power Helps Discover Spears",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631600,
+    "key": "dormantPowerHelpsDiscoverGreatSpears",
+    "nome": "Dormant Power Helps Discover Great Spears",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631700,
+    "key": "dormantPowerHelpsDiscoverHalberds",
+    "nome": "Dormant Power Helps Discover Halberds",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631800,
+    "key": "dormantPowerHelpsDiscoverReapers",
+    "nome": "Dormant Power Helps Discover Reapers",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6631900,
+    "key": "dormantPowerHelpsDiscoverFists",
+    "nome": "Dormant Power Helps Discover Fists",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632000,
+    "key": "dormantPowerHelpsDiscoverClaws",
+    "nome": "Dormant Power Helps Discover Claws",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632100,
+    "key": "dormantPowerHelpsDiscoverWhips",
+    "nome": "Dormant Power Helps Discover Whips",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632200,
+    "key": "dormantPowerHelpsDiscoverColossalWeapons",
+    "nome": "Dormant Power Helps Discover Colossal Weapons",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632300,
+    "key": "dormantPowerHelpsDiscoverBows",
+    "nome": "Dormant Power Helps Discover Bows",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632400,
+    "key": "dormantPowerHelpsDiscoverGreatbows",
+    "nome": "Dormant Power Helps Discover Greatbows",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632500,
+    "key": "dormantPowerHelpsDiscoverCrossbows",
+    "nome": "Dormant Power Helps Discover Crossbows",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632600,
+    "key": "dormantPowerHelpsDiscoverBallistas",
+    "nome": "Dormant Power Helps Discover Ballistas",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632700,
+    "key": "dormantPowerHelpsDiscoverSmallShields",
+    "nome": "Dormant Power Helps Discover Small Shields",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632800,
+    "key": "dormantPowerHelpsDiscoverMediumShields",
+    "nome": "Dormant Power Helps Discover Medium Shields",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6632900,
+    "key": "dormantPowerHelpsDiscoverGreatshields",
+    "nome": "Dormant Power Helps Discover Greatshields",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6633000,
+    "key": "dormantPowerHelpsDiscoverStaves",
+    "nome": "Dormant Power Helps Discover Staves",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6633100,
+    "key": "dormantPowerHelpsDiscoverSacredSeals",
+    "nome": "Dormant Power Helps Discover Sacred Seals",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6633200,
+    "key": "dormantPowerHelpsDiscoverTorches",
+    "nome": "Dormant Power Helps Discover Torches",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7332500,
+    "key": "improvedGreatbowAttackPower",
+    "nome": "Improved Greatbow Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7332600,
+    "key": "improvedCrossbowAttackPower",
+    "nome": "Improved Crossbow Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7332700,
+    "key": "improvedBallistaAttackPower",
+    "nome": "Improved Ballista Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7342500,
+    "key": "hpRestorationUponGreatbowAttacks",
+    "nome": "HP Restoration upon Greatbow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342600,
+    "key": "hpRestorationUponCrossbowAttacks",
+    "nome": "HP Restoration upon Crossbow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7342700,
+    "key": "hpRestorationUponBallistaAttacks",
+    "nome": "HP Restoration upon Ballista Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352500,
+    "key": "fpRestorationUponGreatbowAttacks",
+    "nome": "FP Restoration upon Greatbow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352600,
+    "key": "fpRestorationUponCrossbowAttacks",
+    "nome": "FP Restoration upon Crossbow Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7352700,
+    "key": "fpRestorationUponBallistaAttacks",
+    "nome": "FP Restoration upon Ballista Attacks",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8851000,
+    "key": "allResistancesUp",
+    "nome": "All Resistances Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8851200,
+    "key": "improvedSorceriesAndIncantations",
+    "nome": "Improved Sorceries & Incantations",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8851300,
+    "key": "increasedSorceryAndIncantationDuration",
+    "nome": "Increased Sorcery & Incantation Duration",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6623200,
+    "key": "greenspillCrystalTearInPossessionAtStartOfExpedition",
+    "nome": "Greenspill Crystal Tear in possession at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006500,
+    "key": "continuousFpRecovery",
+    "nome": "Continuous FP Recovery",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7006600,
+    "key": "improvedMeleeAttackPower",
+    "nome": "Improved Melee Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 7037700,
+    "key": "statusAilmentGaugesSlowlyIncreaseAttackPower",
+    "nome": "Status Ailment Gauges Slowly Increase Attack Power",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7037800,
+    "key": "occasionallyNullifyAttacksWhenDamageNegationsIsLowered",
+    "nome": "Occasionally Nullify Attacks When Damage Negation is Lowered",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7170100,
+    "key": "attacksInflictRotWhenDamageIsTaken",
+    "nome": "Attacks Inflict Rot when Damage is Taken",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7260900,
+    "key": "rotInVicinityCausesContinuousHpRecovery",
+    "nome": "Rot in Vicinity Causes Continuous HP Recovery",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7360600,
+    "key": "changesCompatibleArmamentsSorceryToMagicGlintbladeAtStartOfExpedition",
+    "nome": "Changes compatible armament's sorcery to Magic Glintblade at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7360900,
+    "key": "changesCompatibleArmamentsSorceryToCarianGreatswordAtStartOfExpedition",
+    "nome": "Changes compatible armament's sorcery to Carian Greatsword at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7361200,
+    "key": "changesCompatibleArmamentsSorceryToNightShardAtStartOfExpedition",
+    "nome": "Changes compatible armament's sorcery to Night Shard at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7361300,
+    "key": "changesCompatibleArmamentsSorceryToMagmaShotAtStartOfExpedition",
+    "nome": "Changes compatible armament's sorcery to Magma Shot at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7362100,
+    "key": "changesCompatibleArmamentsSorceryToBriarsOfPunishmentAtStartOfExpedition",
+    "nome": "Changes compatible armament's sorcery to Briars of Punishment at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7370300,
+    "key": "changesCompatibleArmamentsIncantationToWrathOfGoldAtStartOfExpedition",
+    "nome": "Changes compatible armament's incantation to Wrath of Gold at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7370400,
+    "key": "changesCompatibleArmamentsIncantationToLightningSpearAtStartOfExpedition",
+    "nome": "Changes compatible armament's incantation to Lightning Spear at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7370600,
+    "key": "changesCompatibleArmamentsIncantationToOFlameAtStartOfExpedition",
+    "nome": "Changes compatible armament's incantation to O, Flame! at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7370900,
+    "key": "changesCompatibleArmamentsIncantationToBeastClawAtStartOfExpedition",
+    "nome": "Changes compatible armament's incantation to Beast Claw at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 7371500,
+    "key": "changesCompatibleArmamentsIncantationToDragonfireAtStartOfExpedition",
+    "nome": "Changes compatible armament's incantation to Dragonfire at start of expedition",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8210701,
+    "key": "allResistanceUp",
+    "nome": "All Resistance Up",
+    "group": null,
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8500100,
+    "key": "runeOfTheStrong",
+    "nome": "Rune of the Strong",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 8500101,
+    "key": "runeOfTheStrong",
+    "nome": "Rune of the Strong",
+    "group": null,
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6611101,
+    "key": "improvedAffinityDamageNegationPlus1",
+    "nome": "Improved Affinity Damage Negation +1",
+    "group": "improvedAffinityDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6611102,
+    "key": "improvedAffinityDamageNegationPlus2",
+    "nome": "Improved Affinity Damage Negation +2",
+    "group": "improvedAffinityDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003100,
+    "key": "improvedBloodLossResistancePlus1",
+    "nome": "Improved Blood Loss Resistance +1",
+    "group": "improvedBloodLossResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003101,
+    "key": "improvedBloodLossResistancePlus2",
+    "nome": "Improved Blood Loss Resistance +2",
+    "group": "improvedBloodLossResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003300,
+    "key": "improvedDeathBlightResistancePlus1",
+    "nome": "Improved Death Blight Resistance +1",
+    "group": "improvedDeathBlightResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003301,
+    "key": "improvedDeathBlightResistancePlus2",
+    "nome": "Improved Death Blight Resistance +2",
+    "group": "improvedDeathBlightResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6002700,
+    "key": "improvedFireDamageNegationPlus1",
+    "nome": "Improved Fire Damage Negation +1",
+    "group": "improvedFireDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6002701,
+    "key": "improvedFireDamageNegationPlus2",
+    "nome": "Improved Fire Damage Negation +2",
+    "group": "improvedFireDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003500,
+    "key": "improvedFrostResistancePlus1",
+    "nome": "Improved Frost Resistance +1",
+    "group": "improvedFrostResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003501,
+    "key": "improvedFrostResistancePlus2",
+    "nome": "Improved Frost Resistance +2",
+    "group": "improvedFrostResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6040500,
+    "key": "improvedGlintstoneAndGravityStoneDamagePlus1",
+    "nome": "Improved Glintstone and Gravity Stone Damage +1",
+    "group": "improvedGlintstoneAndGravityStoneDamage",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6040501,
+    "key": "improvedGlintstoneAndGravityStoneDamagePlus2",
+    "nome": "Improved Glintstone and Gravity Stone Damage +2",
+    "group": "improvedGlintstoneAndGravityStoneDamage",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6040100,
+    "key": "improvedGuardCountersPlus1",
+    "nome": "Improved Guard Counters +1",
+    "group": "improvedGuardCounters",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6040101,
+    "key": "improvedGuardCountersPlus2",
+    "nome": "Improved Guard Counters +2",
+    "group": "improvedGuardCounters",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6002900,
+    "key": "improvedHolyDamageNegationPlus1",
+    "nome": "Improved Holy Damage Negation +1",
+    "group": "improvedHolyDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6002901,
+    "key": "improvedHolyDamageNegationPlus2",
+    "nome": "Improved Holy Damage Negation +2",
+    "group": "improvedHolyDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6611301,
+    "key": "improvedIncantationsPlus1",
+    "nome": "Improved Incantations +1",
+    "group": "improvedIncantations",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6611302,
+    "key": "improvedIncantationsPlus2",
+    "nome": "Improved Incantations +2",
+    "group": "improvedIncantations",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6002800,
+    "key": "improvedLightningDamageNegationPlus1",
+    "nome": "Improved Lightning Damage Negation +1",
+    "group": "improvedLightningDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6002801,
+    "key": "improvedLightningDamageNegationPlus2",
+    "nome": "Improved Lightning Damage Negation +2",
+    "group": "improvedLightningDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003600,
+    "key": "improvedMadnessResistancePlus1",
+    "nome": "Improved Madness Resistance +1",
+    "group": "improvedMadnessResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003601,
+    "key": "improvedMadnessResistancePlus2",
+    "nome": "Improved Madness Resistance +2",
+    "group": "improvedMadnessResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6002600,
+    "key": "improvedMagicDamageNegationPlus1",
+    "nome": "Improved Magic Damage Negation +1",
+    "group": "improvedMagicDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6002601,
+    "key": "improvedMagicDamageNegationPlus2",
+    "nome": "Improved Magic Damage Negation +2",
+    "group": "improvedMagicDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6043100,
+    "key": "improvedPerfumingArtsPlus1",
+    "nome": "Improved Perfuming Arts +1",
+    "group": "improvedPerfumingArts",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6043101,
+    "key": "improvedPerfumingArtsPlus2",
+    "nome": "Improved Perfuming Arts +2",
+    "group": "improvedPerfumingArts",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6611001,
+    "key": "improvedPhysicalDamageNegationPlus1",
+    "nome": "Improved Physical Damage Negation +1",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6611002,
+    "key": "improvedPhysicalDamageNegationPlus2",
+    "nome": "Improved Physical Damage Negation +2",
+    "group": "improvedPhysicalDamageNegation",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003000,
+    "key": "improvedPoisonResistancePlus1",
+    "nome": "Improved Poison Resistance +1",
+    "group": "improvedPoisonResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003001,
+    "key": "improvedPoisonResistancePlus2",
+    "nome": "Improved Poison Resistance +2",
+    "group": "improvedPoisonResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6043000,
+    "key": "improvedRoarAndBreathAttacksPlus1",
+    "nome": "Improved Roar & Breath Attacks +1",
+    "group": "improvedRoarAndBreathAttacks",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6043001,
+    "key": "improvedRoarAndBreathAttacksPlus2",
+    "nome": "Improved Roar & Breath Attacks +2",
+    "group": "improvedRoarAndBreathAttacks",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6003400,
+    "key": "improvedRotResistancePlus1",
+    "nome": "Improved Rot Resistance +1",
+    "group": "improvedRotResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003401,
+    "key": "improvedRotResistancePlus2",
+    "nome": "Improved Rot Resistance +2",
+    "group": "improvedRotResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6003200,
+    "key": "improvedSleepResistancePlus1",
+    "nome": "Improved Sleep Resistance +1",
+    "group": "improvedSleepResistance",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6003201,
+    "key": "improvedSleepResistancePlus2",
+    "nome": "Improved Sleep Resistance +2",
+    "group": "improvedSleepResistance",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6611201,
+    "key": "improvedSorceriesPlus1",
+    "nome": "Improved Sorceries +1",
+    "group": "improvedSorceries",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6611202,
+    "key": "improvedSorceriesPlus2",
+    "nome": "Improved Sorceries +2",
+    "group": "improvedSorceries",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 8020201,
+    "key": "improvedStaminaRecoveryPlus1",
+    "nome": "Improved stamina recovery +1",
+    "group": "improvedStaminaRecovery",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6040400,
+    "key": "improvedThrowingKnifeDamagePlus1",
+    "nome": "Improved Throwing Knife Damage +1",
+    "group": "improvedThrowingKnifeDamage",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6040401,
+    "key": "improvedThrowingKnifeDamagePlus2",
+    "nome": "Improved Throwing Knife Damage +2",
+    "group": "improvedThrowingKnifeDamage",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6040300,
+    "key": "improvedThrowingPotDamagePlus1",
+    "nome": "Improved Throwing Pot Damage +1",
+    "group": "improvedThrowingPotDamage",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6040301,
+    "key": "improvedThrowingPotDamagePlus2",
+    "nome": "Improved Throwing Pot Damage +2",
+    "group": "improvedThrowingPotDamage",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6001700,
+    "key": "lightningAttackPowerUpPlus3",
+    "nome": "Lightning Attack Power Up +3",
+    "group": "lightningAttackPowerUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001701,
+    "key": "lightningAttackPowerUpPlus4",
+    "nome": "Lightning Attack Power Up +4",
+    "group": "lightningAttackPowerUp",
+    "level": 4,
+    "stacks": true
+  },
+  {
+    "id": 6600100,
+    "key": "madnessInVicinityImprovesAttackPower",
+    "nome": "Madness in Vicinity Improves Attack Power",
+    "group": "madnessInVicinityImprovesAttackPower",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6600101,
+    "key": "madnessInVicinityImprovesAttackPowerPlus1",
+    "nome": "Madness in Vicinity Improves Attack Power +1",
+    "group": "madnessInVicinityImprovesAttackPower",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6600102,
+    "key": "madnessInVicinityImprovesAttackPowerPlus2",
+    "nome": "Madness in Vicinity Improves Attack Power +2",
+    "group": "madnessInVicinityImprovesAttackPower",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6001500,
+    "key": "magicAttackPowerUpPlus3",
+    "nome": "Magic Attack Power Up +3",
+    "group": "magicAttackPowerUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001501,
+    "key": "magicAttackPowerUpPlus4",
+    "nome": "Magic Attack Power Up +4",
+    "group": "magicAttackPowerUp",
+    "level": 4,
+    "stacks": true
+  },
+  {
+    "id": 6005600,
+    "key": "partialHPRestorationUponPostDamageAttacksPlus1",
+    "nome": "Partial HP Restoration upon Post-Damage Attacks +1",
+    "group": "partialHPRestorationUponPostDamageAttacks",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6005601,
+    "key": "partialHPRestorationUponPostDamageAttacksPlus2",
+    "nome": "Partial HP Restoration upon Post-Damage Attacks +2",
+    "group": "partialHPRestorationUponPostDamageAttacks",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 6030900,
+    "key": "physicalAttackPowerIncreasesAfterUsingGreaseItemsPlus1",
+    "nome": "Physical attack power increases after using grease items +1",
+    "group": "physicalAttackPowerIncreasesAfterUsingGreaseItems",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6030901,
+    "key": "physicalAttackPowerIncreasesAfterUsingGreaseItemsPlus2",
+    "nome": "Physical attack power increases after using grease items +2",
+    "group": "physicalAttackPowerIncreasesAfterUsingGreaseItems",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7001401,
+    "key": "physicalAttackUpPlus1",
+    "nome": "Physical Attack Up +1",
+    "group": "physicalAttackUp",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001402,
+    "key": "physicalAttackUpPlus2",
+    "nome": "Physical Attack Up +2",
+    "group": "physicalAttackUp",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6001400,
+    "key": "physicalAttackUpPlus3",
+    "nome": "Physical Attack Up +3",
+    "group": "physicalAttackUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7001403,
+    "key": "physicalAttackUpPlus3",
+    "nome": "Physical Attack Up +3",
+    "group": "physicalAttackUp",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001401,
+    "key": "physicalAttackUpPlus4",
+    "nome": "Physical Attack Up +4",
+    "group": "physicalAttackUp",
+    "level": 4,
+    "stacks": true
+  },
+  {
+    "id": 7001000,
+    "key": "poisePlus1",
+    "nome": "Poise +1",
+    "group": "poise",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7001001,
+    "key": "poisePlus2",
+    "nome": "Poise +2",
+    "group": "poise",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7001002,
+    "key": "poisePlus3",
+    "nome": "Poise +3",
+    "group": "poise",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6001000,
+    "key": "poisePlus4",
+    "nome": "Poise +4",
+    "group": "poise",
+    "level": 4,
+    "stacks": false
+  },
+  {
+    "id": 6001001,
+    "key": "poisePlus5",
+    "nome": "Poise +5",
+    "group": "poise",
+    "level": 5,
+    "stacks": false
+  },
+  {
+    "id": 8200001,
+    "key": "raisesPhysicalDamageNegationPlus1",
+    "nome": "Raises physical damage negation +1",
+    "group": "raisesPhysicalDamageNegation",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6610700,
+    "key": "reducedFPConsumption",
+    "nome": "Reduced FP Consumption",
+    "group": "reducedFPConsumption",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8010100,
+    "key": "reducedFPConsumption",
+    "nome": "Reduced FP Consumption",
+    "group": "reducedFPConsumption",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 8010101,
+    "key": "reducedFPConsumption",
+    "nome": "Reduced FP Consumption",
+    "group": "reducedFPConsumption",
+    "level": 0,
+    "stacks": true
+  },
+  {
+    "id": 6610701,
+    "key": "reducedFPConsumptionPlus1",
+    "nome": "Reduced FP Consumption +1",
+    "group": "reducedFPConsumption",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 6610702,
+    "key": "reducedFPConsumptionPlus2",
+    "nome": "Reduced FP Consumption +2",
+    "group": "reducedFPConsumption",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 6600000,
+    "key": "sleepInVicinityImprovesAttackPower",
+    "nome": "Sleep in Vicinity Improves Attack Power",
+    "group": "sleepInVicinityImprovesAttackPower",
+    "level": 0,
+    "stacks": false
+  },
+  {
+    "id": 6600001,
+    "key": "sleepInVicinityImprovesAttackPowerPlus1",
+    "nome": "Sleep in Vicinity Improves Attack Power +1",
+    "group": "sleepInVicinityImprovesAttackPower",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 6600002,
+    "key": "sleepInVicinityImprovesAttackPowerPlus2",
+    "nome": "Sleep in Vicinity Improves Attack Power +2",
+    "group": "sleepInVicinityImprovesAttackPower",
+    "level": 2,
+    "stacks": false
+  },
+  {
+    "id": 7100110,
+    "key": "staminaRecoveryUponLandingAttacksPlus1",
+    "nome": "Stamina Recovery upon Landing Attacks +1",
+    "group": "staminaRecoveryUponLandingAttacks",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7100190,
+    "key": "staminaRecoveryUponLandingAttacksPlus1",
+    "nome": "Stamina Recovery upon Landing Attacks +1",
+    "group": "staminaRecoveryUponLandingAttacks",
+    "level": 1,
+    "stacks": false
+  },
+  {
+    "id": 7000300,
+    "key": "strengthPlus1",
+    "nome": "Strength +1",
+    "group": "strength",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000301,
+    "key": "strengthPlus2",
+    "nome": "Strength +2",
+    "group": "strength",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000302,
+    "key": "strengthPlus3",
+    "nome": "Strength +3",
+    "group": "strength",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 7000900,
+    "key": "ultimateArtAutoChargePlus1",
+    "nome": "Ultimate Art Auto Charge +1",
+    "group": "ultimateArtGauge",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000901,
+    "key": "ultimateArtAutoChargePlus2",
+    "nome": "Ultimate Art Auto Charge +2",
+    "group": "ultimateArtGauge",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000902,
+    "key": "ultimateArtAutoChargePlus3",
+    "nome": "Ultimate Art Auto Charge +3",
+    "group": "ultimateArtGauge",
+    "level": 3,
+    "stacks": true
+  },
+  {
+    "id": 6000900,
+    "key": "ultimateArtAutoChargePlus4",
+    "nome": "Ultimate Art Auto Charge +4",
+    "group": "ultimateArtGauge",
+    "level": 4,
+    "stacks": false
+  },
+  {
+    "id": 6000901,
+    "key": "ultimateArtAutoChargePlus5",
+    "nome": "Ultimate Art Auto Charge +5",
+    "group": "ultimateArtGauge",
+    "level": 5,
+    "stacks": false
+  },
+  {
+    "id": 7000000,
+    "key": "vigorPlus1",
+    "nome": "Vigor +1",
+    "group": "vigor",
+    "level": 1,
+    "stacks": true
+  },
+  {
+    "id": 7000001,
+    "key": "vigorPlus2",
+    "nome": "Vigor +2",
+    "group": "vigor",
+    "level": 2,
+    "stacks": true
+  },
+  {
+    "id": 7000002,
+    "key": "vigorPlus3",
+    "nome": "Vigor +3",
+    "group": "vigor",
+    "level": 3,
+    "stacks": true
+  }
+]
