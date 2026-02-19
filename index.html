@@ -1407,8 +1407,11 @@ tr:last-child td {
 // ================================================================
 let db = null;                // Database in memoria
 
-// Note: Effect data is now loaded from js/resources/effects.js
-// Old JSON files (effetti_*.json) are no longer used
+// Effect pools for manual relic creation (loaded from data/ JSON files)
+let effNormBuff = [];         // Normal relic buffs
+let effNotteBuff = [];        // Night relic buffs
+let effNotteDebuff = [];      // Night relic debuffs
+
 let wizS = {};                // Stato wizard (chiave: 'n' o 't')
 let isCreazMode = false;      // Flag gettone creazione
 
@@ -1479,12 +1482,42 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (t === 'home') aggiornaHome();
     });
   });
+  
+  // Load effect pools for manual relic creation
+  loadEffectPools();
+  
   // Effects are now loaded from js/resources/effects.js (already loaded via script tag)
   console.log('Effect mapping system loaded:', window.effects ? 'OK' : 'ERROR');
   if (window.effects) {
     console.log('Total effects loaded:', window.effects.size);
   }
 });
+
+// ================================================================
+// LOAD EFFECT POOLS FOR MANUAL RELIC CREATION
+// ================================================================
+async function loadEffectPools() {
+  try {
+    const [normResp, buffResp, debuffResp] = await Promise.all([
+      fetch('./data/effetti_normali_buff.json'),
+      fetch('./data/effetti_notte_buff.json'),
+      fetch('./data/effetti_notte_debuff.json')
+    ]);
+    
+    if (normResp.ok) effNormBuff = await normResp.json();
+    if (buffResp.ok) effNotteBuff = await buffResp.json();
+    if (debuffResp.ok) effNotteDebuff = await debuffResp.json();
+    
+    console.log('Effect pools loaded:', {
+      normal: effNormBuff.length,
+      nightBuff: effNotteBuff.length,
+      nightDebuff: effNotteDebuff.length
+    });
+  } catch (err) {
+    console.warn('Could not load effect pools:', err);
+    // Continue - manual relic creation will show a message if pools are empty
+  }
+}
 
 // ================================================================
 // SEZIONE 1: HOME / CARICA DATI
@@ -1804,17 +1837,45 @@ function aggiornaDropdown() {
 // ================================================================
 /**
  * Get effect information by ID
- * Supports both numeric IDs (from save files) and legacy string IDs (from manual databases)
+ * Supports both numeric IDs (from save files/effect pools) and legacy string IDs
  */
 function getEffInfo(id) {
-  // Check if it's a numeric ID (from save file)
+  // Check if it's a numeric ID (from save file or effect pool)
   if (typeof id === 'number') {
     const effectName = i18n.getEffectName(id);
+    
+    // Check if this effect has group/level information
+    const effectData = window.effects?.get(id);
+    if (effectData && effectData.group !== undefined) {
+      // This effect belongs to a group - calculate stepMax based on group levels
+      const groupName = Object.keys(window.EffectGroup || {}).find(k => window.EffectGroup[k] === effectData.group);
+      if (groupName) {
+        // Find all effects in this group to determine max level
+        const groupEffects = [];
+        window.effects.forEach((eff, effId) => {
+          if (eff.group === effectData.group) {
+            groupEffects.push({ id: effId, level: eff.level || 0 });
+          }
+        });
+        const maxLevel = Math.max(...groupEffects.map(e => e.level), 1);
+        
+        return {
+          nome: effectName || String(id),
+          stepMax: maxLevel,
+          group: groupName,
+          level: effectData.level || 0,
+          descrizioneStep: Array.from({ length: maxLevel }, (_, i) => 
+            `${effectName || String(id)} (Level ${i + 1})`
+          )
+        };
+      }
+    }
+    
+    // Effect without group or not found in mapping
     if (effectName && !effectName.startsWith('Effect ')) {
-      // Found in the mapping system
       return {
         nome: effectName,
-        stepMax: 1, // Save file effects don't use step system
+        stepMax: 1, // Save file effects without groups don't use step system
         descrizioneStep: [effectName]
       };
     }
@@ -1988,48 +2049,81 @@ function addEffModale() {
   const c = document.getElementById('mrEff');
   if (c.children.length >= grado) { alert(`Massimo ${grado} slot per grado ${grado}.`); return; }
 
-  // Manual effect selection is no longer supported
-  // Effects are now imported from save files with numeric IDs
-  alert('La creazione manuale di reliquie con effetti non è più supportata.\n\nCarica reliquie da file .sl2 per ottenere effetti reali dal gioco.\n\nPuoi comunque creare reliquie senza effetti per scopi di test.');
-  return;
-
-  /* OLD MANUAL CREATION CODE - DISABLED
   if (tipo === 'notte') {
     // Night relic: each slot has a buff + debuff pair
-    if (!effNotteBuff.length || !effNotteDebuff.length) { alert('Pool effetti notte vuoto. Verifica i file JSON.'); return; }
+    if (!effNotteBuff.length || !effNotteDebuff.length) { 
+      alert('Pool effetti notte vuoto. Carica i file JSON dalla cartella data/.'); 
+      return; 
+    }
     const i = c.children.length;
     const d = document.createElement('div');
     d.style.cssText = 'border:1px solid #333;border-radius:4px;padding:.4rem;margin-bottom:.4rem;background:#111';
-    let buffOpts = effNotteBuff.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
-    let debOpts = effNotteDebuff.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
+    
+    // Build options with group information
+    let buffOpts = effNotteBuff.map(e => {
+      const groupLabel = e.group ? ` [${e.group}/${e.level}]` : '';
+      return `<option value="${e.id}">${e.nome}${groupLabel}</option>`;
+    }).join('');
+    let debOpts = effNotteDebuff.map(e => {
+      const groupLabel = e.group ? ` [${e.group}/${e.level}]` : '';
+      return `<option value="${e.id}">${e.nome}${groupLabel}</option>`;
+    }).join('');
+    
     d.innerHTML = `<div style="font-size:.8rem;color:#888;margin-bottom:.2rem">Slot ${i + 1}</div>
       <div style="display:flex;gap:.3rem;align-items:center;margin-bottom:.2rem">
         <span style="color:#55cc77;font-size:.8rem;width:45px">Buff:</span>
-        <select id="meb_${i}" style="flex:1">${buffOpts}</select>
+        <select id="meb_${i}" style="flex:1" onchange="updateEffStepInput('meb_${i}', 'msb_${i}')">${buffOpts}</select>
         <input type="number" id="msb_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
       </div>
       <div style="display:flex;gap:.3rem;align-items:center">
         <span style="color:#ff8888;font-size:.8rem;width:45px">Debuff:</span>
-        <select id="med_${i}" style="flex:1">${debOpts}</select>
+        <select id="med_${i}" style="flex:1" onchange="updateEffStepInput('med_${i}', 'msd_${i}')">${debOpts}</select>
         <input type="number" id="msd_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
       </div>
       <button class="btn btn-sm btn-danger" style="margin-top:.3rem" onclick="this.parentElement.remove();aggiornaAddEffBtn()">✕ Rimuovi slot</button>`;
     c.appendChild(d);
+    
+    // Set initial step max
+    updateEffStepInput(`meb_${i}`, `msb_${i}`);
+    updateEffStepInput(`med_${i}`, `msd_${i}`);
   } else {
     // Normal relic: single buff effect
     let pool = effNormBuff;
-    if (!pool.length) { alert('Pool effetti vuoto. Verifica i file JSON.'); return; }
+    if (!pool.length) { 
+      alert('Pool effetti vuoto. Carica i file JSON dalla cartella data/.'); 
+      return; 
+    }
     const i = c.children.length;
     const d = document.createElement('div');
     d.style.cssText = 'display:flex;gap:.3rem;align-items:center;margin-bottom:.3rem';
-    let opts = pool.map(e => `<option value="${e.id}">${e.nome} (max ${e.stepMax})</option>`).join('');
-    d.innerHTML = `<select id="me_${i}" style="flex:1">${opts}</select>
+    
+    // Build options with group information
+    let opts = pool.map(e => {
+      const groupLabel = e.group ? ` [${e.group}/${e.level}]` : '';
+      return `<option value="${e.id}">${e.nome}${groupLabel}</option>`;
+    }).join('');
+    
+    d.innerHTML = `<select id="me_${i}" style="flex:1" onchange="updateEffStepInput('me_${i}', 'ms_${i}')">${opts}</select>
       <input type="number" id="ms_${i}" min="1" max="3" value="1" style="width:55px" placeholder="Step">
       <button class="btn btn-sm btn-danger" onclick="this.parentElement.remove();aggiornaAddEffBtn()">✕</button>`;
     c.appendChild(d);
+    
+    // Set initial step max
+    updateEffStepInput(`me_${i}`, `ms_${i}`);
   }
   aggiornaAddEffBtn();
-  */ // END OLD MANUAL CREATION CODE
+}
+
+// Update step input max based on selected effect
+function updateEffStepInput(selectId, inputId) {
+  const select = document.getElementById(selectId);
+  const input = document.getElementById(inputId);
+  if (!select || !input) return;
+  
+  const effectId = parseInt(select.value);
+  const info = getEffInfo(effectId);
+  input.max = info.stepMax;
+  input.value = Math.min(parseInt(input.value) || 1, info.stepMax);
 }
 
 function salvaRel() {
