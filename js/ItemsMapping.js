@@ -11,10 +11,10 @@ const ItemsMapping = (() => {
   };
 
   const RelicColor = {
-    Red: 'Rosso',
-    Blue: 'Blu',
-    Yellow: 'Giallo',
-    Green: 'Verde'
+    Red: 'Red',
+    Blue: 'Blue',
+    Yellow: 'Yellow',
+    Green: 'Green'
   };
 
   const itemsArray = [
@@ -308,84 +308,7 @@ const ItemsMapping = (() => {
   ];
 
   // Human-readable item names in Italian
-  const itemNames = {
-    besmirchedFrame: 'Cornice Sbrindellata',
-    blackClawNecklace: 'Collana dell\'Artiglio Nero',
-    bladeOfNightFragment: 'Frammento di Lama della Notte',
-    blessedFlowers: 'Fiori Benedetti',
-    blessedIronCoin: 'Moneta di Ferro Benedetta',
-    boneLikeStone: 'Pietra Simile a un Osso',
-    crackedSealingWax: 'Ceralacca Screpolata',
-    crackedWitchsBrooch: 'Spilla della Strega Crepata',
-    crownMedal: 'Medaglia della Corona',
-    darkNightOfTheBaron: 'Notte Oscura del Barone',
-    darkNightOfTheBeast: 'Notte Oscura della Bestia',
-    darkNightOfTheChampion: 'Notte Oscura del Campione',
-    darkNightOfTheDemon: 'Notte Oscura del Demone',
-    darkNightOfTheFathom: 'Notte Oscura dell\'Abisso',
-    darkNightOfTheMiasma: 'Notte Oscura del Miasma',
-    darkNightOfTheWise: 'Notte Oscura del Saggio',
-    delicateBurningScene: 'Scena Ardente Delicata',
-    delicateDrizzlyScene: 'Scena Piovigginosa Delicata',
-    delicateLuminousScene: 'Scena Luminosa Delicata',
-    delicateTranquilScene: 'Scena Tranquilla Delicata',
-    edgeOfOrder: 'Orlo dell\'Ordine',
-    fellOmenFetish: 'Feticcio del Malaugurio Tremendo',
-    fineArrowhead: 'Punta di Freccia Fine',
-    goldenDew: 'Rugiada Dorata',
-    goldenShell: 'Conchiglia Dorata',
-    goldenSprout: 'Germoglio Dorato',
-    grandBurningScene: 'Scena Ardente Grandiosa',
-    grandDrizzlyScene: 'Scena Piovigginosa Grandiosa',
-    grandLuminousScene: 'Scena Luminosa Grandiosa',
-    grandTranquilScene: 'Scena Tranquilla Grandiosa',
-    largeScenicFlatstone: 'Grande Pietra Piatta Scenografica',
-    nightOfTheBaron: 'Notte del Barone',
-    nightOfTheBeast: 'Notte della Bestia',
-    nightOfTheChampion: 'Notte del Campione',
-    nightOfTheDemon: 'Notte del Demone',
-    nightOfTheFathom: 'Notte dell\'Abisso',
-    nightOfTheLord: 'Notte del Signore',
-    nightOfTheMiasma: 'Notte del Miasma',
-    nightOfTheWise: 'Notte del Saggio',
-    nightShard: 'Scheggia della Notte',
-    oldPocketwatch: 'Vecchio Orologio da Tasca',
-    oldPortrait: 'Vecchio Ritratto',
-    polishedBurningScene: 'Scena Ardente Lucida',
-    polishedDrizzlyScene: 'Scena Piovigginosa Lucida',
-    polishedLuminousScene: 'Scena Luminosa Lucida',
-    polishedTranquilScene: 'Scena Tranquilla Lucida',
-    scenicFlatstone: 'Pietra Piatta Scenografica',
-    silverTear: 'Lacrima d\'Argento',
-    slateWhetstone: 'Cote di Ardesia',
-    smallMakeupBrush: 'Piccolo Pennello da Trucco',
-    sovereignSigil: 'Sigillo Sovrano',
-    stoneStake: 'Palo di Pietra',
-    theWyldersEarring: 'Orecchino del Selvaggio',
-    thirdVolume: 'Terzo Volume',
-    tornBraidedCord: 'Cordone Intrecciato Strappato',
-    vestigeOfNight: 'Vestigio della Notte',
-    witchsBrooch: 'Spilla della Strega',
-    deepDelicateBurningScene: 'Scena Ardente Delicata Profonda',
-    deepPolishedBurningScene: 'Scena Ardente Lucida Profonda',
-    deepGrandBurningScene: 'Scena Ardente Grandiosa Profonda',
-    deepDelicateDrizzlyScene: 'Scena Piovigginosa Delicata Profonda',
-    deepPolishedDrizzlyScene: 'Scena Piovigginosa Lucida Profonda',
-    deepGrandDrizzlyScene: 'Scena Piovigginosa Grandiosa Profonda',
-    deepDelicateLuminousScene: 'Scena Luminosa Delicata Profonda',
-    deepPolishedLuminousScene: 'Scena Luminosa Lucida Profonda',
-    deepGrandLuminousScene: 'Scena Luminosa Grandiosa Profonda',
-    deepDelicateTranquilScene: 'Scena Tranquilla Delicata Profonda',
-    deepPolishedTranquilScene: 'Scena Tranquilla Lucida Profonda',
-    deepGrandTranquilScene: 'Scena Tranquilla Grandiosa Profonda',
-    theWillOfTheBalancers: 'La Volontà dei Bilanciatori',
-    theNightOfDregs: 'La Notte delle Fecce',
-    cleansingTear: 'Lacrima Purificatrice',
-    noteMyDearSuccessor: 'Nota: Mio Caro Successore',
-    theWillOfTheBalance: 'La Volontà dell\'Equilibrio',
-    leatherMonocleCase: 'Custodia di Cuoio per Monocolo',
-    glassNecklace: 'Collana di Vetro'
-  };
+  // Note: Item names are now handled by i18n.js for multi-language support
 
   // Build a map for fast lookup
   const itemsMap = new Map();
@@ -407,28 +330,38 @@ const ItemsMapping = (() => {
     },
 
     /**
-     * Get item name by ID (in Italian)
+     * Get item name by ID (uses i18n for current language)
      */
     getItemName: (itemId) => {
       const item = itemsMap.get(itemId);
       if (!item) {
         console.warn(`Item with ID ${itemId} not found`);
-        return `Reliquia Sconosciuta (ID: ${itemId})`;
+        const unknownText = (typeof i18n !== 'undefined') 
+          ? i18n.t('ui.unknownRelic', 'Unknown Relic')
+          : 'Reliquia Sconosciuta';
+        return `${unknownText} (ID: ${itemId})`;
       }
-      return itemNames[item.key] || item.key;
+      // Use i18n if available, otherwise fallback to key
+      if (typeof i18n !== 'undefined') {
+        return i18n.getItemName(item.key);
+      }
+      return item.key;
     },
 
     /**
      * Get item color by ID
      */
+    /**
+     * Get item color by ID (returns color key, use i18n to translate)
+     */
     getItemColor: (itemId) => {
       const item = itemsMap.get(itemId);
       if (!item) {
-        console.warn(`Item with ID ${itemId} not found, defaulting to Rosso`);
+        console.warn(`Item with ID ${itemId} not found, defaulting to Red`);
         return RelicColor.Red;
       }
       if (item.color === null) {
-        console.warn(`Item ${itemId} (${item.key}) has no color defined, defaulting to Rosso`);
+        console.warn(`Item ${itemId} (${item.key}) has no color defined, defaulting to Red`);
         return RelicColor.Red;
       }
       return item.color;
