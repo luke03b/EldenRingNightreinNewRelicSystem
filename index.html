@@ -1433,7 +1433,8 @@ function changeLanguage(langCode) {
     // Update language selector buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.remove('active');
-      if (btn.textContent.toLowerCase() === langCode) {
+      // Compare the uppercase version since button text is uppercase
+      if (btn.textContent.trim().toUpperCase() === langCode.toUpperCase()) {
         btn.classList.add('active');
       }
     });

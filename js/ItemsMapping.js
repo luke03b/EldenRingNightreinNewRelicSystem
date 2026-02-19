@@ -338,7 +338,7 @@ const ItemsMapping = (() => {
         console.warn(`Item with ID ${itemId} not found`);
         const unknownText = (typeof i18n !== 'undefined') 
           ? i18n.t('ui.unknownRelic', 'Unknown Relic')
-          : 'Reliquia Sconosciuta';
+          : 'Unknown Relic';
         return `${unknownText} (ID: ${itemId})`;
       }
       // Use i18n if available, otherwise fallback to key

@@ -110,7 +110,7 @@ const i18n = (() => {
         theWillOfTheBalancers: 'La Volontà dei Bilanciatori',
         theNightOfDregs: 'La Notte delle Fecce',
         cleansingTear: 'Lacrima Purificatrice',
-        noteMyDearSuccessor: 'Nota: Mio Caro Successore',
+        noteMyDearSuccessor: 'Nota, Mio Caro Successore',
         theWillOfTheBalance: 'La Volontà dell\'Equilibrio',
         leatherMonocleCase: 'Custodia di Cuoio per Monocolo',
         glassNecklace: 'Collana di Vetro'
@@ -219,7 +219,7 @@ const i18n = (() => {
         theWillOfTheBalancers: 'The Will of the Balancers',
         theNightOfDregs: 'The Night of Dregs',
         cleansingTear: 'Cleansing Tear',
-        noteMyDearSuccessor: 'Note My Dear Successor',
+        noteMyDearSuccessor: 'Nota: Mio Caro Successore',
         theWillOfTheBalance: 'The Will of the Balance',
         leatherMonocleCase: 'Leather Monocle Case',
         glassNecklace: 'Glass Necklace'
