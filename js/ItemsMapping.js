@@ -336,8 +336,9 @@ const ItemsMapping = (() => {
       const item = itemsMap.get(itemId);
       if (!item) {
         console.warn(`Item with ID ${itemId} not found`);
+        // Use i18n for unknown relic message if available, otherwise use English as universal fallback
         const unknownText = (typeof i18n !== 'undefined') 
-          ? i18n.t('ui.unknownRelic', 'Unknown Relic')
+          ? i18n.t('ui.unknownRelic', 'Unknown Relic') 
           : 'Unknown Relic';
         return `${unknownText} (ID: ${itemId})`;
       }

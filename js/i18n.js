@@ -219,7 +219,7 @@ const i18n = (() => {
         theWillOfTheBalancers: 'The Will of the Balancers',
         theNightOfDregs: 'The Night of Dregs',
         cleansingTear: 'Cleansing Tear',
-        noteMyDearSuccessor: 'Nota: Mio Caro Successore',
+        noteMyDearSuccessor: 'Note, My Dear Successor',
         theWillOfTheBalance: 'The Will of the Balance',
         leatherMonocleCase: 'Leather Monocle Case',
         glassNecklace: 'Glass Necklace'
